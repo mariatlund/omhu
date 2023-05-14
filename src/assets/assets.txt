@@ -1,0 +1,4 @@
+This folder should contain folders for:
+- Icons
+- Images
+- Other material that is not code files

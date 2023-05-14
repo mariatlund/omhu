@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://use.typekit.net/nyh1izf.css");
+
+/* TYPOGRAPHY */
+
+@layer base {
+  .text-outline-blue {
+    -webkit-text-stroke: 2px #1d00b2;
+  }
+}
+
+@layer components {
+  .style-h1 {
+    @apply text-40 font-extrabold leading-tight md:text-64 text-white font-headline text-outline-blue uppercase;
+  }
+  .style-h2 {
+    @apply text-40 font-bold leading-tight md:text-48 font-headline uppercase;
+  }
+  .style-h3 {
+    @apply text-24 font-semibold leading-tight font-body;
+  }
+  .style-h4 {
+    @apply text-base font-semibold leading-tight font-body;
+  }
+  .style-body-x-small {
+    @apply text-12 leading-relaxed font-body;
+  }
+  .style-body-small {
+    @apply text-14 leading-relaxed font-body;
+  }
+  .style-body {
+    @apply text-base leading-normal font-body;
+  }
+}
