@@ -1,10 +1,15 @@
+"use client";
 import Button from "@/components/Button/Button";
-import { TestComponent } from "@/components/TestComponent";
-import Image from "next/image";
+import Navigation from "@/components/Navigation";
+import { useState } from "react";
+import OpenMenu from "@/components/OpenMenu";
 
 export default function Home() {
+  const [showMenu, setShowMenu] = useState(false);
   return (
-    <main className="p-10  bg-grey-50">
+    <main className="p-10  bg-grey-50 static">
+      <Navigation setShowMenu={setShowMenu} showMenu={showMenu} />
+      {showMenu && <OpenMenu setShowMenu={setShowMenu} showMenu={showMenu} />}
       <h1 className="style-h1">H1 headline</h1>
       <h2 className="style-h2">H2 headline</h2>
       <h3 className="style-h3">H3 headline</h3>
