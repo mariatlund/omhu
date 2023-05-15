@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/Button/Button";
+import Navigation from "@/components/Navigation";
 import Checkbox from "@/components/InputFields/Checkbox/Checkbox";
 import ColourSelect from "@/components/InputFields/ColourSelect/ColourSelect";
 import Radio from "@/components/InputFields/Radio/Radio";
@@ -55,7 +56,8 @@ export default function Home() {
   const [selectedCountry, setSelectedCountry] = useState<string | undefined>();
 
   return (
-    <main className="p-10  bg-grey-50">
+    <main className="p-10  bg-grey-50 static">
+      <Navigation />
       <h1 className="style-h1">H1 headline</h1>
       <h2 className="style-h2">H2 headline</h2>
       <h3 className="style-h3">H3 headline</h3>
