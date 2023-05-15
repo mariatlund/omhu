@@ -1,7 +1,9 @@
 "use client";
 
 import Button from "@/components/Button/Button";
+import Checkbox from "@/components/InputFields/Checkbox/Checkbox";
 import ColourSelect from "@/components/InputFields/ColourSelect/ColourSelect";
+import Radio from "@/components/InputFields/Radio/Radio";
 import TextInput from "@/components/InputFields/TextInput/TextInput";
 import { useState } from "react";
 
@@ -62,8 +64,16 @@ export default function Home() {
       </div>
 
       <div className="mt-10 flex gap-5">
-        <TextInput label="Label" placeholder="Placeholder" />
+        <TextInput type="text" label="Label" placeholder="Placeholder" fieldName="text" />
         <ColourSelect options={optionsArray} selectedOptionValue={selectedValue} onChange={setSelectedValue} defaultOption={optionsArray[0]} containerClass="w-60" />
+        <div className="space-y-2">
+          <Checkbox label="This is a checkbox" value="Indeed" fieldName="checkbox" />
+          <Checkbox label="This one as well" value="Indeed" fieldName="checkbox" />
+        </div>
+        <div className="space-y-2">
+          <Radio label="I'm an option" value="Option1" defaultChecked={true} fieldName="radio" />
+          <Radio label="So am I, pick me" value="Option2" fieldName="radio" />
+        </div>
       </div>
     </main>
   );
