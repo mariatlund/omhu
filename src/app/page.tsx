@@ -1,8 +1,8 @@
 "use client";
 
 import Button from "@/components/Button/Button";
-import ColourSelect from "@/components/InputFields/ColourSelect";
-import TextInput from "@/components/InputFields/TextInput";
+import ColourSelect from "@/components/InputFields/ColourSelect/ColourSelect";
+import TextInput from "@/components/InputFields/TextInput/TextInput";
 import { useState } from "react";
 
 const optionsArray = [

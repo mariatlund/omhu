@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import TextInput from "../InputFields/TextInput";
+import TextInput from "../TextInput/TextInput";
 
 type Story = StoryObj<typeof TextInput>;
 

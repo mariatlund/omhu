@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import ColourSelect from "@/components/InputFields/ColourSelect";
+import ColourSelect from "../ColourSelect/ColourSelect";
 
 type Story = StoryObj<typeof ColourSelect>;
 
