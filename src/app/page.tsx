@@ -32,6 +32,13 @@ export default function Home() {
         <Button intent="secondary" kind="link" href="#" size="small" label="Test button" icon="filter" />
         <Button intent="alternative" kind="link" href="#" size="small" label="Test button" icon="sort" />
       </div>
+
+      <div className="mt-10 flex gap-5">
+        <div className="flex flex-col">
+          <label htmlFor="test1">Test text field </label>
+          <input type="text" name="test" id="test1" />
+        </div>
+      </div>
     </main>
   );
 }
