@@ -1,4 +1,5 @@
 import Button from "@/components/Button/Button";
+import TextInput from "@/components/InputFields/TextInput";
 import { TestComponent } from "@/components/TestComponent";
 import Image from "next/image";
 
@@ -34,10 +35,7 @@ export default function Home() {
       </div>
 
       <div className="mt-10 flex gap-5">
-        <div className="flex flex-col">
-          <label htmlFor="test1">Test text field </label>
-          <input type="text" name="test" id="test1" />
-        </div>
+        <TextInput label="Label" placeholder="Placeholder" />
       </div>
     </main>
   );
