@@ -4,10 +4,11 @@ import Button from "@/components/Button/Button";
 import Checkbox from "@/components/InputFields/Checkbox/Checkbox";
 import ColourSelect from "@/components/InputFields/ColourSelect/ColourSelect";
 import Radio from "@/components/InputFields/Radio/Radio";
+import Select from "@/components/InputFields/Select/Select";
 import TextInput from "@/components/InputFields/TextInput/TextInput";
 import { useState } from "react";
 
-const optionsArray = [
+const coloursArray = [
   {
     value: "5774",
     label: "Mustard",
@@ -30,8 +31,28 @@ const optionsArray = [
   },
 ];
 
+const countriesArray = [
+  {
+    value: "DK",
+    label: "Denmark",
+  },
+  {
+    value: "UK",
+    label: "United Kingdom",
+  },
+  {
+    value: "US",
+    label: "United States",
+  },
+  {
+    value: "SE",
+    label: "Sweden",
+  },
+];
+
 export default function Home() {
-  const [selectedValue, setSelectedValue] = useState<string | undefined>();
+  const [selectedColour, setSelectedColour] = useState<string | undefined>();
+  const [selectedCountry, setSelectedCountry] = useState<string | undefined>();
 
   return (
     <main className="p-10  bg-grey-50">
@@ -65,7 +86,10 @@ export default function Home() {
 
       <div className="mt-10 flex gap-5">
         <TextInput type="text" label="Label" placeholder="Placeholder" fieldName="text" />
-        <ColourSelect options={optionsArray} selectedOptionValue={selectedValue} onChange={setSelectedValue} defaultOption={optionsArray[0]} containerClass="w-60" />
+        <div className="space-y-5">
+          <Select options={countriesArray} selectedOptionValue={selectedCountry} onChange={setSelectedCountry} placeholder="Select country" />
+          <ColourSelect options={coloursArray} selectedOptionValue={selectedColour} onChange={setSelectedColour} defaultOption={coloursArray[0]} containerClass="w-60" />
+        </div>
         <div className="space-y-2">
           <Checkbox label="This is a checkbox" value="Indeed" fieldName="checkbox" />
           <Checkbox label="This one as well" value="Indeed" fieldName="checkbox" />
