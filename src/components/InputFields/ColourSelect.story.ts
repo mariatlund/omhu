@@ -1,16 +1,31 @@
 import { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import Select from "./ColourSelect";
+import ColourSelect from "@/components/InputFields/ColourSelect";
 
-type Story = StoryObj<typeof Select>;
+type Story = StoryObj<typeof ColourSelect>;
 
 export default {
-  component: Select,
-  //   render: function Wrapper(args) {
-  //     const [selectedValue, setSelectedValue] = useState<string | undefined>();
-  //     return <Select {...args} selectedOptionValue={selectedValue} onChange={setSelectedValue} />;
-  //   },
-} satisfies Meta<typeof Select>;
+  component: ColourSelect,
+} satisfies Meta<typeof ColourSelect>;
+
+//   render: function Wrapper(args) {
+//     const [selectedValue, setSelectedValue] = useState<string | undefined>();
+//     return <Select {...args} selectedOptionValue={selectedValue} onChange={setSelectedValue} />;
+//   },
+
+// export default {
+//   component: SidePanelLinks,
+//   parameters: {
+//     layout: 'padded',
+//   },
+//   render: function Wrapper(args) {
+//     return (
+//       <aside className="max-w-sm">
+//         <SidePanelLinks {...args} />
+//       </aside>
+//     );
+//   },
+// } satisfies Meta<typeof SidePanelLinks>;
 
 const optionsArray = [
   {

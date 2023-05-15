@@ -13,13 +13,13 @@ const chevronDown = (
   </svg>
 );
 
-interface Option {
+export interface Option {
   label: string;
   value: string;
   hexCode: string;
 }
 
-interface SelectProps {
+export interface ColourSelectProps {
   options: Option[];
   onChange: (value: string) => void;
   selectedOptionValue?: string;
@@ -28,7 +28,7 @@ interface SelectProps {
   containerClass?: string;
 }
 
-export default function Select({ selectedOptionValue, options, containerClass, placeholder, onChange, defaultOption }: SelectProps) {
+export default function ColourSelect({ selectedOptionValue, options, containerClass, placeholder, onChange, defaultOption }: ColourSelectProps) {
   const selectedOption = options.find(({ value }) => value === selectedOptionValue);
 
   return (
@@ -37,7 +37,7 @@ export default function Select({ selectedOptionValue, options, containerClass, p
         <>
           <Listbox.Button className={clsx("flex justify-between w-full gap-x-5 border py-2 px-4", "border-blue bg-white items-center focus:outline-2 focus:outline-blue")}>
             <div className="flex items-center gap-5">
-              {defaultOption ? <span className="rounded-full w-8 h-8 inline-block" style={{ backgroundColor: defaultOption?.hexCode }}></span> : null}
+              {defaultOption ? <span className="rounded-full w-8 h-8 inline-block" style={selectedOption?.hexCode ? { backgroundColor: selectedOption?.hexCode } : { backgroundColor: defaultOption?.hexCode }}></span> : null}
 
               <span className="truncate">{selectedOption?.label ?? (placeholder || defaultOption?.label)}</span>
             </div>

@@ -1,9 +1,36 @@
+"use client";
+
 import Button from "@/components/Button/Button";
+import ColourSelect from "@/components/InputFields/ColourSelect";
 import TextInput from "@/components/InputFields/TextInput";
-import { TestComponent } from "@/components/TestComponent";
-import Image from "next/image";
+import { useState } from "react";
+
+const optionsArray = [
+  {
+    value: "5774",
+    label: "Mustard",
+    hexCode: "#C99136",
+  },
+  {
+    value: "5771",
+    label: "Turquoise",
+    hexCode: "#2C6B7E",
+  },
+  {
+    value: "5772",
+    label: "Blue",
+    hexCode: "#6B6BEC",
+  },
+  {
+    value: "765",
+    label: "Brown",
+    hexCode: "#60342C",
+  },
+];
 
 export default function Home() {
+  const [selectedValue, setSelectedValue] = useState<string | undefined>();
+
   return (
     <main className="p-10  bg-grey-50">
       <h1 className="style-h1">H1 headline</h1>
@@ -36,6 +63,7 @@ export default function Home() {
 
       <div className="mt-10 flex gap-5">
         <TextInput label="Label" placeholder="Placeholder" />
+        <ColourSelect options={optionsArray} selectedOptionValue={selectedValue} onChange={setSelectedValue} defaultOption={optionsArray[0]} containerClass="w-60" />
       </div>
     </main>
   );
