@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import ProductCard from "../ProductCard/ProductCard";
+import ProductCard from "../Cards/ProductCard";
 
 type Story = StoryObj<typeof ProductCard>;
 
