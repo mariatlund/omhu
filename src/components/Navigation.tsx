@@ -7,7 +7,6 @@ import Burger from "../assets/icons/menu.svg";
 import Link from "next/link";
 import { useState } from "react";
 import OpenMenu from "./OpenMenu";
-import clsx from "clsx";
 
 function Navigation() {
   const [showMenu, setShowMenu] = useState(false);
