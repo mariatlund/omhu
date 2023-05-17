@@ -6,7 +6,7 @@ import Link from "next/link";
 function Footer() {
   return (
     <footer className="bg-blue text-link-50 font-semibold">
-      <div className="grid space-y-10 style-body-small md:style-body p-10 md:flex md:gap-10 md:space-y-0 md:justify-evenly container">
+      <div className="grid space-y-10 style-body-small md:style-body py-10 md:flex md:py-14 md:gap-10 md:space-y-0 md:justify-between container">
         <Image src={Logo} alt="OMHU Logo" className="w-24 h-24 justify-self-center border border-white md:w-20 md:h-20" />
         <div className="grid space-y-1">
           <h3 className="style-h4 uppercase text-white">Contact</h3>

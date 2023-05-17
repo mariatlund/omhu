@@ -10,9 +10,9 @@ interface RadioProps {
 function Radio({ label, value, fieldName, defaultChecked }: RadioProps) {
   const ID = useId();
   return (
-    <div className="flex items-center gap-2">
-      <input type="radio" name={fieldName} value={value} id={ID} checked={defaultChecked} className="w-6 h-6 accent-blue" />
-      <label htmlFor={ID} className="style-body text-blue">
+    <div className="flex items-center gap-2 style-body text-blue hover:text-link">
+      <input type="radio" name={fieldName} value={value} id={ID} defaultChecked={defaultChecked} className="w-6 h-6 accent-blue  cursor-pointer" />
+      <label htmlFor={ID} className="cursor-pointer">
         {label}
       </label>
     </div>
