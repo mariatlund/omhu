@@ -24,6 +24,7 @@ module.exports = {
       },
       link: {
         DEFAULT: "#035FCC",
+        50: "#90AFFF",
       },
       white: {
         DEFAULT: "#FAFAFA",
