@@ -44,7 +44,3 @@
     @apply text-base leading-normal font-body;
   }
 }
-
-a {
-  @apply text-link underline underline-offset-2 hover:text-blue-50;
-}

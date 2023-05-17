@@ -40,7 +40,6 @@ const returnsQuestions: FaqItem[] = [
 function Faq() {
   return (
     <div className="space-y-8 md:space-y-10">
-      <h1 className="style-h1">FAQ</h1>
       <Accordion title="Delivery" items={deliveryQuestions} />
       <Accordion title="Product" items={productQuestions} />
       <Accordion title="Returns" items={returnsQuestions} />
