@@ -1,6 +1,7 @@
+import Accordion, { FaqItem } from "../../components/Accordion/Accordion";
 import React from "react";
 
-const deliveryQuestions = [
+const deliveryQuestions: FaqItem[] = [
   {
     question: "Which countries do you deliver to?",
     answer: "We currently deliver to Europe, the United Kingdom and the United States. If you're located somewhere else in the world, you can contact us to find out if we can arrange for delivery to your location.",
@@ -17,7 +18,7 @@ const deliveryQuestions = [
   },
 ];
 
-const productQuestions = [
+const productQuestions: FaqItem[] = [
   {
     question: "How can I clean and maintain my TEDDY sofa?",
     answer:
@@ -29,19 +30,22 @@ const productQuestions = [
   },
 ];
 
-const returnsQuestions = [
+const returnsQuestions: FaqItem[] = [
   {
     question: "Do you have a return policy?",
     answer: "We can arrange returns if your order arrives with faults. If you are otherwise dissatisfied with your purchase or if something went wrong with your order, please contact usand we will do our best to solve it with you.",
   },
 ];
 
-interface FaqProps {
-  title: string;
-}
-
-function Faq({ title }: FaqProps) {
-  return <section>{/* map through Faq sections here */}</section>;
+function Faq() {
+  return (
+    <div className="space-y-8 md:space-y-10">
+      <h1 className="style-h1">FAQ</h1>
+      <Accordion title="Delivery" items={deliveryQuestions} />
+      <Accordion title="Product" items={productQuestions} />
+      <Accordion title="Returns" items={returnsQuestions} />
+    </div>
+  );
 }
 
 export default Faq;

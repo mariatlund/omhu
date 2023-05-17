@@ -1,14 +1,15 @@
 import { Disclosure } from "@headlessui/react";
 import React from "react";
 import Image from "next/image";
+import clsx from "clsx";
 
-interface FaqItem {
+export interface FaqItem {
   question: string;
   answer: string;
   imageSrc?: string;
 }
 
-interface AccordionProps {
+export interface AccordionProps {
   title?: string;
   items: FaqItem[];
 }
@@ -26,7 +27,7 @@ function Accordion({ title, items }: AccordionProps) {
                 <path d="M18.8369 1.99996L11.6956 9.12568L4.55432 1.99996L2.3606 4.19369L11.6956 13.5287L21.0306 4.19369L18.8369 1.99996Z" fill="currentColor" />
               </svg>
             </Disclosure.Button>
-            <Disclosure.Panel className="px-6 pt-2 pb-4 style-body-small text-blue grid md:grid-cols-3 gap-x-5">
+            <Disclosure.Panel className={clsx("px-6 pt-2 pb-4 style-body-small text-blue grid", item?.imageSrc ? "md:grid-cols-3 gap-x-5" : "md:max-w-2xl")}>
               <div className="md:col-span-2">{item.answer}</div>
               {item.imageSrc ? <Image src={item.imageSrc} alt="" className="lg:max-w-xl" /> : null}
             </Disclosure.Panel>
