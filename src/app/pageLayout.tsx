@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/Menu/Navigation";
 import Footer from "@/modules/Footer/Footer";
 import "../../styles/globals.css";
 
