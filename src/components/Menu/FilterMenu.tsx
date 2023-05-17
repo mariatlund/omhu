@@ -12,7 +12,7 @@ function FilterMenu({ handleFilter, handlePriceChange }: FilterMenuProps) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   return (
     <div className="relative">
-      <Button intent="secondary" kind="base" size="large" label="Filter" icon="filter" callback={() => setShowMenu(!showMenu)} />
+      <Button intent={showMenu ? "primary" : "secondary"} kind="base" size="large" label="Filter" icon={showMenu ? "close" : "filter"} callback={() => setShowMenu(!showMenu)} />
       {showMenu && <FilterSettings onChangeCategory={handleFilter} onChangePrice={handlePriceChange} />}
     </div>
   );

@@ -47,10 +47,16 @@ const sortIcon = (
   </svg>
 );
 
+const closeIcon = (
+  <svg width="22" height="22" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.03006 2L2 4.03006L12.4699 14.5L2 24.9699L4.03006 27L14.5 16.5301L24.9699 27L27 24.9699L16.5301 14.5L27 4.03006L24.9699 2L14.5 12.4699L4.03006 2Z" fill="currentColor" />
+  </svg>
+);
+
 interface CommonProps {
   intent: "primary" | "secondary" | "alternative";
   size: "large" | "small";
-  icon?: "arrow" | "filter" | "sort";
+  icon?: "arrow" | "filter" | "sort" | "close";
   label: string;
   className?: string;
   callback?: () => void | undefined;
@@ -75,7 +81,7 @@ function Button({ intent = "primary", size = "large", icon, label, className, ca
   const iconInner = (
     <span className="flex flex-row items-center gap-x-4">
       {label}
-      {icon === "arrow" ? arrowIcon : icon === "filter" ? filterIcon : sortIcon}
+      {icon === "arrow" ? arrowIcon : icon === "filter" ? filterIcon : icon === "sort" ? sortIcon : closeIcon}
     </span>
   );
 

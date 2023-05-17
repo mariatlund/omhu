@@ -5,14 +5,17 @@ interface RadioProps {
   value: string;
   fieldName: string;
   defaultChecked?: boolean;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-function Radio({ label, value, fieldName, defaultChecked }: RadioProps) {
+function Radio({ label, value, fieldName, defaultChecked, onChange }: RadioProps) {
   const ID = useId();
   return (
+
     <div className="flex items-center gap-2 style-body text-blue hover:text-link">
-      <input type="radio" name={fieldName} value={value} id={ID} defaultChecked={defaultChecked} className="w-6 h-6 accent-blue  cursor-pointer" />
+      <input type="radio" name={fieldName} value={value} id={ID} defaultChecked={defaultChecked} onChange={onChange}  className="w-6 h-6 accent-blue  cursor-pointer" />
       <label htmlFor={ID} className="cursor-pointer">
+
         {label}
       </label>
     </div>

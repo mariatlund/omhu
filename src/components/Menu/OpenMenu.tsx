@@ -1,5 +1,5 @@
 import React from "react";
-import CloseIcon from "../assets/icons/close.svg";
+import CloseIcon from "../../assets/icons/close.svg";
 import Image from "next/image";
 
 function OpenMenu(props: { showMenu: boolean; setShowMenu: Function }) {

@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import Logo from "../assets/logo_500x500.svg";
-import Basket from "../assets/icons/basket.svg";
+import Logo from "../../assets/logo_500x500.svg";
+import Basket from "../../assets/icons/basket.svg";
 import Image from "next/image";
-import Burger from "../assets/icons/menu.svg";
+import Burger from "../../assets/icons/menu.svg";
 import Link from "next/link";
 import { useState } from "react";
 import OpenMenu from "./OpenMenu";
