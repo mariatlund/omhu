@@ -58,6 +58,17 @@ const countriesArray = [
 export default function Home() {
   const [selectedColour, setSelectedColour] = useState<string | undefined>();
   const [selectedCountry, setSelectedCountry] = useState<string | undefined>();
+  const [selectedFilter, setSelectedFilter] = useState<string[]>([]);
+
+  const handleFilter = (value: string, isChecked: boolean) => {
+    if (isChecked) {
+      setSelectedFilter((prevValues) => [...prevValues, value]);
+    } else {
+      setSelectedFilter((prevValues) => prevValues.filter((v) => v !== value));
+    }
+  };
+
+  //when we have the data we can write the filtering function here based on the selectedFilter array
 
   return (
     <main className="p-10  bg-grey-50 static">
@@ -106,7 +117,7 @@ export default function Home() {
         </div>
       </div>
       <ProductCard productName={"Teddy"} price={1200} productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"} newlyAdded={true} colors={hexCodesArray} />
-      <FilterMenu />
+      <FilterMenu handleFilter={handleFilter} />
     </main>
   );
 }
