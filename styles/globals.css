@@ -4,6 +4,10 @@
 
 @import url("https://use.typekit.net/nyh1izf.css");
 
+* {
+  @apply m-0;
+}
+
 /* TYPOGRAPHY */
 
 @layer base {
@@ -37,5 +41,5 @@
 }
 
 a {
-  @apply text-link underline underline-offset-2 hover:text-orange;
+  @apply text-link underline underline-offset-2 hover:text-blue-50;
 }
