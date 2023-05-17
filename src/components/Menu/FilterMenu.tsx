@@ -5,14 +5,15 @@ import FilterSettings from "./FilterSettings";
 
 export interface FilterMenuProps {
   handleFilter: (value: string, isChecked: boolean) => void;
+  handlePriceChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-function FilterMenu({ handleFilter }: FilterMenuProps) {
+function FilterMenu({ handleFilter, handlePriceChange }: FilterMenuProps) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   return (
     <div className="relative">
       <Button intent="secondary" kind="base" size="large" label="Filter" icon="filter" callback={() => setShowMenu(!showMenu)} />
-      {showMenu && <FilterSettings onChange={handleFilter} />}
+      {showMenu && <FilterSettings onChangeCategory={handleFilter} onChangePrice={handlePriceChange} />}
     </div>
   );
 }
