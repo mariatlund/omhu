@@ -8,6 +8,8 @@ import Radio from "@/components/InputFields/Radio/Radio";
 import Select from "@/components/InputFields/Select/Select";
 import TextInput from "@/components/InputFields/TextInput/TextInput";
 import { useState } from "react";
+import ProductCard from "@/components/Cards/ProductCard";
+import FilterMenu from "@/components/Menu/FilterMenu";
 
 const coloursArray = [
   {
@@ -31,6 +33,7 @@ const coloursArray = [
     hexCode: "#60342C",
   },
 ];
+const hexCodesArray = ["#000000", "#dddddd", "#ff0000", "#00ff00", "#0000ff", "#0000ff", "#00ff00", "#0000ff", "#0000ff", "#dddddd", "#ff0000", "#00ff00", "#0000ff", "#0000ff", "#00ff00"];
 
 const countriesArray = [
   {
@@ -51,9 +54,69 @@ const countriesArray = [
   },
 ];
 
+//create a type for filteroptions
+
+type FilterOptions = {
+  category: string[];
+  price: {
+    min: number;
+    max: number;
+  };
+};
+
 export default function Home() {
   const [selectedColour, setSelectedColour] = useState<string | undefined>();
   const [selectedCountry, setSelectedCountry] = useState<string | undefined>();
+  const [selectedFilter, setSelectedFilter] = useState<FilterOptions>({
+    category: [],
+    price: {
+      min: 0,
+      max: 0,
+    },
+  });
+
+  const handleFilter = (value: string, isChecked: boolean) => {
+    if (isChecked) {
+      setSelectedFilter((prevValues) => {
+        return {
+          ...prevValues,
+          category: [...prevValues.category, value],
+        };
+      });
+    } else {
+      setSelectedFilter((prevValues) => {
+        return {
+          ...prevValues,
+          category: prevValues.category.filter((v) => v !== value),
+        };
+      });
+    }
+  };
+
+  const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedFilter((prevValues) => {
+      let newPrice = { ...prevValues.price };
+      if (e.target.name === "min_price") {
+        newPrice = {
+          ...newPrice,
+          min: parseInt(e.target.value),
+        };
+        console.log("min", e.target.value);
+      } else {
+        newPrice = {
+          ...newPrice,
+          max: parseInt(e.target.value),
+        };
+        console.log("max", e.target.value);
+      }
+      return {
+        ...prevValues,
+        price: newPrice,
+      };
+    });
+  };
+
+  //when we have the data we can write the filtering function here based on the selectedFilter array
 
   return (
     <main className="p-10  bg-grey-50 static">
@@ -87,7 +150,7 @@ export default function Home() {
       </div>
 
       <div className="mt-10 flex gap-5">
-        <TextInput type="text" label="Label" placeholder="Placeholder" fieldName="text" />
+        <TextInput type="text" label="Label" placeholder="Placeholder" fieldName="text" boxSize={20} />
         <div className="space-y-5">
           <Select options={countriesArray} selectedOptionValue={selectedCountry} onChange={setSelectedCountry} placeholder="Select country" />
           <ColourSelect options={coloursArray} selectedOptionValue={selectedColour} onChange={setSelectedColour} defaultOption={coloursArray[0]} containerClass="w-60" />
@@ -101,6 +164,8 @@ export default function Home() {
           <Radio label="So am I, pick me" value="Option2" fieldName="radio" />
         </div>
       </div>
+      <ProductCard productName={"Teddy"} price={1200} productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"} newlyAdded={true} colors={hexCodesArray} />
+      <FilterMenu handleFilter={handleFilter} handlePriceChange={handlePriceChange} />
     </main>
   );
 }

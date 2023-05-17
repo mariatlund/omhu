@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import clsx from "clsx";
+import { parentPort } from "worker_threads";
 
 interface CommonProps {
   intent: "image" | "link";
@@ -39,11 +40,13 @@ function TrendingNowCard({ size = "large", src, label, ...props }: TrendingNowPr
       </a>
     );
   }
-  return (
-    <div className={(clsx(size === "large" ? large : small), "relative")}>
-      <Image src={src} alt={label} width={size === "large" ? widthL : widthS} height={size === "large" ? heightL : heightS} className="rounded-3xl object-cover" />
-    </div>
-  );
+  if (props.intent === "image") {
+    return (
+      <div className={(clsx(size === "large" ? large : small), "relative")}>
+        <Image src={src} alt={label} width={size === "large" ? widthL : widthS} height={size === "large" ? heightL : heightS} className="rounded-3xl object-cover" />
+      </div>
+    );
+  }
 }
 
 export default TrendingNowCard;

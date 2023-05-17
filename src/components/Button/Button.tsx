@@ -53,7 +53,7 @@ interface CommonProps {
   icon?: "arrow" | "filter" | "sort";
   label: string;
   className?: string;
-  callback?: () => void;
+  callback?: () => void | undefined;
 }
 
 interface AnchorProps extends CommonProps {
@@ -65,8 +65,11 @@ interface AnchorProps extends CommonProps {
 interface FormButtonProps extends CommonProps {
   kind: "submit";
 }
+interface BasicButtonProps extends CommonProps {
+  kind: "base";
+}
 
-type ButtonProps = AnchorProps | FormButtonProps;
+type ButtonProps = AnchorProps | FormButtonProps | BasicButtonProps;
 
 function Button({ intent = "primary", size = "large", icon, label, className, callback, ...props }: ButtonProps) {
   const iconInner = (
@@ -88,6 +91,7 @@ function Button({ intent = "primary", size = "large", icon, label, className, ca
 
   // this button is for forms (does it need anything else other than type="submit"?)
   if (props.kind === "submit") {
+    const { kind, ...rest } = props;
     return (
       <button type="submit" className={clsx(basic, intent === "primary" ? primary : intent === "secondary" ? secondary : alternative, size === "large" ? large : small, icon != undefined ? hasIcon : noIcon)}>
         {icon ? iconInner : label}
@@ -96,6 +100,14 @@ function Button({ intent = "primary", size = "large", icon, label, className, ca
   }
 
   // this button should be able to receive an onClick function
+  if (props.kind === "base") {
+    const { kind, ...rest } = props;
+    return (
+      <button onClick={callback} className={clsx(basic, intent === "primary" ? primary : intent === "secondary" ? secondary : alternative, size === "large" ? large : small, icon != undefined ? hasIcon : noIcon)}>
+        {icon ? iconInner : label}
+      </button>
+    );
+  }
   return (
     <button onClick={callback} className={clsx(basic, intent === "primary" ? primary : intent === "secondary" ? secondary : alternative, size === "large" ? large : small, icon != undefined ? hasIcon : noIcon)}>
       {icon ? iconInner : label}
