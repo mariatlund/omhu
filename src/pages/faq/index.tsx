@@ -7,8 +7,10 @@ function faq() {
   return (
     <>
       <Layout>
-        <h1>FAQ</h1>
-        <Faq />
+        <div className="container mt-5 mb-14 md:mt-14 md:mb-20">
+          <h1 className="style-h1 mb-10">FAQ</h1>
+          <Faq />
+        </div>
       </Layout>
     </>
   );
