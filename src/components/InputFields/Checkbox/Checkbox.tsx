@@ -4,9 +4,10 @@ interface CheckboxProps {
   label: string;
   value: string;
   fieldName: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-function Checkbox({ label, value, fieldName }: CheckboxProps) {
+function Checkbox({ label, value, fieldName, onChange }: CheckboxProps) {
   const ID = useId();
   return (
     <div className="flex gap-x-2 items-center style-body text-blue hover:text-link ">

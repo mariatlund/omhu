@@ -9,7 +9,7 @@ import { useState } from "react";
 import OpenMenu from "./OpenMenu";
 
 function Navigation() {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
   const listItemStyle = "border-l-2 border-t-2 border-b-2  border-blue py-2 px-8";
   return (
     <nav className="nav_wrapper flex flex-row items-center justify-between px-5 sm:px-10 py-3 sm:py-5 text-blue bg-white">
