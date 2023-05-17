@@ -10,7 +10,7 @@ interface FilterSettingsProps {
 function FilterSettings({ onChangeCategory, onChangePrice }: FilterSettingsProps) {
   const checkboxValues = ["Seating", "Artwork", "Accessories"];
   return (
-    <div className="flex flex-row gap-10  bg-white p-5 w-96 h-auto border-2 border-blue absolute top-[52.5px]">
+    <div className="flex flex-col sm:flex-row gap-10  bg-white p-5 w-auto h-auto border-2 border-blue absolute top-[52.5px]">
       <div className="flex flex-col gap-5">
         <p className="font-semibold uppercase style-body">Category</p>
         {checkboxValues.map((value) => (
@@ -20,12 +20,18 @@ function FilterSettings({ onChangeCategory, onChangePrice }: FilterSettingsProps
       <div className="flex flex-col gap-5">
         <div className="flex flex-col gap-2">
           <p className="font-semibold uppercase style-body ">Min price</p>
-          <TextInput type="text" placeholder="e.g. 1000" fieldName="min_price" boxSize={20} onChange={onChangePrice} />
+          <div className="flex flex-row items-center justify-center gap-1 sm:gap-2">
+            <TextInput type="text" placeholder="e.g. 1000" fieldName="min_price" boxSize={20} onChange={onChangePrice} />
+            <p> € EUR</p>
+          </div>
         </div>
 
         <div className="flex flex-col gap-2">
           <p className="font-semibold uppercase style-body ">Max price</p>
-          <TextInput type="text" placeholder="e.g. 5000" fieldName="max_price" boxSize={20} onChange={onChangePrice} />
+          <div className="flex flex-row items-center justify-center gap-1 sm:gap-2">
+            <TextInput type="text" placeholder="e.g. 5000" fieldName="max_price" boxSize={20} onChange={onChangePrice} />
+            <p> € EUR</p>
+          </div>
         </div>
       </div>
     </div>
