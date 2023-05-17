@@ -8,6 +8,11 @@
   @apply m-0;
 }
 
+.container {
+  @apply mx-auto w-full max-w-screen-2xl px-6;
+  @apply md:px-10 lg:px-16 xl:px-20;
+}
+
 /* TYPOGRAPHY */
 
 @layer base {
