@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/Button/Button";
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/Menu/Navigation";
 import Checkbox from "@/components/InputFields/Checkbox/Checkbox";
 import ColourSelect from "@/components/InputFields/ColourSelect/ColourSelect";
 import Radio from "@/components/InputFields/Radio/Radio";
@@ -10,6 +10,7 @@ import TextInput from "@/components/InputFields/TextInput/TextInput";
 import { useState } from "react";
 import ProductCard from "@/components/Cards/ProductCard";
 import FilterMenu from "@/components/Menu/FilterMenu";
+import SortMenu from "@/components/Menu/SortMenu";
 
 const coloursArray = [
   {
@@ -74,6 +75,7 @@ export default function Home() {
       max: 0,
     },
   });
+  const [selectedSort, setSelectedSort] = useState<string>("Most Popular");
 
   const handleFilter = (value: string, isChecked: boolean) => {
     if (isChecked) {
@@ -114,6 +116,10 @@ export default function Home() {
         price: newPrice,
       };
     });
+  };
+
+  const handleSort = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedSort(e.target.value);
   };
 
   //when we have the data we can write the filtering function here based on the selectedFilter array
@@ -165,7 +171,10 @@ export default function Home() {
         </div>
       </div>
       <ProductCard productName={"Teddy"} price={1200} productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"} newlyAdded={true} colors={hexCodesArray} />
-      <FilterMenu handleFilter={handleFilter} handlePriceChange={handlePriceChange} />
+      <div className="flex flex-row justify-between">
+        <FilterMenu handleFilter={handleFilter} handlePriceChange={handlePriceChange} />
+        <SortMenu handleSort={handleSort} />
+      </div>
     </main>
   );
 }
