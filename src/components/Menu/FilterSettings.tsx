@@ -10,7 +10,7 @@ interface FilterSettingsProps {
 function FilterSettings({ onChangeCategory, onChangePrice }: FilterSettingsProps) {
   const checkboxValues = ["Seating", "Artwork", "Accessories"];
   return (
-    <div className="flex flex-col sm:flex-row gap-10  bg-white p-5 w-auto  sm:w-[450px] h-auto border-2 border-blue absolute top-[52.5px]">
+    <div className="flex flex-col sm:flex-row gap-10  bg-white p-5 w-auto  sm:w-[450px] h-auto border-2 border-blue absolute top-[52.5px] z-50 text-blue">
       <div className="flex flex-col gap-5">
         <p className="font-semibold uppercase style-body">Category</p>
         {checkboxValues.map((value) => (
