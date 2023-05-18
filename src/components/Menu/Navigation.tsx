@@ -14,37 +14,39 @@ function Navigation() {
   return (
     <nav className="nav_wrapper flex flex-row items-center justify-between px-5 sm:px-10 py-3 sm:py-5 text-blue bg-white">
       <div className="flex flex-row items-center justify-aroun gap-5 ">
-        <Image className="logo w-14 h-auto" src={Logo} alt="Omhu logo" />
+        <Link href="/">
+          <Image className="logo w-14 h-auto" src={Logo} alt="Omhu logo" />
+        </Link>
         <ul className="nav_links hidden lg:inline-flex flex-row style-body">
           <li className={listItemStyle}>
             {" "}
-            <a href="/shop" className="uppercase">
+            <Link href="/shop" className="uppercase">
               Shop
-            </a>
+            </Link>
           </li>
           <li className={listItemStyle}>
             {" "}
-            <a href="/showroom" className="uppercase">
+            <Link href="/showroom" className="uppercase">
               Showroom
-            </a>
+            </Link>
           </li>
           <li className={listItemStyle}>
             {" "}
-            <a href="/about" className="uppercase">
+            <Link href="/about" className="uppercase">
               About us
-            </a>
+            </Link>
           </li>
           <li className={listItemStyle}>
             {" "}
-            <a href="/contact" className="uppercase">
+            <Link href="/contact" className="uppercase">
               Contact
-            </a>
+            </Link>
           </li>
           <li className="border-2 border-blue py-2 px-8">
             {" "}
-            <a href="/faq" className="uppercase">
+            <Link href="/faq" className="uppercase">
               FAQ
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
