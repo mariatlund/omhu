@@ -7,11 +7,11 @@ interface inputProps {
   placeholder?: string;
   errorMessage?: string;
   required?: boolean;
-  boxSize?: number;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  pattern?: string;
 }
 
-function TextInput({ type, label, fieldName, placeholder, required = true, errorMessage, boxSize, onChange }: inputProps) {
+function TextInput({ type, label, fieldName, placeholder, required = true, errorMessage, onChange, pattern }: inputProps) {
   const ID = useId();
   return (
     <div className="flex flex-col">
@@ -28,8 +28,8 @@ function TextInput({ type, label, fieldName, placeholder, required = true, error
           placeholder={placeholder}
           className="bg-white border border-blue-75 px-4 py-2 placeholder:text-blue-50 text-blue hover:border-blue focus:outline-blue style-body-small"
           required={required}
-          size={boxSize}
           onChange={onChange}
+          pattern={pattern}
         />
       ) : type === "email" ? (
         <input
@@ -39,8 +39,8 @@ function TextInput({ type, label, fieldName, placeholder, required = true, error
           placeholder={placeholder}
           className="bg-white border border-blue-75 px-4 py-2 placeholder:text-blue-50 text-blue hover:border-blue focus:outline-blue style-body-small"
           required={required}
-          size={boxSize}
           onChange={onChange}
+          pattern={pattern}
         />
       ) : (
         <input
@@ -50,8 +50,8 @@ function TextInput({ type, label, fieldName, placeholder, required = true, error
           placeholder={placeholder}
           className="bg-white border border-blue-75 px-4 py-2 placeholder:text-blue-50 text-blue hover:border-blue focus:outline-blue style-body-small"
           required={required}
-          size={boxSize}
           onChange={onChange}
+          pattern={pattern}
         />
       )}
     </div>

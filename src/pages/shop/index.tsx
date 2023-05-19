@@ -10,7 +10,7 @@ const products = getProducts();
 console.log("products", products);
 
 interface shopProps {
-  handleFilter: (value: string, isChecked: boolean) => void;
+  handleFilter: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handlePriceChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSort: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
