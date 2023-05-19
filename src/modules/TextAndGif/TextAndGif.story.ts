@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
 import TextAndGif from "./TextAndGif";
-import { text } from "stream/consumers";
 
 type Story = StoryObj<typeof TextAndGif>;
 
