@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import ColourSelect from "../ColourSelect/ColourSelect";
+import ColourSelect from "./ColourSelect";
 
 type Story = StoryObj<typeof ColourSelect>;
 
 export default {
   component: ColourSelect,
-} satisfies Meta<typeof ColourSelect>;
+} as Meta<typeof ColourSelect>;
 
 //   render: function Wrapper(args) {
 //     const [selectedValue, setSelectedValue] = useState<string | undefined>();
