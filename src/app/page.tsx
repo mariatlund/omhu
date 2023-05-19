@@ -12,6 +12,7 @@ import { Layout } from "@/app/pageLayout";
 import ProductCard from "@/components/Cards/ProductCard";
 import FilterMenu from "@/components/Menu/FilterMenu";
 import SortMenu from "@/components/Menu/SortMenu";
+import QuantitySelector from "@/components/InputFields/QuantitySelector/QuantitySelector";
 
 const coloursArray = [
   {
@@ -77,26 +78,27 @@ export default function Home() {
     },
   });
   const [selectedSort, setSelectedSort] = useState<string>("Most Popular");
+  const [counter, setCounter] = useState<number>(0);
 
-  const handleFilter = (value: string, isChecked: boolean) => {
-    if (isChecked) {
-      setSelectedFilter((prevValues) => {
+  const handleFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log("run");
+    setSelectedFilter((prevValues) => {
+      if (e.target.checked) {
         return {
           ...prevValues,
-          category: [...prevValues.category, value],
+          category: [...prevValues.category, e.target.value],
         };
-      });
-    } else {
-      setSelectedFilter((prevValues) => {
+      } else {
         return {
           ...prevValues,
-          category: prevValues.category.filter((v) => v !== value),
+          category: prevValues.category.filter((v) => v !== e.target.value),
         };
-      });
-    }
+      }
+    });
   };
 
   const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log("run2");
     setSelectedFilter((prevValues) => {
       let newPrice = { ...prevValues.price };
       if (e.target.name === "min_price") {
@@ -121,6 +123,13 @@ export default function Home() {
 
   const handleSort = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedSort(e.target.value);
+  };
+
+  const handleQuantity = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseInt(e.target.value);
+    if (!isNaN(value)) {
+      setCounter(value);
+    }
   };
 
   //when we have the data we can write the filtering function here based on the selectedFilter array
@@ -175,7 +184,11 @@ export default function Home() {
               <Radio label="I'm an option" value="Option1" defaultChecked={true} fieldName="radio" />
               <Radio label="So am I, pick me" value="Option2" fieldName="radio" />
             </div>
+            <div className="space-y-2">
+              <QuantitySelector onChangeQuantity={handleQuantity} counter={counter} setCounter={setCounter} />
+            </div>
           </div>
+
           <div className="container">
             <ProductCard productName={"Teddy"} price={1200} productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"} newlyAdded={true} colors={hexCodesArray} />
             <div className="flex flex-row justify-between">

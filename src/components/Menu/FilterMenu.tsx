@@ -4,8 +4,9 @@ import Button from "../Button/Button";
 import FilterSettings from "./FilterSettings";
 
 export interface FilterMenuProps {
-  handleFilter: (value: string, isChecked: boolean) => void;
   handlePriceChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+
+  handleFilter: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 function FilterMenu({ handleFilter, handlePriceChange }: FilterMenuProps) {

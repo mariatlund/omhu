@@ -21,7 +21,6 @@ export const Email: Story = {
     type: "email",
     label: "Email address",
     placeholder: "apple@johnbottom.com",
-    boxSize: 20,
   },
 };
 
@@ -30,6 +29,6 @@ export const Phone: Story = {
     type: "tel",
     label: "Phone number",
     placeholder: "+45 72853829",
-    boxSize: 50,
+    pattern: "[0-9]",
   },
 };
