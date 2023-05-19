@@ -44,3 +44,23 @@
     @apply text-base leading-normal font-body;
   }
 }
+
+/* image carousel */
+.carousel {
+  --swiper-theme-color: #1d00b2;
+  --swiper-navigation-size: 1.5rem;
+}
+
+.swiper-slide-thumb-active {
+  @apply border-b-4 border-blue pb-2;
+}
+
+.thumbnails .swiper-slide {
+  @apply cursor-pointer hover:opacity-75;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply p-5 rounded-full;
+  @apply hover:bg-blue hover:bg-opacity-75 hover:text-white;
+}
