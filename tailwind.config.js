@@ -13,6 +13,12 @@ module.exports = {
         50: "#8E80D9",
         25: "#DED8FF",
       },
+      silver: {
+        DEFAULT: "#BCBCBC",
+      },
+      gold: {
+        DEFAULT: "#DCC68C",
+      },
       grey: {
         DEFAULT: "#5F5F5D",
         75: "#919190",

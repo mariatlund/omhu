@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 
 interface QuantitySelectorProps {
   onChangeQuantity: (e: React.ChangeEvent<HTMLInputElement>) => void;

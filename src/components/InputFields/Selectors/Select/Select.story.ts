@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from "@storybook/react";
-import Select from "../Select/Select";
+import Select from "./Select";
 
 type Story = StoryObj<typeof Select>;
 
 export default {
   component: Select,
-} satisfies Meta<typeof Select>;
+} as Meta<typeof Select>;
 
 const optionsArray = [
   {

@@ -3,16 +3,17 @@
 import Button from "@/components/Button/Button";
 import Navigation from "@/components/Menu/Navigation";
 import Checkbox from "@/components/InputFields/Checkbox/Checkbox";
-import ColourSelect from "@/components/InputFields/ColourSelect/ColourSelect";
+import ColourSelect from "@/components/InputFields/Selectors/ColourSelect/ColourSelect";
 import Radio from "@/components/InputFields/Radio/Radio";
-import Select from "@/components/InputFields/Select/Select";
+import Select from "@/components/InputFields/Selectors/Select/Select";
 import TextInput from "@/components/InputFields/TextInput/TextInput";
 import { useState } from "react";
 import { Layout } from "@/app/pageLayout";
 import ProductCard from "@/components/Cards/ProductCard";
 import FilterMenu from "@/components/Menu/FilterMenu";
 import SortMenu from "@/components/Menu/SortMenu";
-import QuantitySelector from "@/components/InputFields/QuantitySelector/QuantitySelector";
+import QuantitySelector from "@/components/InputFields/Selectors/QuantitySelector";
+import MetalColorSelector from "@/components/InputFields/Selectors/MetalColorSelector";
 
 const coloursArray = [
   {
@@ -79,6 +80,7 @@ export default function Home() {
   });
   const [selectedSort, setSelectedSort] = useState<string>("Most Popular");
   const [counter, setCounter] = useState<number>(0);
+  const [selectedMetalColor, setSelectedMetalColor] = useState<string | undefined>();
 
   const handleFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log("run");
@@ -131,6 +133,9 @@ export default function Home() {
       setCounter(value);
     }
   };
+  const handleMetalColor = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedMetalColor(e.target.value);
+  };
 
   //when we have the data we can write the filtering function here based on the selectedFilter array
 
@@ -181,11 +186,14 @@ export default function Home() {
               <Checkbox label="This one as well" value="Indeed" fieldName="checkbox" />
             </div>
             <div className="space-y-2">
-              <Radio label="I'm an option" value="Option1" defaultChecked={true} fieldName="radio" />
-              <Radio label="So am I, pick me" value="Option2" fieldName="radio" />
+              <Radio kind="default" intent="default" label="I'm an option" value="Option1" defaultChecked={true} fieldName="radio" />
+              <Radio kind="default" intent="default" label="So am I, pick me" value="Option2" fieldName="radio" />
             </div>
             <div className="space-y-2">
               <QuantitySelector onChangeQuantity={handleQuantity} counter={counter} setCounter={setCounter} />
+            </div>
+            <div className="space-y-2">
+              <MetalColorSelector onChangeMetalColor={setSelectedMetalColor} selectedMetalColor={selectedMetalColor} />
             </div>
           </div>
 
