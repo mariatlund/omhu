@@ -1,16 +1,6 @@
 import React from "react";
 import { clsx } from "clsx";
 
-/*
-BUTTON VARIANTS
-
-Primary, secondary, alternative
-Icon, no icon
-Large, small
-Anchor link, form button, button with onClick?
-
-*/
-
 // STYLING
 const basic = "font-body font-medium uppercase border inline-block border-2 leading-6";
 // intent
@@ -58,7 +48,7 @@ interface CommonProps {
   size: "large" | "small";
   icon?: "arrow" | "filter" | "sort" | "close";
   label: string;
-  className?: string;
+  containerClass?: string;
   callback?: () => void | undefined;
 }
 
@@ -77,7 +67,7 @@ interface BasicButtonProps extends CommonProps {
 
 type ButtonProps = AnchorProps | FormButtonProps | BasicButtonProps;
 
-function Button({ intent = "primary", size = "large", icon, label, className, callback, ...props }: ButtonProps) {
+function Button({ intent = "primary", size = "large", icon, label, containerClass, callback, ...props }: ButtonProps) {
   const iconInner = (
     <span className="flex flex-row items-center gap-x-4">
       {label}
@@ -89,7 +79,7 @@ function Button({ intent = "primary", size = "large", icon, label, className, ca
   if (props.kind === "link") {
     const { href, kind, target, ...rest } = props;
     return (
-      <a href={href} target={target} className={clsx(basic, intent === "primary" ? primary : intent === "secondary" ? secondary : alternative, size === "large" ? large : small, icon != undefined ? hasIcon : noIcon)}>
+      <a href={href} target={target} className={clsx(basic, containerClass, intent === "primary" ? primary : intent === "secondary" ? secondary : alternative, size === "large" ? large : small, icon != undefined ? hasIcon : noIcon)}>
         {icon ? iconInner : label}
       </a>
     );
@@ -99,7 +89,7 @@ function Button({ intent = "primary", size = "large", icon, label, className, ca
   if (props.kind === "submit") {
     const { kind, ...rest } = props;
     return (
-      <button type="submit" className={clsx(basic, intent === "primary" ? primary : intent === "secondary" ? secondary : alternative, size === "large" ? large : small, icon != undefined ? hasIcon : noIcon)}>
+      <button type="submit" className={clsx(basic, containerClass, intent === "primary" ? primary : intent === "secondary" ? secondary : alternative, size === "large" ? large : small, icon != undefined ? hasIcon : noIcon)}>
         {icon ? iconInner : label}
       </button>
     );
@@ -109,13 +99,13 @@ function Button({ intent = "primary", size = "large", icon, label, className, ca
   if (props.kind === "base") {
     const { kind, ...rest } = props;
     return (
-      <button onClick={callback} className={clsx(basic, intent === "primary" ? primary : intent === "secondary" ? secondary : alternative, size === "large" ? large : small, icon != undefined ? hasIcon : noIcon)}>
+      <button onClick={callback} className={clsx(basic, containerClass, intent === "primary" ? primary : intent === "secondary" ? secondary : alternative, size === "large" ? large : small, icon != undefined ? hasIcon : noIcon)}>
         {icon ? iconInner : label}
       </button>
     );
   }
   return (
-    <button onClick={callback} className={clsx(basic, intent === "primary" ? primary : intent === "secondary" ? secondary : alternative, size === "large" ? large : small, icon != undefined ? hasIcon : noIcon)}>
+    <button onClick={callback} className={clsx(basic, containerClass, intent === "primary" ? primary : intent === "secondary" ? secondary : alternative, size === "large" ? large : small, icon != undefined ? hasIcon : noIcon)}>
       {icon ? iconInner : label}
     </button>
   );
