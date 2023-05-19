@@ -25,7 +25,7 @@ function Video({ title, videoSrc, videoThumbnail }: VideoProps) {
     videoRef.current?.play();
   }
   return (
-    <section className="text-blue">
+    <section className="text-blue container">
       {title ? (
         <div>
           <h2 className="style-h3 uppercase mb-5">{title}</h2>
