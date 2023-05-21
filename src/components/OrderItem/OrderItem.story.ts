@@ -10,8 +10,10 @@ export default {
 export const Default: Story = {
   args: {
     productName: "Teddy",
-    fabricColour: "Dusty Green",
+    fabricColour: "Blue",
+    fabricHex: "#6B6BEC",
     frameColour: "Chrome",
+    frameHex: "",
     amount: "1",
     price: "12.899,00",
   },
