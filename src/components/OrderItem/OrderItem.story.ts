@@ -13,7 +13,7 @@ export const Default: Story = {
     fabricColour: "Blue",
     fabricHex: "#6B6BEC",
     frameColour: "Chrome",
-    frameHex: "",
+    frameHex: "#919190",
     amount: "1",
     price: "12.899,00",
   },

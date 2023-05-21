@@ -18,12 +18,12 @@ function OrderItem({ productName, fabricColour, fabricHex, frameColour, frameHex
       <div className="flex justify-between items-center mt-2 sm:col-span-3">
         <div className="grid style-body-x-small text-blue-75">
           <div className="flex gap-1">
-            <span className="block w-4 h-4 bg-grey-50 rounded-full" style={{ backgroundColor: fabricHex }}></span>
+            <span className="block w-4 h-4 rounded-full flex-none" style={{ backgroundColor: fabricHex }}></span>
             <span>{fabricColour}</span>
           </div>
           {frameColour ? (
             <div className="flex gap-1">
-              <span className="block w-4 h-4 bg-grey-50 rounded-full" style={{ backgroundColor: frameHex }}></span>
+              <span className="block w-4 h-4 rounded-full flex-none" style={{ backgroundColor: frameHex }}></span>
               <span>{frameColour}</span>
             </div>
           ) : null}
