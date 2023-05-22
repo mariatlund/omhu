@@ -8,23 +8,23 @@ interface QuantitySelectorProps {
 
 function QuantitySelector({ onChangeQuantity, counter, setCounter }: QuantitySelectorProps) {
   return (
-    <div className="flex flex-row gap-2 h-auto">
+    <div className="flex flex-row gap-1 h-auto">
       <button
         onClick={() => {
           if (counter >= 1) {
             setCounter((counter) => counter - 1);
           }
         }}
-        className="py-1 px-2 border-blue border-2"
+        className="py-1 px-2 border-blue border"
       >
         -
       </button>
-      <input type="text" pattern="[0-9]" placeholder={"0"} onChange={onChangeQuantity} className="py-1 px-2 border-blue border-2 text-center" size={2} value={counter} />
+      <input type="text" pattern="[0-9]" placeholder={"0"} onChange={onChangeQuantity} className="py-1 px-2 border-blue border text-center" size={2} value={counter} />
       <button
         onClick={() => {
           setCounter((counter) => counter + 1);
         }}
-        className="py-1 px-2 border-blue border-2"
+        className="py-1 px-2 border-blue border"
       >
         +
       </button>

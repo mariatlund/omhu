@@ -13,7 +13,7 @@ import ProductCard from "@/components/Cards/ProductCard";
 import FilterMenu from "@/components/Menu/FilterMenu";
 import SortMenu from "@/components/Menu/SortMenu";
 import QuantitySelector from "@/components/InputFields/Selectors/QuantitySelector";
-import MetalColorSelector from "@/components/InputFields/Selectors/MetalColorSelector";
+import MetalColorSelector from "../components/InputFields/Selectors/MetalColorSelector";
 
 const coloursArray = [
   {
@@ -37,8 +37,48 @@ const coloursArray = [
     hexCode: "#60342C",
   },
 ];
-const hexCodesArray = ["#000000", "#dddddd", "#ff0000", "#00ff00", "#0000ff", "#0000ff", "#00ff00", "#0000ff", "#0000ff", "#dddddd", "#ff0000", "#00ff00", "#0000ff", "#0000ff", "#00ff00"];
-
+const colorOptions = {
+  brown: {
+    label: "Brown",
+    value: "765",
+    hexCode: "#60342C",
+    images: ["https://amorea.dk/exam/finalExam/ProductPictures/corner/brown.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/brown_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/brown_full.jpg"],
+  },
+  cream_white: {
+    label: "Cream White",
+    value: "763",
+    hexCode: "#EEE6E4",
+    images: [
+      "https://amorea.dk/exam/finalExam/ProductPictures/corner/cream_white.jpg",
+      "https://amorea.dk/exam/finalExam/ProductPictures/corner/cream_white_closeup.jpg",
+      "https://amorea.dk/exam/finalExam/ProductPictures/corner/cream_white_full.jpg",
+    ],
+  },
+  turquoise: {
+    label: "Turquoise",
+    value: "5771",
+    hexCode: "#2C6B7E",
+    images: ["https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise_full.jpg"],
+  },
+  green: {
+    label: "Green",
+    value: "768",
+    hexCode: "#3D5648",
+    images: ["https://amorea.dk/exam/finalExam/ProductPictures/corner/green.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/green_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/green_full.jpg"],
+  },
+  mustard_yellow: {
+    label: "Mustard yellow",
+    value: "5774",
+    hexCode: "#C99136",
+    images: ["https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard_full.jpg"],
+  },
+  dark_orange: {
+    label: "Dark orange",
+    value: "769",
+    hexCode: "#914525",
+    images: ["https://amorea.dk/exam/finalExam/ProductPictures/corner/orange.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/orange_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/orange_full.jpg"],
+  },
+};
 const countriesArray = [
   {
     value: "DK",
@@ -186,8 +226,8 @@ export default function Home() {
               <Checkbox label="This one as well" value="Indeed" fieldName="checkbox" />
             </div>
             <div className="space-y-2">
-              <Radio kind="default" intent="default" label="I'm an option" value="Option1" defaultChecked={true} fieldName="radio" />
-              <Radio kind="default" intent="default" label="So am I, pick me" value="Option2" fieldName="radio" />
+              <Radio label="I'm an option" value="Option1" defaultChecked={true} fieldName="radio" />
+              <Radio label="So am I, pick me" value="Option2" fieldName="radio" />
             </div>
             <div className="space-y-2">
               <QuantitySelector onChangeQuantity={handleQuantity} counter={counter} setCounter={setCounter} />
@@ -198,7 +238,7 @@ export default function Home() {
           </div>
 
           <div className="container">
-            <ProductCard productName={"Teddy"} price={1200} productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"} newlyAdded={true} colors={hexCodesArray} />
+            <ProductCard productName={"Teddy"} price={1200} productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"} newlyAdded={true} colors={colorOptions} />
             <div className="flex flex-row justify-between">
               <FilterMenu handleFilter={handleFilter} handlePriceChange={handlePriceChange} />
               <SortMenu handleSort={handleSort} />

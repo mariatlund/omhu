@@ -50,6 +50,7 @@ interface CommonProps {
   label: string;
   containerClass?: string;
   callback?: () => void | undefined;
+  className?: string;
 }
 
 interface AnchorProps extends CommonProps {
