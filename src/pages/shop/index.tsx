@@ -1,21 +1,29 @@
 import Head from "next/head";
 import React from "react";
-import { getProducts } from "../../../config.js";
+import { headers, url } from "../../../config.js";
 import { Layout } from "@/app/pageLayout";
 import ProductCard from "../../components/Cards/ProductCard";
 import FilterMenu from "../../components/Menu/FilterMenu";
 import SortMenu from "../../components/Menu/SortMenu";
 
-const products = getProducts();
-console.log("products", products);
-
 interface shopProps {
   handleFilter: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handlePriceChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSort: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  products?: any;
 }
 
-function shop({ handleFilter, handlePriceChange, handleSort }: shopProps) {
+function shop({ handleFilter, handlePriceChange, handleSort, products }: shopProps) {
+  //sorting products by newly added first
+  const sortedProducts = products.sort((a: any, b: any) => {
+    if (a.product_newly_added && !b.product_newly_added) {
+      return -1; // a comes first
+    } else if (!a.product_newly_added && b.product_newly_added) {
+      return 1; // b comes first
+    } else {
+      return 0; // no change in order
+    }
+  });
   return (
     <>
       <Layout>
@@ -27,34 +35,22 @@ function shop({ handleFilter, handlePriceChange, handleSort }: shopProps) {
             <SortMenu handleSort={handleSort} />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  justify-items-center align-middle gap-11 gap-y-16 lg:gap-16 ">
-            <ProductCard
-              productName={"Teddy"}
-              price={2335}
-              productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"}
-              newlyAdded={true}
-              colors={["#000000", "#dddddd", "#ff0000", "#00ff00", "#0000ff", "#0000ff", "#00ff00"]}
-            />
-            <ProductCard
-              productName={"Teddy"}
-              price={2335}
-              productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"}
-              newlyAdded={true}
-              colors={["#000000", "#dddddd", "#ff0000", "#00ff00", "#0000ff", "#0000ff", "#00ff00"]}
-            />
-            <ProductCard
-              productName={"Teddy"}
-              price={2335}
-              productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"}
-              newlyAdded={true}
-              colors={["#000000", "#dddddd", "#ff0000", "#00ff00", "#0000ff", "#0000ff", "#00ff00"]}
-            />
-            <ProductCard
-              productName={"Teddy"}
-              price={2335}
-              productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"}
-              newlyAdded={true}
-              colors={["#000000", "#dddddd", "#ff0000", "#00ff00", "#0000ff", "#0000ff", "#00ff00"]}
-            />
+            {sortedProducts.map((product: any) => {
+              const colorKeys = Object.keys(product.product_colors);
+              const randomColorKey = colorKeys[Math.floor(Math.random() * colorKeys.length)];
+              const randomColor = product.product_colors[randomColorKey];
+              let imageIndex = 0;
+              if (product.product_name === "Pillows") {
+                imageIndex = 0;
+              } else if (product.product_name === "Ottoman") {
+                imageIndex = 1;
+              } else if (product.product_name === "Corner Sofa") {
+                imageIndex = 2;
+              } else {
+                imageIndex = 3;
+              }
+              return <ProductCard key={product.product_id} productName={product.product_name} price={product.product_price} productImage={randomColor.images[imageIndex]} newlyAdded={product.product_newly_added} colors={product.product_colors} />;
+            })}
           </div>
         </div>
       </Layout>
@@ -64,16 +60,16 @@ function shop({ handleFilter, handlePriceChange, handleSort }: shopProps) {
 
 export default shop;
 
-// export async function getServerSideProps() {
-//   const options = {
-//     method: "GET",
-//     headers: headers,
-//   };
-//   const res = await fetch(url, options);
-//   const products = await res.json();
-//   return {
-//     props: { products },
-//   };
-// }
+export async function getServerSideProps() {
+  const options = {
+    method: "GET",
+    headers: headers,
+  };
+  const res = await fetch(url, options);
+  const products = await res.json();
+  return {
+    props: { products: products },
+  };
+}
 
 // This should be the shop page with the product list

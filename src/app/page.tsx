@@ -46,7 +46,7 @@ const colorOptions = {
   },
   cream_white: {
     label: "Cream White",
-    value: "765",
+    value: "763",
     hexCode: "#EEE6E4",
     images: [
       "https://amorea.dk/exam/finalExam/ProductPictures/corner/cream_white.jpg",
@@ -62,7 +62,7 @@ const colorOptions = {
   },
   green: {
     label: "Green",
-    value: "765",
+    value: "768",
     hexCode: "#3D5648",
     images: ["https://amorea.dk/exam/finalExam/ProductPictures/corner/green.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/green_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/green_full.jpg"],
   },
@@ -74,7 +74,7 @@ const colorOptions = {
   },
   dark_orange: {
     label: "Dark orange",
-    value: "765",
+    value: "769",
     hexCode: "#914525",
     images: ["https://amorea.dk/exam/finalExam/ProductPictures/corner/orange.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/orange_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/orange_full.jpg"],
   },

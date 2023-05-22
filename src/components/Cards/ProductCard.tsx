@@ -13,6 +13,10 @@ interface ProductCardProps {
 export type ColorOptions = {
   brown: singleColorOption;
   cream_white: singleColorOption;
+  turquoise: singleColorOption;
+  green: singleColorOption;
+  mustard_yellow: singleColorOption;
+  dark_orange: singleColorOption;
 };
 
 export type singleColorOption = {
@@ -24,7 +28,7 @@ export type singleColorOption = {
 
 function ProductCard({ productName, price, productImage, newlyAdded, colors }: ProductCardProps) {
   return (
-    <div className="w-[280px] sm:w-[350px] flex flex-col gap-5 relative">
+    <div className="w-[280px] sm:w-[350px] h-auto flex flex-col gap-5 relative">
       {newlyAdded && <div className="h-auto w-auto px-[10px] py-[3px] absolute top-5 right-5  bg-blue text-white text-center uppercase">new !</div>}
       <Link href={`/products/${productName}`}>
         <Image src={productImage} alt={productName} width={350} height={300} />
