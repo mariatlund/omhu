@@ -9,7 +9,9 @@ export function Layout({ children }: Props) {
   return (
     <>
       <Navigation />
-      <main id="main">{children}</main>
+      <main id="main" className="text-blue">
+        {children}
+      </main>
       <Footer />
     </>
   );
