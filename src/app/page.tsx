@@ -16,6 +16,7 @@ import QuantitySelector from "@/components/InputFields/Selectors/QuantitySelecto
 import MetalColorSelector from "../components/InputFields/Selectors/MetalColorSelector";
 import Reviews from "@/modules/Reviews/Reviews";
 import ContactBox from "@/modules/ContactBox/ContactBox";
+import HeroSection from "@/modules/HeroSection/HeroSection";
 
 const coloursArray = [
   {
@@ -184,6 +185,7 @@ export default function Home() {
   return (
     <>
       <Layout>
+        <HeroSection />
         <div className="mt-5 mb-14 md:mt-14 md:mb-20">
           <div className="container">
             <h1 className="style-h1">H1 headline</h1>
@@ -246,7 +248,7 @@ export default function Home() {
               <SortMenu handleSort={handleSort} />
             </div>
             <ContactBox />
-            <Reviews />
+            <Reviews title="" />
           </div>
         </div>
       </Layout>

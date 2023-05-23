@@ -59,6 +59,14 @@ module.exports = {
       bold: 700,
       extrabold: 800,
     },
+
+    backgroundSize: {
+      auto: "auto",
+      cover: "cover",
+      contain: "contain",
+      "90%": "90%",
+      16: "4rem",
+    },
   },
   plugins: [require("@headlessui/tailwindcss")],
 };
