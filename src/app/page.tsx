@@ -15,6 +15,7 @@ import SortMenu from "@/components/Menu/SortMenu";
 import QuantitySelector from "@/components/InputFields/Selectors/QuantitySelector";
 import MetalColorSelector from "../components/InputFields/Selectors/MetalColorSelector";
 import Reviews from "@/modules/Reviews/Reviews";
+import ContactBox from "@/modules/ContactBox/ContactBox";
 
 const coloursArray = [
   {
@@ -246,6 +247,7 @@ export default function Home() {
             </div>
           </div>
           <Reviews />
+          <ContactBox />
         </div>
       </Layout>
     </>
