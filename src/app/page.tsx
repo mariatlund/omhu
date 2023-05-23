@@ -14,6 +14,7 @@ import FilterMenu from "@/components/Menu/FilterMenu";
 import SortMenu from "@/components/Menu/SortMenu";
 import QuantitySelector from "@/components/InputFields/Selectors/QuantitySelector";
 import MetalColorSelector from "../components/InputFields/Selectors/MetalColorSelector";
+import Reviews from "@/modules/Reviews/Reviews";
 
 const coloursArray = [
   {
@@ -244,6 +245,7 @@ export default function Home() {
               <SortMenu handleSort={handleSort} />
             </div>
           </div>
+          <Reviews />
         </div>
       </Layout>
     </>
