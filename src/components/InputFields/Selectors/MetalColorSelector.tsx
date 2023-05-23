@@ -1,10 +1,10 @@
 import React from "react";
-import Radio from "../Radio/Radio";
 import ColourSelect from "./ColourSelect/ColourSelect";
 
 interface MetalColorSelectorProps {
   onChangeMetalColor: (value: string) => void;
   selectedMetalColor: string | undefined;
+  containerClass?: string;
 }
 
 const metalColorOptions = [
@@ -20,14 +20,14 @@ const metalColorOptions = [
   },
 ];
 
-function MetalColorSelector({ onChangeMetalColor, selectedMetalColor }: MetalColorSelectorProps) {
+function MetalColorSelector({ onChangeMetalColor, selectedMetalColor, containerClass }: MetalColorSelectorProps) {
   return (
     <div className="flex flex-col gap-2">
       <p className="uppercase style-h4">
         Metal colour: <span className="capitalize style-body font-normal"> {selectedMetalColor === "1762" ? "Gold" : "Silver"}</span>
       </p>
 
-      <ColourSelect options={metalColorOptions} onChange={onChangeMetalColor} defaultOption={metalColorOptions[0]} selectedOptionValue={selectedMetalColor} />
+      <ColourSelect options={metalColorOptions} onChange={onChangeMetalColor} defaultOption={metalColorOptions[1]} selectedOptionValue={selectedMetalColor} containerClass={containerClass} />
     </div>
   );
 }
