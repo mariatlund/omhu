@@ -9,6 +9,7 @@ import Button from "@/components/Button/Button";
 import ImageCarousel from "@/components/ImageCarousel/ImageCarousel";
 import TextAndGif from "@/modules/TextAndGif/TextAndGif";
 import Video from "@/modules/Video/Video";
+import Reviews from "@/modules/Reviews/Reviews";
 
 const deliveryQuestions = [
   {
@@ -154,6 +155,8 @@ function Product() {
                 image={gif}
               />
               <Video title="Easy to place, easy to style" videoSrc="https://vimeo.com/783453158" />
+
+              <Reviews title="Hear what other people think about this product" />
             </div>
           </div>
         </div>

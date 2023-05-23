@@ -239,15 +239,15 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="container">
+          <div className="container flex flex-col gap-20">
             <ProductCard productName={"Teddy"} price={1200} productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"} newlyAdded={true} colors={colorOptions} />
             <div className="flex flex-row justify-between">
               <FilterMenu handleFilter={handleFilter} handlePriceChange={handlePriceChange} />
               <SortMenu handleSort={handleSort} />
             </div>
+            <ContactBox />
+            <Reviews />
           </div>
-          <Reviews />
-          <ContactBox />
         </div>
       </Layout>
     </>
