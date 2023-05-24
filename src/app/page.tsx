@@ -22,7 +22,6 @@ function Home() {
     <>
       <HeroSection />
       <div className="space-y-10 mt-10 md:space-y-20 md:mt-20">
-        <TrendingNow />
         <FeaturedSection
           bgColour="blue"
           image={meetOmhuImg}
