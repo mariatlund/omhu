@@ -2,14 +2,14 @@ import Image from "next/image";
 import React, { useState } from "react";
 import QuantitySelector from "../InputFields/Selectors/QuantitySelector";
 
-type BasketImage = {
+export type BasketImage = {
   src: string;
   alt?: string;
   width: number;
   height: number;
 };
 
-interface BasketItemProps {
+export interface BasketItemProps {
   image: BasketImage;
   productName: string;
   fabricColour: string;
@@ -17,7 +17,7 @@ interface BasketItemProps {
   frameColour?: string;
   frameHex?: string;
   amount: number;
-  price: number;
+  price: string;
 }
 
 function BasketItem({ image, productName, fabricColour, fabricHex, frameColour, frameHex, amount, price }: BasketItemProps) {
@@ -31,7 +31,7 @@ function BasketItem({ image, productName, fabricColour, fabricHex, frameColour, 
   };
 
   return (
-    <div className="grid grid-rows-2 grid-cols-3 items-center gap-2 style-body-small text-blue p-2 md:p-5 md:border-2  md:grid-rows-1 md:grid-cols-12 md:gap-x-5">
+    <div className="grid grid-rows-2 grid-cols-3 items-center gap-2 style-body-small text-blue p-2 md:p-5 md:border-2 md:border-t-0 md:grid-rows-1 md:grid-cols-12 md:gap-x-5">
       <Image src={image.src} alt={image.alt ? image.alt : ""} height={image.height} width={image.width} className="aspect-square flex-none w-20 h-20 order-1 md:w-full md:h-full md:col-span-2 object-cover" />
 
       <div className="grid order-2 md:col-span-3">
