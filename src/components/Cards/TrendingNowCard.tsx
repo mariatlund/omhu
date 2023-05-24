@@ -1,12 +1,12 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import clsx from "clsx";
 import { parentPort } from "worker_threads";
 
 interface CommonProps {
   intent: "image" | "link";
   size: "small" | "large";
-  src: string;
+  src: string | StaticImageData;
   label: string;
 }
 interface AnchorProps extends CommonProps {
@@ -39,8 +39,7 @@ function TrendingNowCard({ size = "large", src, label, ...props }: TrendingNowPr
         </div>
       </a>
     );
-  }
-  if (props.intent === "image") {
+  } else {
     return (
       <div className={(clsx(size === "large" ? large : small), "relative")}>
         <Image src={src} alt={label} width={size === "large" ? widthL : widthS} height={size === "large" ? heightL : heightS} className="rounded-3xl object-cover" />
