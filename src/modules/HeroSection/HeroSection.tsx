@@ -3,8 +3,8 @@ import Button from "../../components/Button/Button";
 import React from "react";
 
 const heroImage = "https://amorea.dk/exam/finalExam/teddy_hero.jpg";
+
 function HeroSection() {
-  //
   return (
     <section className="relative overflow-hidden">
       <div className="absolute z-40 w-full flex flex-col bottom-10 px-6 md:flex-row md:justify-between xl:px-[5rem]">

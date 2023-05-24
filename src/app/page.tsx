@@ -3,6 +3,7 @@ import HeroSection from "@/modules/HeroSection/HeroSection";
 import IGfeed from "@/modules/IGfeed/IGfeed";
 import TrendingNow from "@/modules/TrendingNow/TrendingNow";
 import React from "react";
+import showroomPic from "../assets/showroom.png";
 
 const meetOmhuImg: ImageProps = {
   imageSrc: "https://images.unsplash.com/photo-1520722359162-8ead33ae9ba4",
@@ -11,7 +12,7 @@ const meetOmhuImg: ImageProps = {
 };
 
 const showroomImg: ImageProps = {
-  imageSrc: "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c",
+  imageSrc: showroomPic,
   imageWidth: 865,
   imageHeight: 620,
 };

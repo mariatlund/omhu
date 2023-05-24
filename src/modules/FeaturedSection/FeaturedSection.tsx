@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import Button from "../../components/Button/Button";
 
@@ -74,7 +74,7 @@ const largeMSVG = (
 );
 
 export interface ImageProps {
-  imageSrc: string;
+  imageSrc: string | StaticImageData;
   imageWidth: number;
   imageHeight: number;
 }
