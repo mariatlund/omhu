@@ -111,7 +111,7 @@ function FeaturedSection({ bgColour, image, title, description, buttonLabel, but
         </div>
       )}
 
-      <div className="container relative grid py-10 md:grid-cols-2 md:gap-x-10 md:items-center">
+      <div className="container relative grid py-10 md:grid-cols-2 md:gap-x-10 md:items-center md:py-16">
         <Image src={image.imageSrc} alt="" width={image.imageWidth} height={image.imageHeight} className="aspect-square object-cover" />
         <div className="mt-5">
           <h2 className="style-h3 uppercase md:style-h2">{title}</h2>
