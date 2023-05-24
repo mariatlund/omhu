@@ -7,23 +7,34 @@ import Button from "../../components/Button/Button";
 
 function ContactBox() {
   return (
-    <div className="text-blue">
-      <div className="flex flex-col gap-10 lg:flex-row lg:border-2 lg:border-blue  lg:p-14 lg:container">
-        <div className="contact_info flex flex-col gap-10 md:max-w-[500px]">
-          <h2 className="style-h4 uppercase">Get in touch with us here</h2>
+    <div className="text-blue ">
+      <div className="flex flex-col gap-10 lg:flex-row md:border-2 md:border-blue  md:p-14 container">
+        <div className="contact_info flex flex-col gap-10 md:max-w-[500px] style-body-small">
+          <h2 className="style-h3 uppercase">Get in touch with us here</h2>
 
           <div className="flex flex-row gap-5 items-center">
-            <Image src={Phone} alt="Phone icon" width={35} />
-            <p className="style-body">+45 26 11 89 56 (between 9am-16pm everyday)</p>
+            <Image src={Phone} alt="Phone icon" width={30} />
+            <div>
+              <a href="tel:+4526118956" className="hover:text-blue-50">
+                +45 26 11 89 56
+              </a>
+              <br />
+              <span> (between 9am-16pm everyday)</span>
+            </div>
           </div>
           <div className="flex flex-row gap-5 items-center">
             <Image src={Mail} alt="Phone icon" width={30} />
-            <p className="style-body">hello@omhucph.com</p>
+            <a href="mailto:hello@omhucph.com" className=" hover:text-blue-50">
+              hello@omhucph.com
+            </a>
           </div>
 
           <div className="flex flex-row gap-5 items-center">
-            <Image src={Location} alt="Phone icon" width={35} />
-            <p className="style-body">Kram & Klenodier (OMHU CPH) Kongevejen 340 (basement level, entrace from the back of the building), 2840 Holte</p>
+            <Image src={Location} alt="Phone icon" width={30} />
+            <address className="not-italic mb-2">
+              Kram & Klenodier APS (OMHU CPH) <br /> Kongevejen 340, 2840 Holte <br />
+              (The entrance is at the basement level at the back of the building)
+            </address>
           </div>
           <div>
             <Button intent="primary" kind="link" href="/showroom" size="small" label="Book a time slot" />

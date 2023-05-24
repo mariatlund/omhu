@@ -13,7 +13,7 @@ function ShowroomBox() {
             <address className="not-italic mb-2">
               Kram & Klenodier APS (OMHU CPH) <br /> Kongevejen 340, 2840 Holte
             </address>
-            <span>(Indgangen er i kælderplan, på bagsiden af bygningen)</span>
+            <span>(The entrance is at the basement level at the back of the building)</span>
           </div>
           <div className="grid space-y-1">
             <span>Monday-Friday: Book a timeslot</span>
