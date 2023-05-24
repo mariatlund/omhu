@@ -1,38 +1,24 @@
-import Button from "@/components/Button/Button";
+import Image from "next/image";
+import Button from "../../components/Button/Button";
 import React from "react";
 
 const heroImage = "https://amorea.dk/exam/finalExam/teddy_hero.jpg";
 function HeroSection() {
   //
   return (
-    <section className="">
-      <div className="relative h-[60vh] bg-cover bg-no-repeat w-screen sm:bg-[center_bottom_-10rem] md:bg-[center_bottom_-20rem] lg:bg-[center_bottom_-28rem]  lg:bg-[length:1450px]  lg:h-[90vh]" style={{ backgroundImage: `url('${heroImage}')` }}>
-        <div className="container flex flex-row lg:justify-between absolute bottom-5 right-0 lg:bottom-10 lg:items-center items-end justify-end">
-          <div className="w-96 hidden sm:inline-block">
-            <p className="style-h2 uppercase text-white">Ready for a bear hug?</p>
-          </div>
-          <div>
-            <Button kind="link" label="Check out Teddy" intent="alternative" size="large" href="/shop" icon="arrow" />
-          </div>
+    <section className="relative overflow-hidden">
+      <div className="absolute z-40 w-full flex flex-col bottom-10 px-6 md:flex-row md:justify-between xl:px-[5rem]">
+        <h1 className="style-h2 text-white hidden w-1/2 md:block">Ready for a bear hug?</h1>
+        <div className="self-end">
+          <Button kind="link" label="Check out Teddy" intent="alternative" size="large" href="/shop" icon="arrow" />
         </div>
+      </div>
+
+      <div className="w-full h-[27.5rem] lg:h-[52.5rem]">
+        <Image src={heroImage} alt="OMHU Teddy Sofa" fill className="w-full object-cover object-center md:aspect-video" />
       </div>
     </section>
   );
 }
 
 export default HeroSection;
-
-{
-  /* <section className="">
-      <div className="relative h-[60vh] bg-cover bg-no-repeat w-screen sm:bg-[center_bottom_-10rem] md:bg-[center_bottom_-20rem] lg:bg-[center_bottom_-28rem]  lg:bg-[length:1450px]  lg:h-[90vh]" style={{ backgroundImage: `url('${heroImage}')` }}>
-        <div className="container flex flex-row lg:justify-between absolute bottom-5 right-0 lg:bottom-10 lg:items-center items-end justify-end">
-          <div className="w-96 hidden sm:inline-block">
-            <p className="style-h2 uppercase text-white">Ready for a bear hug?</p>
-          </div>
-          <div>
-            <Button kind="link" label="Check out Teddy" intent="alternative" size="large" href="/shop" icon="arrow" />
-          </div>
-        </div>
-      </div>
-    </section> */
-}
