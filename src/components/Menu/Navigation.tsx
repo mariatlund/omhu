@@ -10,7 +10,7 @@ import OpenMenu from "./OpenMenu";
 
 function Navigation() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  const listItemStyle = "border-l-2 border-t-2 border-b-2  border-blue py-2 px-8";
+  const listItemStyle = "border-l-2 border-t-2 border-b-2  border-blue py-2 px-8 hover:text-blue-50";
   return (
     <nav className="nav_wrapper flex flex-row items-center justify-between px-5 sm:px-10 py-3 sm:py-5 text-blue bg-white">
       <div className="flex flex-row items-center justify-aroun gap-5 ">
@@ -42,7 +42,7 @@ function Navigation() {
               Contact
             </Link>
           </li>
-          <li className="border-2 border-blue py-2 px-8">
+          <li className="border-2 border-blue py-2 px-8 hover:text-blue-50">
             {" "}
             <Link href="/faq" className="uppercase">
               FAQ
