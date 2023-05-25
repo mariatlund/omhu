@@ -11,7 +11,7 @@ import ProductCard from "@/components/Cards/ProductCard";
 import FilterMenu from "@/components/Menu/FilterMenu";
 import SortMenu from "@/components/Menu/SortMenu";
 import QuantitySelector from "@/components/InputFields/Selectors/QuantitySelector";
-import MetalColorSelector from "../components/InputFields/Selectors/MetalColorSelector";
+import MetalColorSelector from "../../components/InputFields/Selectors/MetalColorSelector";
 import Reviews from "@/modules/Reviews/Reviews";
 import ContactBox from "@/modules/ContactBox/ContactBox";
 import HeroSection from "@/modules/HeroSection/HeroSection";

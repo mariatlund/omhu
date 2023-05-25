@@ -20,6 +20,6 @@ export const Default: Story = {
     frameColour: "Chrome",
     frameHex: "#919190",
     amount: 1,
-    price: 12.899,
+    price: "12.899",
   },
 };
