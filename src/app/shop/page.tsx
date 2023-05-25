@@ -143,7 +143,12 @@ const Shop: React.FC<shopProps> = () => {
         {/* {module here} */}
         <div className="flex flex-row justify-between mb-10">
           <FilterMenu handleFilter={handleFilter} handlePriceChange={handlePriceChange} />
-          {selectedFilter.filterCategory.length > 0 && selectedFilter.filterCategory.map((category) => <p key="category">{category}</p>)}
+          {selectedFilter.filterCategory.length > 0 &&
+            selectedFilter.filterCategory.map((category) => (
+              <div className="border-blue border rounded-3xl h-10 w-fit px-2 py-1 text-center bg-blue-25 text-blue" key={Math.random()}>
+                {category}
+              </div>
+            ))}
           <SortMenu handleSort={handleSort} />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  justify-items-center align-middle gap-11 gap-y-16 lg:gap-16 ">
