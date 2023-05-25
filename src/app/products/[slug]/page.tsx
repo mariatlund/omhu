@@ -135,7 +135,7 @@ function Product({ params }: { params: { slug: string } }) {
   if (!product) {
     return <div>Loading...</div>;
   }
-  console.log(product.product_bars_colors.silver);
+
   return (
     <>
       <div className="container mt-5 mb-14 md:mt-14 md:mb-20">
@@ -163,7 +163,7 @@ function Product({ params }: { params: { slug: string } }) {
               <p>{product.product_description}</p>
             </div>
 
-            {Object.values(product.product_bars_colors).length > 0 && (
+            {product.product_bars_colors && (
               <MetalColorSelector onChangeMetalColor={setSelectedMetalColor} options={product.product_bars_colors} selectedMetalColor={selectedMetalColor} defaultOption={product.product_bars_colors.silver} containerClass="w-60" />
             )}
 
