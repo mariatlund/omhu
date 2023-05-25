@@ -35,5 +35,6 @@ export const Default: Story = {
       total: "16.000,00",
     },
     buttonLabel: "Continue to payment",
+    checkboxes: "true",
   },
 };
