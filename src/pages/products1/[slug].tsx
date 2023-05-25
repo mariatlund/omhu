@@ -104,63 +104,61 @@ function Product() {
 
   return (
     <>
-      <Layout>
-        <div className="container mt-5 mb-14 md:mt-14 md:mb-20">
-          <div className="main_wrapper  flex flex-col sm:flex-row gap-10 text-blue sm:grid sm:grid-cols-2 sm:gap-x-0">
-            <h1 className="style-h3 container text-blue uppercase sm:col-start-2 sm:flex sm:flex-row sm:justify-between">
-              Teddy{" "}
-              <span className="hidden sm:inline">
-                {" "}
+      <div className="container mt-5 mb-14 md:mt-14 md:mb-20">
+        <div className="main_wrapper  flex flex-col sm:flex-row gap-10 text-blue sm:grid sm:grid-cols-2 sm:gap-x-0">
+          <h1 className="style-h3 container text-blue uppercase sm:col-start-2 sm:flex sm:flex-row sm:justify-between">
+            Teddy{" "}
+            <span className="hidden sm:inline">
+              {" "}
+              EUR <span>1200</span>
+            </span>
+          </h1>
+          <div className="image_container container  sm:row-start-1 sm:row-span-2">
+            <ImageCarousel images={images} />
+          </div>
+
+          <div className="product_info container flex flex-col gap-10">
+            <div className="flex flex-row justify-between items-center sm:hidden">
+              <p className="style-h4">
                 EUR <span>1200</span>
-              </span>
-            </h1>
-            <div className="image_container container  sm:row-start-1 sm:row-span-2">
-              <ImageCarousel images={images} />
+              </p>
+              <Button intent="primary" label="Add to cart" size="small" kind="base" />
             </div>
 
-            <div className="product_info container flex flex-col gap-10">
-              <div className="flex flex-row justify-between items-center sm:hidden">
-                <p className="style-h4">
-                  EUR <span>1200</span>
-                </p>
-                <Button intent="primary" label="Add to cart" size="small" kind="base" />
-              </div>
-
-              <div className="sm:col-start-2 sm:row-start-2">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quod nam sapiente perspiciatis. Quo enim amet cumque a soluta modi quae, ipsam odio repellat unde doloribus dolorum vel quam quasi.</p>
-              </div>
-
-              <MetalColorSelector onChangeMetalColor={setSelectedMetalColor} selectedMetalColor={selectedMetalColor} containerClass="w-60" />
-
-              <div className="flex flex-col  gap-3">
-                <h2 className="style-h4 uppercase">Fabric colour</h2>
-                <ColourSelect options={coloursArray} onChange={setSelectedColour} selectedOptionValue={selectedColour} defaultOption={coloursArray[0]} containerClass="w-60" />
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <p className="style-h4 uppercase">Quantity</p>
-                <QuantitySelector onChangeQuantity={handleQuantity} counter={counter} setCounter={setCounter} />
-              </div>
-              <div className="hidden sm:inline-block">
-                <Button intent="primary" label="Add to cart" size="small" kind="base" />
-              </div>
+            <div className="sm:col-start-2 sm:row-start-2">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quod nam sapiente perspiciatis. Quo enim amet cumque a soluta modi quae, ipsam odio repellat unde doloribus dolorum vel quam quasi.</p>
             </div>
-            <div className="sm:col-start-1 sm:col-span-2 flex flex-col gap-14 sm:gap-20 sm:mt-10">
-              <div className="container">
-                <Accordion title="" items={deliveryQuestions} />{" "}
-              </div>
-              <TextAndGif
-                title="Fold it how you want"
-                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia architecto provident deleniti suscipit id ratione repudiandae animi saepe temporibus blanditiis, asperiores voluptas aspernatur voluptate, exercitationem voluptates quisquam ea dolorem cumque?"
-                image={gif}
-              />
-              <Video title="Easy to place, easy to style" videoSrc="https://vimeo.com/783453158" />
 
-              <Reviews title="Hear what other people think about this product" />
+            <MetalColorSelector onChangeMetalColor={setSelectedMetalColor} selectedMetalColor={selectedMetalColor} containerClass="w-60" />
+
+            <div className="flex flex-col  gap-3">
+              <h2 className="style-h4 uppercase">Fabric colour</h2>
+              <ColourSelect options={coloursArray} onChange={setSelectedColour} selectedOptionValue={selectedColour} defaultOption={coloursArray[0]} containerClass="w-60" />
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <p className="style-h4 uppercase">Quantity</p>
+              <QuantitySelector onChangeQuantity={handleQuantity} counter={counter} setCounter={setCounter} />
+            </div>
+            <div className="hidden sm:inline-block">
+              <Button intent="primary" label="Add to cart" size="small" kind="base" />
             </div>
           </div>
+          <div className="sm:col-start-1 sm:col-span-2 flex flex-col gap-14 sm:gap-20 sm:mt-10">
+            <div className="container">
+              <Accordion title="" items={deliveryQuestions} />{" "}
+            </div>
+            <TextAndGif
+              title="Fold it how you want"
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia architecto provident deleniti suscipit id ratione repudiandae animi saepe temporibus blanditiis, asperiores voluptas aspernatur voluptate, exercitationem voluptates quisquam ea dolorem cumque?"
+              image={gif}
+            />
+            <Video title="Easy to place, easy to style" videoSrc="https://vimeo.com/783453158" />
+
+            <Reviews title="Hear what other people think about this product" />
+          </div>
         </div>
-      </Layout>
+      </div>
     </>
   );
 }

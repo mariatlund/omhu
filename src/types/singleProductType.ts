@@ -1,16 +1,16 @@
 import { ProductColors } from "./productColors";
 
 export type singleProductType = {
-  id: number;
-  productName: string;
-  description: string;
-  price: number;
-  colors: ProductColors;
-  frameColors: ProductColors;
-  material: string;
-  new: boolean;
-  category: string;
-  popularity: number;
-  measurementsImage: string[];
-  size: string;
+  product_id: string;
+  product_name: string;
+  product_description: string;
+  product_price: number;
+  product_colors: ProductColors;
+  product_bars_colors: ProductColors;
+  product_material_information: string;
+  product_newly_added: boolean;
+  product_category: string;
+  product_popularity: number;
+  product_measument_link: string[];
+  product_sizes: string;
 };

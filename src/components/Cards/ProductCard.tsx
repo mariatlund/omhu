@@ -8,6 +8,7 @@ interface ProductCardProps {
   productImage: string;
   newlyAdded: boolean;
   colors: ColorOptions;
+  id: number;
 }
 
 export type ColorOptions = {
@@ -26,11 +27,11 @@ export type singleColorOption = {
   images: string[];
 };
 
-function ProductCard({ productName, price, productImage, newlyAdded, colors }: ProductCardProps) {
+function ProductCard({ productName, price, productImage, newlyAdded, colors, id }: ProductCardProps) {
   return (
     <div className="w-[280px] sm:w-[350px] h-auto flex flex-col gap-5 relative">
       {newlyAdded && <div className="h-auto w-auto px-[10px] py-[3px] absolute top-5 right-5  bg-blue text-white text-center uppercase">new !</div>}
-      <Link href={`/products/${productName}`}>
+      <Link href={`/products/${id}`}>
         <Image src={productImage} alt={productName} width={350} height={300} />
       </Link>
       <div className="product_colors flex flex-row gap-[10px]">

@@ -166,7 +166,17 @@ const Shop: React.FC<shopProps> = () => {
             } else {
               imageIndex = 3;
             }
-            return <ProductCard key={product.product_id} productName={product.product_name} price={product.product_price} productImage={randomColor.images[imageIndex]} newlyAdded={product.product_newly_added} colors={product.product_colors} />;
+            return (
+              <ProductCard
+                key={product.product_id}
+                productName={product.product_name}
+                price={product.product_price}
+                productImage={randomColor.images[imageIndex]}
+                newlyAdded={product.product_newly_added}
+                colors={product.product_colors}
+                id={product.product_id}
+              />
+            );
           })}
         </div>
       </div>

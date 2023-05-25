@@ -9,16 +9,17 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 import "../../../styles/globals.css";
+import { ImagesType } from "@/types/images";
 
-type Image = {
-  imageSrc: string;
-  imageWidth: number;
-  imageHeight: number;
-  alt?: string;
-};
+// type Image = {
+//   imageSrc: string;
+//   imageWidth: number;
+//   imageHeight: number;
+//   alt?: string;
+// };
 
 interface ImageCarouselProps {
-  images: Image[];
+  images: ImagesType[];
 }
 
 function ImageCarousel({ images }: ImageCarouselProps) {
