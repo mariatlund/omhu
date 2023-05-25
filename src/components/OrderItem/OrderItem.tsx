@@ -1,6 +1,6 @@
 import React from "react";
 
-interface OrderItemProps {
+export interface OrderItemProps {
   productName: string;
   fabricColour: string;
   fabricHex: string;
@@ -12,7 +12,7 @@ interface OrderItemProps {
 
 function OrderItem({ productName, fabricColour, fabricHex, frameColour, frameHex, amount, price }: OrderItemProps) {
   return (
-    <div className="text-blue style-body-small grid border border-blue p-3 sm:grid-cols-4 items-center">
+    <div className="text-blue style-body-small grid border-2 border-blue p-3 sm:grid-cols-4 items-center md:px-5">
       <h3 className="font-semibold uppercase">{productName}</h3>
 
       <div className="flex justify-between items-center mt-2 sm:col-span-3">

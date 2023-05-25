@@ -1,6 +1,6 @@
 import React from "react";
 
-interface PriceBoxProps {
+export interface PriceBoxProps {
   subtotal: string;
   deliveryCost: string | "Free";
   total: string;
