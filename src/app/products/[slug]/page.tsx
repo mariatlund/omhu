@@ -163,7 +163,7 @@ function Product({ params }: { params: { slug: string } }) {
               <p>{product.product_description}</p>
             </div>
 
-            {product.product_bars_colors && (
+            {Object.values(product.product_bars_colors).length > 0 && (
               <MetalColorSelector onChangeMetalColor={setSelectedMetalColor} options={product.product_bars_colors} selectedMetalColor={selectedMetalColor} defaultOption={product.product_bars_colors.silver} containerClass="w-60" />
             )}
 
