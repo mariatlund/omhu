@@ -8,7 +8,5 @@ export default {
 } satisfies Meta<typeof TrendingNow>;
 
 export const Default: Story = {
-  args: {
-    title: "Delivery",
-  },
+  args: {},
 };
