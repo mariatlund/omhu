@@ -132,10 +132,6 @@ const Shop: React.FC<shopProps> = () => {
     });
   };
 
-  // const filteredProducts = sortedProducts.filter((product) => {
-  //   return product.category && selectedFilter.category.some((category) => product.category.includes(category));
-  // });
-
   return (
     <>
       <div className="container mt-5 mb-14 md:mt-14 md:mb-20">
@@ -171,7 +167,7 @@ const Shop: React.FC<shopProps> = () => {
                 key={product.product_id}
                 productName={product.product_name}
                 price={product.product_price}
-                productImage={randomColor.images[imageIndex]}
+                productImage={randomColor.images[imageIndex].imageSrc}
                 newlyAdded={product.product_newly_added}
                 colors={product.product_colors}
                 id={product.product_id}

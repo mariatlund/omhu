@@ -6,7 +6,7 @@ type Story = StoryObj<typeof ImageCarousel>;
 
 export default {
   component: ImageCarousel,
-} satisfies Meta<typeof ImageCarousel>;
+} as Meta<typeof ImageCarousel>;
 
 export const Default: Story = {
   args: {

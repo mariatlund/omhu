@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ImagesType } from "@/types/images";
 
 interface ProductCardProps {
   productName: string;
@@ -24,7 +25,7 @@ export type singleColorOption = {
   label: string;
   value: string;
   hexCode: string;
-  images: string[];
+  images: ImagesType[];
 };
 
 function ProductCard({ productName, price, productImage, newlyAdded, colors, id }: ProductCardProps) {

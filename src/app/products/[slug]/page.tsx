@@ -135,6 +135,9 @@ function Product({ params }: { params: { slug: string } }) {
   if (!product) {
     return <div>Loading...</div>;
   }
+  console.log("brown picture", product.product_colors.brown.images?.[0].imageSrc);
+
+  const currentImagePool = `product.product_colors.${selectedColour}.images`;
 
   return (
     <>
@@ -148,7 +151,7 @@ function Product({ params }: { params: { slug: string } }) {
             </span>
           </h1>
           <div className="image_container container  sm:row-start-1 sm:row-span-2">
-            <ImageCarousel images={images} />
+            <ImageCarousel images={product.product_colors.brown.images?.[0].imageSrc} />
           </div>
 
           <div className="product_info container flex flex-col gap-10">

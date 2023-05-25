@@ -1,3 +1,6 @@
 export type ImagesType = {
-  [key: string]: string[];
+  imageSrc: string;
+  imageWidth: number;
+  imageHeight: number;
+  alt?: string;
 };
