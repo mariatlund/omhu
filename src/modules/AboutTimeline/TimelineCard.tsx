@@ -27,12 +27,12 @@ function TimelineCard({ year, title, description, image }: TimelineCardProps) {
       <div className="relative grid space-y-5 col-span-10 col-start-3 md:col-span-11 md:col-start-2 md:grid-cols-2 md:gap-x-10 xl:gap-x-20 md:pt-5">
         <div className="flex flex-col gap-y-1.5 md:gap-y-4">
           <span className="style-body">{year}</span>
-          <h2 className="style-h3">{title}</h2>
+          <h2 className="style-h3 uppercase">{title}</h2>
           <p className="style-body-small">{description}</p>
         </div>
         {image ? (
-          <div className="rounded-3xl overflow-hidden max-w-[500px]">
-            <Image src={image.imageSrc} alt="" height={image.imageHeight} width={image.imageWidth} className="object-cover object-center aspect-[4/3] w-full " />
+          <div className="rounded-3xl overflow-hidden max-w-[500px] aspect-[4/3] object-center">
+            <Image src={image.imageSrc} alt={title} height={image.imageHeight} width={image.imageWidth} className="object-cover object-center aspect-[4/3] w-full " />
           </div>
         ) : null}
       </div>
