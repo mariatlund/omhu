@@ -223,8 +223,8 @@ export default function Testpage() {
             <ColourSelect options={coloursArray} selectedOptionValue={selectedColour} onChange={setSelectedColour} defaultOption={coloursArray[0]} containerClass="w-60" />
           </div>
           <div className="space-y-2">
-            <Checkbox label="This is a checkbox" value="Indeed" name="checkbox" />
-            <Checkbox label="This one as well" value="Indeed" name="checkbox" />
+            <Checkbox label="This is a checkbox" value="Indeed" fieldName="checkbox" />
+            <Checkbox label="This one as well" value="Indeed" fieldName="checkbox" />
           </div>
           <div className="space-y-2">
             <Radio label="I'm an option" value="Option1" defaultChecked={true} fieldName="radio" />

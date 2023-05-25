@@ -2,20 +2,23 @@ import Head from "next/head";
 import React from "react";
 import { headers, url } from "../../../config.js";
 import { Layout } from "@/app/pageLayout";
-import ProductCard from "../../components/Cards/ProductCard";
-import FilterMenu from "../../components/Menu/FilterMenu";
-import SortMenu from "../../components/Menu/SortMenu";
+import ProductCard from "@/components/Cards/ProductCard";
+import FilterMenu from "@/components/Menu/FilterMenu";
+import SortMenu from "@/components/Menu/SortMenu";
+import { singleProductType } from "@/types/singleProductType";
+import { Products } from "@/types/products.js";
 
 interface shopProps {
   handleFilter: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handlePriceChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSort: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  products?: any;
+  products: Products;
 }
 
 function shop({ handleFilter, handlePriceChange, handleSort, products }: shopProps) {
   //sorting products by newly added first
-  const sortedProducts = products.sort((a: any, b: any) => {
+
+  const sortedProducts = products?.sort((a: any, b: any) => {
     if (a.product_newly_added && !b.product_newly_added) {
       return -1; // a comes first
     } else if (!a.product_newly_added && b.product_newly_added) {
@@ -24,9 +27,10 @@ function shop({ handleFilter, handlePriceChange, handleSort, products }: shopPro
       return 0; // no change in order
     }
   });
+  console.log(products);
   return (
     <>
-      <Layout>
+      <Layout products={products}>
         <div className="container mt-5 mb-14 md:mt-14 md:mb-20">
           <h1 className="style-h1 mb-10">Shop</h1>
           {/* {module here} */}
@@ -35,7 +39,7 @@ function shop({ handleFilter, handlePriceChange, handleSort, products }: shopPro
             <SortMenu handleSort={handleSort} />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  justify-items-center align-middle gap-11 gap-y-16 lg:gap-16 ">
-            {sortedProducts.map((product: any) => {
+            {sortedProducts?.map((product: any) => {
               const colorKeys = Object.keys(product.product_colors);
               const randomColorKey = colorKeys[Math.floor(Math.random() * colorKeys.length)];
               const randomColor = product.product_colors[randomColorKey];
@@ -58,8 +62,6 @@ function shop({ handleFilter, handlePriceChange, handleSort, products }: shopPro
   );
 }
 
-export default shop;
-
 export async function getServerSideProps() {
   const options = {
     method: "GET",
@@ -71,5 +73,7 @@ export async function getServerSideProps() {
     props: { products: products },
   };
 }
+
+export default shop;
 
 // This should be the shop page with the product list

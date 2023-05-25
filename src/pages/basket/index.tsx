@@ -2,6 +2,8 @@ import React from "react";
 import Head from "next/head";
 import { Layout } from "@/app/pageLayout";
 import BasketOverview from "@/modules/BasketOverview/BasketOverview";
+import { OrderInfoType } from "@/types/orderInfo";
+import { Products } from "@/types/products";
 
 const mockItems = [
   {
@@ -34,9 +36,13 @@ const mockItems = [
   },
 ];
 
-function basket() {
+interface basketProps {
+  products: Products;
+}
+
+function basket({ products }: basketProps) {
   return (
-    <Layout>
+    <Layout products={products}>
       <div className="container mt-5 mb-14 md:mt-14 md:mb-20">
         <h1 className="style-h1 mb-10">Your basket</h1>
         <BasketOverview items={mockItems} total="25.789" />
