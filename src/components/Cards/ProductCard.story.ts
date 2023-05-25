@@ -30,6 +30,30 @@ export const Default: Story = {
           "https://amorea.dk/exam/finalExam/ProductPictures/corner/cream_white_full.jpg",
         ],
       },
+      turquoise: {
+        label: "Turquoise",
+        value: "5771",
+        hexCode: "#2C6B7E",
+        images: ["https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise_full.jpg"],
+      },
+      green: {
+        label: "Green",
+        value: "768",
+        hexCode: "#3D5648",
+        images: ["https://amorea.dk/exam/finalExam/ProductPictures/corner/green.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/green_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/green_full.jpg"],
+      },
+      mustard_yellow: {
+        label: "Mustard yellow",
+        value: "5774",
+        hexCode: "#C99136",
+        images: ["https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard_full.jpg"],
+      },
+      dark_orange: {
+        label: "Dark orange",
+        value: "769",
+        hexCode: "#914525",
+        images: ["https://amorea.dk/exam/finalExam/ProductPictures/corner/orange.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/orange_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/orange_full.jpg"],
+      },
     },
   },
 };
