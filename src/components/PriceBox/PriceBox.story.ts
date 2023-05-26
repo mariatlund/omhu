@@ -9,7 +9,6 @@ export default {
 
 export const Default: Story = {
   args: {
-    currency: "DKK",
     subtotal: "16.000,00",
     deliveryCost: "Free",
     total: "16.000,00",
