@@ -6,7 +6,7 @@ import React from "react";
 export interface BillingDetailsProps {
   countryOptions: Option[];
   selectOnChange: (value: string) => void;
-  selectCurrentValue: string;
+  selectCurrentValue?: string;
 }
 
 function BillingDetails({ countryOptions, selectOnChange, selectCurrentValue }: BillingDetailsProps) {
