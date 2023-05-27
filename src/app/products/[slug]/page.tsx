@@ -154,7 +154,7 @@ function Product({ params }: { params: { slug: string } }) {
                 image={product.product_animation[0]}
               />
             )}
-            <Video title="Easy to place, easy to style" videoSrc="https://player.vimeo.com/video/829091943?h=285c72499b" />
+            {product.product_name !== "Pillows" && <Video title="Easy to place, easy to style" videoSrc="https://player.vimeo.com/video/829091943?h=285c72499b" />}
 
             <Reviews title="Hear what other people think about this product" />
           </div>
