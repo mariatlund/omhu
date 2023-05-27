@@ -10,21 +10,21 @@ import { Metadata } from "next";
 
 // _APP.JS - ADD LOGIC HERE
 
-export const metadata: Metadata = {
-  title: {
-    default: "Furniture with care | OMHU",
-    template: "%s | OMHU",
-  },
-  keywords: ["Sofa", "Furniture", "Decor", "Furniture design", "Retro furniture", "Teddy"],
-  description: "Your home, with omhu.",
-  robots: {
-    index: false,
-    follow: false,
-  },
-  icons: {
-    icon: "../assets/favicon.png",
-  },
-};
+// export const metadata: Metadata = {
+//   title: {
+//     default: "Furniture with care | OMHU",
+//     template: "%s | OMHU",
+//   },
+//   keywords: ["Sofa", "Furniture", "Decor", "Furniture design", "Retro furniture", "Teddy"],
+//   description: "Your home, with omhu.",
+//   robots: {
+//     index: false,
+//     follow: false,
+//   },
+//   icons: {
+//     icon: "../assets/favicon.png",
+//   },
+// };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [products, setProducts] = useState<Products>([]);
