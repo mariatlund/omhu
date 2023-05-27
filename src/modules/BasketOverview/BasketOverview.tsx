@@ -1,3 +1,4 @@
+"use client";
 import PriceBox from "../../components/PriceBox/PriceBox";
 import BasketItem, { BasketItemProps } from "../../components/BasketItem/BasketItem";
 import React from "react";
