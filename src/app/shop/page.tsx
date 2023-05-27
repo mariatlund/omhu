@@ -57,7 +57,9 @@ const Shop: React.FC<shopProps> = () => {
       let updatedFilters = [...prevValues.filterCategory];
 
       if (e.target.checked) {
-        updatedFilters.push(filterValue);
+        if (!updatedFilters.includes(filterValue)) {
+          updatedFilters.push(filterValue);
+        }
       } else {
         updatedFilters = updatedFilters.filter((value) => value !== filterValue);
       }
@@ -138,7 +140,7 @@ const Shop: React.FC<shopProps> = () => {
         <h1 className="style-h1 mb-10">Shop</h1>
         {/* {module here} */}
         <div className="flex flex-row justify-between mb-10">
-          <FilterMenu handleFilter={handleFilter} handlePriceChange={handlePriceChange} />
+          <FilterMenu handleFilter={handleFilter} handlePriceChange={handlePriceChange} selectedFilter={selectedFilter} />
           {selectedFilter.filterCategory.length > 0 &&
             selectedFilter.filterCategory.map((category) => (
               <div className="border-blue border rounded-3xl h-10 w-fit px-2 py-1 text-center bg-blue-25 text-blue" key={Math.random()}>

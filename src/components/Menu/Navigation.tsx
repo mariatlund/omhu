@@ -20,7 +20,7 @@ function Navigation() {
         <ul className="nav_links hidden lg:inline-flex flex-row style-body">
           <li className={listItemStyle}>
             {" "}
-            <Link href="/shop" className="uppercase">
+            <Link href="/shop" onClick={() => setShowMenu(false)} className="uppercase">
               Shop
             </Link>
           </li>
