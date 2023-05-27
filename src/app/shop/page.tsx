@@ -45,30 +45,13 @@ const Shop: React.FC<shopProps> = () => {
     fetchData();
   }, []);
 
-  //sorting products by newly added first
-
-  const sortedProducts = products.sort((a: any, b: any) => {
-    //assign false by default if the property is not there
-    const aNewlyAdded = a.product_newly_added ?? false;
-    const bNewlyAdded = b.product_newly_added ?? false;
-
-    if (aNewlyAdded && !bNewlyAdded) {
-      return -1; // a comes first
-    } else if (!aNewlyAdded && bNewlyAdded) {
-      return 1; // b comes first
-    } else {
-      return 0; // no change in order
-    }
-  });
-
+  //setting the selected sort
   const handleSort = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedSort(e.target.value);
   };
 
-  //filtering products by category
-
+  //setting the selected filter for category
   const handleFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("run");
     const filterValue = e.target.value;
     setSelectedFilter((prevValues) => {
       let updatedFilters = [...prevValues.filterCategory];
@@ -91,22 +74,39 @@ const Shop: React.FC<shopProps> = () => {
       });
     }
 
-    //apply sort
-    const sortedProducts = filteredProducts.sort((a: any, b: any) => {
-      //assign false by default if the property is not there
-      const aNewlyAdded = a.product_newly_added ?? false;
-      const bNewlyAdded = b.product_newly_added ?? false;
+    // apply price filter
+    filteredProducts = filteredProducts.filter((product: any) => {
+      const { min, max } = selectedFilter.price;
+      const productPrice = product.product_price;
+      return (min === 0 || productPrice >= min) && (max === 0 || productPrice <= max);
+    });
 
-      if (aNewlyAdded && !bNewlyAdded) {
-        return -1; // a comes first
-      } else if (!aNewlyAdded && bNewlyAdded) {
-        return 1; // b comes first
-      } else {
-        return 0; // no change in order
+    //apply sort
+
+    const sortOption = selectedSort;
+    filteredProducts.sort((a: any, b: any) => {
+      switch (sortOption) {
+        case "Most Popular":
+          const aNewlyAdded = a.product_newly_added ?? false;
+          const bNewlyAdded = b.product_newly_added ?? false;
+          if (aNewlyAdded && !bNewlyAdded) {
+            return -1; // a comes first
+          } else if (!aNewlyAdded && bNewlyAdded) {
+            return 1; // b comes first
+          } else {
+            return 0; // no change in order
+          }
+        case "Price low-high":
+          return a.product_price - b.product_price;
+        case "Price high-low":
+          return b.product_price - a.product_price;
+        default:
+          return 0; // no change in order
       }
     });
-    return sortedProducts;
-  }, [products, selectedFilter]);
+
+    return filteredProducts;
+  }, [products, selectedFilter, selectedSort]);
 
   const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log("run2");
