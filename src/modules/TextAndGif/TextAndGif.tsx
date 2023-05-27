@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { ImagesType } from "@/types/images";
 
 type Image = {
   imageSrc: string;
@@ -11,7 +12,7 @@ type Image = {
 interface TextAndGifProps {
   title: string;
   text: string;
-  image: Image;
+  image?: ImagesType;
 }
 
 function TextAndGif({ title, text, image }: TextAndGifProps) {
@@ -22,10 +23,11 @@ function TextAndGif({ title, text, image }: TextAndGifProps) {
           <h2 className="style-h3 uppercase mb-5">{title}</h2>
           <p className="style-body-small md:style-body max-w-lg">{text}</p>
         </div>
-
-        <div className="mt-5 md:mt-0">
-          <Image src={image.imageSrc} alt={image.alt ? image.alt : ""} height={image.imageHeight} width={image.imageWidth} className="object-cover aspect-video" />
-        </div>
+        {image && (
+          <div className="mt-5 md:mt-0">
+            <Image src={image.imageSrc} alt={image.alt ? image.alt : ""} height={image.imageHeight} width={image.imageWidth} className="object-cover" />
+          </div>
+        )}
       </div>
     </section>
   );

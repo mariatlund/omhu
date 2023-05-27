@@ -1,5 +1,15 @@
 Change this file extension to .json to use it as a json file
 
+Brown: 765
+Cream White: 766
+Turquoise: 5771
+Green: 767
+Mustard Yellow: 5774
+Dark Orange: 768
+Silver: 7652
+Gold: 7653
+
+
 
 //CORNER
 {

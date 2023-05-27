@@ -1,13 +1,14 @@
 import React from "react";
 import { ProductColors } from "@/types/productColors";
 import ColourSelect from "./ColourSelect/ColourSelect";
+import { ImagesType } from "@/types/images";
 
 interface MetalColorSelectorProps {
   onChangeMetalColor: (value: string) => void;
   selectedMetalColor: string | undefined;
   containerClass?: string;
-  options: ProductColors;
-  defaultOption?: ProductColors[0];
+  options: { [color: string]: { label: string; value: string; hexCode: string; images?: ImagesType[] } };
+  defaultOption?: { label: string; value: string; hexCode: string; images?: ImagesType[] };
 }
 
 // const metalColorOptions = {

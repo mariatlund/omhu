@@ -1,3 +1,4 @@
+import { ImagesType } from "./images";
 import { ProductColors } from "./productColors";
 
 export type singleProductType = {
@@ -11,6 +12,7 @@ export type singleProductType = {
   product_newly_added: boolean;
   product_category: string;
   product_popularity: number;
-  product_measument_link: string[];
+  product_measument_link: ImagesType[];
   product_sizes: string;
+  product_animation: ImagesType[];
 };

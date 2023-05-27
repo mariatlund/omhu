@@ -1,6 +1,7 @@
 import { ProductColors } from "@/types/productColors";
 import { Listbox } from "@headlessui/react";
 import clsx from "clsx";
+import { ImagesType } from "@/types/images";
 
 const chevronUp = (
   <svg width="16" height="16" viewBox="0 0 24 16" fill="none">
@@ -14,17 +15,11 @@ const chevronDown = (
   </svg>
 );
 
-// export interface Option {
-//   label: string;
-//   value: string;
-//   hexCode: string;
-// }
-
 export interface ColourSelectProps {
-  options: ProductColors;
+  options: { [color: string]: { label: string; value: string; hexCode: string; images?: ImagesType[] } };
   onChange: (value: string) => void;
   selectedOptionValue?: string;
-  defaultOption?: ProductColors[0];
+  defaultOption?: { label: string; value: string; hexCode: string; images?: ImagesType[] };
   placeholder?: string;
   containerClass?: string;
 }
