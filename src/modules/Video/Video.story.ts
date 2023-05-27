@@ -5,7 +5,7 @@ type Story = StoryObj<typeof Video>;
 
 export default {
   component: Video,
-} satisfies Meta<typeof Video>;
+} as Meta<typeof Video>;
 
 export const Default: Story = {
   args: {

@@ -37,12 +37,12 @@ function TrendingNow() {
       <h2 className="style-h1 mb-5">Trending now</h2>
       <div className="grid gap-5 md:grid-cols-2 md:gap-10">
         <div className="grid gap-5 md:gap-10">
-          <TrendingNowCard intent="link" size="large" image={image1} kind="link" href="/shop" target="_self" label="Teddy sofa &#8594;" />
-          <TrendingNowCard intent="link" size="small" image={image3} kind="link" href="/shop" target="_self" label="Teddy sofa &#8594;" />
+          <TrendingNowCard intent="link" size="large" image={image1} kind="link" href="/products/4" target="_self" label="Teddy sofa &#8594;" />
+          <TrendingNowCard intent="link" size="small" image={image3} kind="link" href="/products/4" target="_self" label="Teddy sofa &#8594;" />
         </div>
         <div className="grid gap-5 md:gap-10">
-          <TrendingNowCard intent="link" size="small" image={image2} kind="link" href="/shop" target="_self" label="Teddy sofa &#8594;" />
-          <TrendingNowCard intent="link" size="large" image={image4} kind="link" href="/shop" target="_self" label="Teddy sofa &#8594;" />
+          <TrendingNowCard intent="link" size="small" image={image2} kind="link" href="/products/4" target="_self" label="Teddy sofa &#8594;" />
+          <TrendingNowCard intent="link" size="large" image={image4} kind="link" href="/products/4" target="_self" label="Teddy sofa &#8594;" />
         </div>
       </div>
     </section>

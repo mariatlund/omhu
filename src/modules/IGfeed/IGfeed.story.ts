@@ -5,7 +5,7 @@ type Story = StoryObj<typeof IGfeed>;
 
 export default {
   component: IGfeed,
-} satisfies Meta<typeof IGfeed>;
+} as Meta<typeof IGfeed>;
 
 export const Default: Story = {
   args: {},

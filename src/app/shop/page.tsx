@@ -45,36 +45,21 @@ const Shop: React.FC<shopProps> = () => {
     fetchData();
   }, []);
 
-  //sorting products by newly added first
-
-  const sortedProducts = products.sort((a: any, b: any) => {
-    //assign false by default if the property is not there
-    const aNewlyAdded = a.product_newly_added ?? false;
-    const bNewlyAdded = b.product_newly_added ?? false;
-
-    if (aNewlyAdded && !bNewlyAdded) {
-      return -1; // a comes first
-    } else if (!aNewlyAdded && bNewlyAdded) {
-      return 1; // b comes first
-    } else {
-      return 0; // no change in order
-    }
-  });
-
+  //setting the selected sort
   const handleSort = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedSort(e.target.value);
   };
 
-  //filtering products by category
-
+  //setting the selected filter for category
   const handleFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("run");
     const filterValue = e.target.value;
     setSelectedFilter((prevValues) => {
       let updatedFilters = [...prevValues.filterCategory];
 
       if (e.target.checked) {
-        updatedFilters.push(filterValue);
+        if (!updatedFilters.includes(filterValue)) {
+          updatedFilters.push(filterValue);
+        }
       } else {
         updatedFilters = updatedFilters.filter((value) => value !== filterValue);
       }
@@ -91,22 +76,39 @@ const Shop: React.FC<shopProps> = () => {
       });
     }
 
-    //apply sort
-    const sortedProducts = filteredProducts.sort((a: any, b: any) => {
-      //assign false by default if the property is not there
-      const aNewlyAdded = a.product_newly_added ?? false;
-      const bNewlyAdded = b.product_newly_added ?? false;
+    // apply price filter
+    filteredProducts = filteredProducts.filter((product: any) => {
+      const { min, max } = selectedFilter.price;
+      const productPrice = product.product_price;
+      return (min === 0 || productPrice >= min) && (max === 0 || productPrice <= max);
+    });
 
-      if (aNewlyAdded && !bNewlyAdded) {
-        return -1; // a comes first
-      } else if (!aNewlyAdded && bNewlyAdded) {
-        return 1; // b comes first
-      } else {
-        return 0; // no change in order
+    //apply sort
+
+    const sortOption = selectedSort;
+    filteredProducts.sort((a: any, b: any) => {
+      switch (sortOption) {
+        case "Most Popular":
+          const aNewlyAdded = a.product_newly_added ?? false;
+          const bNewlyAdded = b.product_newly_added ?? false;
+          if (aNewlyAdded && !bNewlyAdded) {
+            return -1; // a comes first
+          } else if (!aNewlyAdded && bNewlyAdded) {
+            return 1; // b comes first
+          } else {
+            return 0; // no change in order
+          }
+        case "Price low-high":
+          return a.product_price - b.product_price;
+        case "Price high-low":
+          return b.product_price - a.product_price;
+        default:
+          return 0; // no change in order
       }
     });
-    return sortedProducts;
-  }, [products, selectedFilter]);
+
+    return filteredProducts;
+  }, [products, selectedFilter, selectedSort]);
 
   const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log("run2");
@@ -136,16 +138,18 @@ const Shop: React.FC<shopProps> = () => {
     <>
       <div className="container mt-5 mb-14 md:mt-14 md:mb-20">
         <h1 className="style-h1 mb-10">Shop</h1>
-        {/* {module here} */}
+
         <div className="flex flex-row justify-between mb-10">
-          <FilterMenu handleFilter={handleFilter} handlePriceChange={handlePriceChange} />
+          <FilterMenu handleFilter={handleFilter} handlePriceChange={handlePriceChange} selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} />
+          <SortMenu handleSort={handleSort} selectedSort={selectedSort} />
+        </div>
+        <div className="flex flex-row  gap-5 mb-10 items-center">
           {selectedFilter.filterCategory.length > 0 &&
             selectedFilter.filterCategory.map((category) => (
-              <div className="border-blue border rounded-3xl h-10 w-fit px-2 py-1 text-center bg-blue-25 text-blue" key={Math.random()}>
+              <div className="border-blue border rounded-3xl h-10 w-fit px-3 py-1 pt-2 text-center  bg-blue-25 text-blue " key={Math.random()}>
                 {category}
               </div>
             ))}
-          <SortMenu handleSort={handleSort} />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  justify-items-center align-middle gap-11 gap-y-16 lg:gap-16 ">
           {filteredAndSortedProducts?.map((product: any) => {
@@ -179,18 +183,6 @@ const Shop: React.FC<shopProps> = () => {
     </>
   );
 };
-
-// export async function getServerSideProps() {
-//   const options = {
-//     method: "GET",
-//     headers: headers,
-//   };
-//   const res = await fetch(url, options);
-//   const products = await res.json();
-//   return {
-//     props: { products: products },
-//   };
-// }
 
 export default Shop;
 

@@ -5,7 +5,7 @@ type Story = StoryObj<typeof BasketItem>;
 
 export default {
   component: BasketItem,
-} satisfies Meta<typeof BasketItem>;
+} as Meta<typeof BasketItem>;
 
 export const Default: Story = {
   args: {

@@ -5,6 +5,6 @@ type Story = StoryObj<typeof Footer>;
 
 export default {
   component: Footer,
-} satisfies Meta<typeof Footer>;
+} as Meta<typeof Footer>;
 
 export const Default: Story = {};

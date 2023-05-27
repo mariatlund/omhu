@@ -15,7 +15,7 @@ import { singleProductType } from "@/types/singleProductType";
 
 function Product({ params }: { params: { slug: string } }) {
   const [counter, setCounter] = useState<number>(0);
-  const [selectedMetalColor, setSelectedMetalColor] = useState<string | undefined>();
+  const [selectedMetalColor, setSelectedMetalColor] = useState<string>("7653");
   const [product, setProduct] = useState<singleProductType>();
   const [selectedColour, setSelectedColour] = useState<string>("765");
   const handleQuantity = (e: React.ChangeEvent<HTMLInputElement>) => {

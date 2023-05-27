@@ -5,7 +5,7 @@ type Story = StoryObj<typeof TrendingNow>;
 
 export default {
   component: TrendingNow,
-} satisfies Meta<typeof TrendingNow>;
+} as Meta<typeof TrendingNow>;
 
 export const Default: Story = {
   args: {},
