@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About us",
   keywords: ["About us", "Furniture company", "Vintage furniture", "Furniture design", "Retro furniture", "Teddy", "Omhu"],
-  description: "Your home, with omhu.",
+  description: "Read more about how OMHU came to be.",
 };
 
 function about() {
