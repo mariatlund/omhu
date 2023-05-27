@@ -5,7 +5,7 @@ type Story = StoryObj<typeof AboutTimeline>;
 
 export default {
   component: AboutTimeline,
-} satisfies Meta<typeof AboutTimeline>;
+} as Meta<typeof AboutTimeline>;
 
 export const Default: Story = {
   args: {},

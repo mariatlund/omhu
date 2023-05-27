@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import StarFull from "../../assets/icons/star_full.svg";
 import Image from "next/image";
@@ -23,7 +24,7 @@ function Reviews({ title }: ReviewsProps) {
           {/* Charlotte */}
           <div
             className="
-          single_review flex flex-col gap-9 p-5   border-blue border-2 rounded-[20px] sm:col-start-1"
+          single_review flex flex-col gap-9 p-5   border-blue border-2 rounded-[20px] sm:col-start-1 h-full"
           >
             <div className="flex flex-col sm:flex-row gap-8 items-center sm:gap-4 ">
               <div className="rounded-full w-20 h-20 overflow-hidden">
@@ -41,11 +42,14 @@ function Reviews({ title }: ReviewsProps) {
               </div>
             </div>
             <div className="review_text w-fit">
-              <p className="style-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam faucibus, nibh nisl ultricies nunc, quis</p>
+              <p className="style-body">
+                I recently purchased this item and I'm extremely pleased with my choice. It offers excellent comfort and support, making it perfect for relaxing after a long day. The design effortlessly complements my existing decor, adding a touch
+                of sophistication to the room. Not only does it look great, but it is also highly functional. The item's sturdy construction and comfortable padding make it a versatile piece that can be used in various ways.
+              </p>
             </div>
           </div>
           {/* Jens */}
-          <div className="single_review flex flex-col gap-9 p-5  border-blue border-2 rounded-[20px] sm:col-start-2 ">
+          <div className="single_review flex flex-col gap-9 p-5  border-blue border-2 rounded-[20px] sm:col-start-2 h-full ">
             <div className="flex flex-col sm:flex-row gap-8 items-center sm:gap-4">
               <div className="rounded-full w-20 h-20 overflow-hidden">
                 <Image src={JensP} alt="Charlotte Reviewer image" className="w-full h-full object-cover" />
@@ -62,11 +66,11 @@ function Reviews({ title }: ReviewsProps) {
               </div>
             </div>
             <div className="review_text w-fit">
-              <p className="style-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam faucibus, nibh nisl ultricies nunc, quis</p>
+              <p className="style-body">I recently purchased this product, and it has quickly become one of my favorite additions to my home. I couldn't be happier with this purchase. </p>
             </div>
           </div>
           {/* Emilie */}
-          <div className="single_review flex flex-col gap-9 p-5  border-blue border-2 rounded-[20px]  sm:col-start-1 sm:row-start-2 lg:col-start-3 lg:row-start-1">
+          <div className="single_review flex flex-col gap-9 p-5  border-blue border-2 rounded-[20px]  sm:col-start-1 sm:row-start-2 lg:col-start-3 lg:row-start-1 h-full">
             <div className="flex flex-col sm:flex-row gap-8 items-center sm:gap-4  ">
               <div className="rounded-full w-20 h-20 overflow-hidden">
                 <Image src={EmilieS} alt="Charlotte Reviewer image" className="w-full h-full object-cover" />
@@ -83,7 +87,7 @@ function Reviews({ title }: ReviewsProps) {
               </div>
             </div>
             <div className="review_text w-fit">
-              <p className="style-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam faucibus, nibh nisl ultricies nunc, quis</p>
+              <p className="style-body">I appreciate the durable construction and superior craftsmanship that ensure this item will last. If you're looking for a cozy and personal addition to your space, this item is a definite winner.</p>
             </div>
           </div>
         </div>

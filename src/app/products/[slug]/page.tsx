@@ -15,7 +15,7 @@ import { singleProductType } from "@/types/singleProductType";
 
 function Product({ params }: { params: { slug: string } }) {
   const [counter, setCounter] = useState<number>(0);
-  const [selectedMetalColor, setSelectedMetalColor] = useState<string | undefined>();
+  const [selectedMetalColor, setSelectedMetalColor] = useState<string>("7653");
   const [product, setProduct] = useState<singleProductType>();
   const [selectedColour, setSelectedColour] = useState<string>("765");
   const handleQuantity = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -154,7 +154,7 @@ function Product({ params }: { params: { slug: string } }) {
                 image={product.product_animation[0]}
               />
             )}
-            <Video title="Easy to place, easy to style" videoSrc="https://player.vimeo.com/video/829091943?h=285c72499b" />
+            {product.product_name !== "Pillows" && <Video title="Easy to place, easy to style" videoSrc="https://player.vimeo.com/video/829091943?h=285c72499b" />}
 
             <Reviews title="Hear what other people think about this product" />
           </div>

@@ -5,7 +5,7 @@ type Story = StoryObj<typeof PriceBox>;
 
 export default {
   component: PriceBox,
-} satisfies Meta<typeof PriceBox>;
+} as Meta<typeof PriceBox>;
 
 export const Default: Story = {
   args: {

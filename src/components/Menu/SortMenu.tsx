@@ -5,14 +5,16 @@ import SortSettings from "./SortSettings";
 
 export interface SortMenuProps {
   handleSort: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  selectedSort: string;
 }
 
-function SortMenu({ handleSort }: SortMenuProps) {
+function SortMenu({ handleSort, selectedSort }: SortMenuProps) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+
   return (
     <div className="relative">
       <Button intent={showMenu ? "primary" : "secondary"} kind="base" size="large" label="Sort" icon={showMenu ? "close" : "sort"} callback={() => setShowMenu(!showMenu)} />
-      {showMenu && <SortSettings onChangeSort={handleSort} />}
+      {showMenu && <SortSettings onChangeSort={handleSort} selectedSort={selectedSort} />}
     </div>
   );
 }

@@ -1,9 +1,10 @@
 "use client";
 
-import Accordion, { FaqItem } from "../../components/Accordion/Accordion";
+import Accordion from "../../components/Accordion/Accordion";
 import React from "react";
+import { AccordionType } from "@/types/accordion";
 
-const deliveryQuestions: FaqItem[] = [
+const deliveryQuestions: AccordionType[] = [
   {
     question: "Which countries do you deliver to?",
     answer: "We currently deliver to Europe, the United Kingdom and the United States. If you're located somewhere else in the world, you can contact us to find out if we can arrange for delivery to your location.",
@@ -20,7 +21,7 @@ const deliveryQuestions: FaqItem[] = [
   },
 ];
 
-const productQuestions: FaqItem[] = [
+const productQuestions: AccordionType[] = [
   {
     question: "How can I clean and maintain my TEDDY sofa?",
     answer:
@@ -32,7 +33,7 @@ const productQuestions: FaqItem[] = [
   },
 ];
 
-const returnsQuestions: FaqItem[] = [
+const returnsQuestions: AccordionType[] = [
   {
     question: "Do you have a return policy?",
     answer: "We can arrange returns if your order arrives with faults. If you are otherwise dissatisfied with your purchase or if something went wrong with your order, please contact usand we will do our best to solve it with you.",
