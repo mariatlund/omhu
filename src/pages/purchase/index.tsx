@@ -6,6 +6,7 @@ import BillingDetails from "@/components/FormFlow/BillingDetails/BillingDetails"
 import YourOrder from "@/components/YourOrder/YourOrder";
 import Summary from "@/components/FormFlow/Summary/Summary";
 import PaymentDetails from "@/components/FormFlow/PaymentDetails/PaymentDetails";
+import ThankYou from "@/components/FormFlow/ThankYou/ThankYou";
 
 const countries = [
   {
@@ -64,25 +65,38 @@ function Purchase() {
       setCurrentStep("2");
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
-    } else {
+    }
+    if (currentStep === "2") {
       setCurrentStep("3");
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
+    if (currentStep === "3") {
+      setCurrentStep("4");
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    console.log(currentStep);
   }
 
   return (
     <Layout>
-      <div className="container mt-5 mb-14 md:mb-48 xl:mb-72 text-blue">
-        {currentStep === "3" ? <StepIndicator activeStep="3" /> : currentStep === "2" ? <StepIndicator activeStep="2" /> : <StepIndicator activeStep="1" />}
-        <div className="xl:grid xl:grid-cols-2 xl:gap-x-10">
-          <div className="mt-10 2xl:mt-16">{currentStep === "3" ? <Summary /> : currentStep === "2" ? <PaymentDetails /> : <BillingDetails countryOptions={countries} selectCurrentValue={selectedCountry} selectOnChange={setSelectedCountry} />}</div>
+      {currentStep != "4" ? (
+        <div className="container mt-5 mb-14 md:mb-48 xl:mb-80 text-blue">
+          {currentStep === "3" ? <StepIndicator activeStep="3" /> : currentStep === "2" ? <StepIndicator activeStep="2" /> : <StepIndicator activeStep="1" />}
+          <div className="xl:grid xl:grid-cols-2 xl:gap-x-10">
+            <div className="mt-10 2xl:mt-16">{currentStep === "3" ? <Summary /> : currentStep === "2" ? <PaymentDetails /> : <BillingDetails countryOptions={countries} selectCurrentValue={selectedCountry} selectOnChange={setSelectedCountry} />}</div>
 
-          <div className="mt-10 2xl:mt-16">
-            <YourOrder buttonLabel={button} checkboxes={checkboxes} order={orderInfo} priceInfo={priceInfo} buttonCallback={nextStep} />
+            <div className="mt-10 2xl:mt-16">
+              <YourOrder buttonLabel={button} checkboxes={checkboxes} order={orderInfo} priceInfo={priceInfo} buttonCallback={nextStep} />
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="container py-80 xl:pb-96 grid w-full place-content-center">
+          <ThankYou />
+        </div>
+      )}
     </Layout>
   );
 }
