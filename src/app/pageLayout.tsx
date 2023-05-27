@@ -5,7 +5,6 @@ import "../../styles/globals.css";
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import { url, headers } from "../../config.js";
-import { singleProductType } from "@/types/singleProductType";
 import { Products } from "@/types/products.js";
 
 // LAYOUT FOR PAGES IN /PAGES (THEY ARE USING OLD NEXTJS ROUTING, SO OUR ROOT LAYOUT DOESN'T APPLY TO THEM)
