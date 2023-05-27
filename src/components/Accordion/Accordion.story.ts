@@ -6,7 +6,7 @@ type Story = StoryObj<typeof Accordion>;
 
 export default {
   component: Accordion,
-} satisfies Meta<typeof Accordion>;
+} as Meta<typeof Accordion>;
 
 export const Faq: Story = {
   args: {
@@ -37,7 +37,7 @@ export const ProductInfo: Story = {
       {
         question: "Measurements",
         answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis minus placeat totam autem consequatur reiciendis numquam velit id rerum magnam consectetur deserunt nihil eveniet voluptatum accusantium ut.",
-        imageSrc: measurements,
+        // imageSrc: measurements,
       },
     ],
   },

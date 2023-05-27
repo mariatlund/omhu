@@ -220,11 +220,11 @@ export default function Testpage() {
           <TextInput type="text" label="Label" placeholder="Placeholder" fieldName="text" />
           <div className="space-y-5">
             <Select options={countriesArray} selectedOptionValue={selectedCountry} onChange={setSelectedCountry} placeholder="Select country" />
-            {/* <ColourSelect options={coloursArray} selectedOptionValue={selectedColour} onChange={setSelectedColour} defaultOption={coloursArray[0]} containerClass="w-60" /> */}
+            <ColourSelect options={coloursArray} selectedOptionValue={selectedColour} onChange={setSelectedColour} defaultOption={coloursArray[0]} containerClass="w-60" />
           </div>
           <div className="space-y-2">
-            <Checkbox label="This is a checkbox" value="Indeed" name="checkbox" />
-            <Checkbox label="This one as well" value="Indeed" name="checkbox" />
+            <Checkbox label="This is a checkbox" value="Indeed" fieldName="checkbox" />
+            <Checkbox label="This one as well" value="Indeed" fieldName="checkbox" />
           </div>
           <div className="space-y-2">
             <Radio label="I'm an option" value="Option1" defaultChecked={true} fieldName="radio" />
@@ -233,13 +233,13 @@ export default function Testpage() {
           <div className="space-y-2">
             <QuantitySelector onChangeQuantity={handleQuantity} counter={counter} setCounter={setCounter} />
           </div>
-          {/* <div className="space-y-2">
+          <div className="space-y-2">
             <MetalColorSelector onChangeMetalColor={setSelectedMetalColor} selectedMetalColor={selectedMetalColor} />
-          </div> */}
+          </div>
         </div>
 
         <div className="container flex flex-col gap-20">
-          <ProductCard productName={"Teddy"} price={1200} productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"} newlyAdded={true} colors={colorOptions} id={36} />
+          <ProductCard productName={"Teddy"} price={1200} productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"} newlyAdded={true} colors={colorOptions} />
           <div className="flex flex-row justify-between">
             <FilterMenu handleFilter={handleFilter} handlePriceChange={handlePriceChange} />
             <SortMenu handleSort={handleSort} />

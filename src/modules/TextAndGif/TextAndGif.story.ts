@@ -5,7 +5,7 @@ type Story = StoryObj<typeof TextAndGif>;
 
 export default {
   component: TextAndGif,
-} satisfies Meta<typeof TextAndGif>;
+} as Meta<typeof TextAndGif>;
 
 export const Default: Story = {
   args: {

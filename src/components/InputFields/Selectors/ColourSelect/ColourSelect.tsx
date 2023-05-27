@@ -1,5 +1,7 @@
+import { ProductColors } from "@/types/productColors";
 import { Listbox } from "@headlessui/react";
 import clsx from "clsx";
+import { ImagesType } from "@/types/images";
 
 const chevronUp = (
   <svg width="16" height="16" viewBox="0 0 24 16" fill="none">
@@ -13,23 +15,17 @@ const chevronDown = (
   </svg>
 );
 
-export interface Option {
-  label: string;
-  value: string;
-  hexCode: string;
-}
-
 export interface ColourSelectProps {
-  options: Option[];
+  options: { [color: string]: { label: string; value: string; hexCode: string; images?: ImagesType[] } };
   onChange: (value: string) => void;
   selectedOptionValue?: string;
-  defaultOption?: Option;
+  defaultOption?: { label: string; value: string; hexCode: string; images?: ImagesType[] };
   placeholder?: string;
   containerClass?: string;
 }
 
 export default function ColourSelect({ selectedOptionValue, options, containerClass, placeholder, onChange, defaultOption }: ColourSelectProps) {
-  const selectedOption = options.find(({ value }) => value === selectedOptionValue);
+  const selectedOption = Object.values(options).find(({ value }) => value === selectedOptionValue);
 
   return (
     <Listbox value={selectedOptionValue || defaultOption?.value} onChange={onChange} as="div" className={clsx("relative text-blue style-body", containerClass)}>
@@ -45,8 +41,8 @@ export default function ColourSelect({ selectedOptionValue, options, containerCl
           </Listbox.Button>
 
           <Listbox.Options className="absolute mt-2 z-10 w-full overflow-hidden border border-blue bg-white py-4 drop-shadow focus:outline-2 focus:outline-blue">
-            {options.map((option) => (
-              <Listbox.Option key={option.value} value={option.value}>
+            {Object.values(options).map((option, index) => (
+              <Listbox.Option key={index} value={option.value}>
                 {({ active }) => (
                   <span className={clsx("truncate px-4 py-2 flex items-center gap-5", active ? "cursor-pointer bg-blue-25 font-medium text-primary" : "")}>
                     <span className="rounded-full w-8 h-8 inline-block" style={{ backgroundColor: option.hexCode }}></span>

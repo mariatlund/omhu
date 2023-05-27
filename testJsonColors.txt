@@ -1,5 +1,15 @@
 Change this file extension to .json to use it as a json file
 
+Brown: 765
+Cream White: 766
+Turquoise: 5771
+Green: 767
+Mustard Yellow: 5774
+Dark Orange: 768
+Silver: 7652
+Gold: 7653
+
+
 
 //CORNER
 {
@@ -8,15 +18,51 @@ Change this file extension to .json to use it as a json file
     "value": "765",
     "hexCode": "#60342C",
     "images": [
-      "https://amorea.dk/exam/finalExam/ProductPictures/corner/brown.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/brown_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/brown_full.jpg"
-    ]
+     {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/brown.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Brown Corner Sofa"
+  },
+{
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/brown_closeup.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Brown Corner Sofa Close Up"
+  },
+ {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/brown_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Brown Corner Sofa Full Picture"
+  } ]
+
+
   },
   "cream_white": {
     "label": "Cream White",
-    "value": "765",
+    "value": "766",
     "hexCode": "#EEE6E4",
     "images": [
-        "https://amorea.dk/exam/finalExam/ProductPictures/corner/cream_white.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/cream_white_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/cream_white_full.jpg"
+
+      {
+    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/corner/cream_white.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Cream White Corner Sofa"
+  } ,
+   {
+    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/corner/cream_white_closeup.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Cream White Corner Sofa Close Up"
+  },
+   {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/cream_white_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Cream White Corner Sofa Full Picture"
+  }
     ]
   },
   "turquoise": {
@@ -24,31 +70,105 @@ Change this file extension to .json to use it as a json file
     "value": "5771",
     "hexCode": "#2C6B7E",
     "images": [
-        "https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise_full.jpg"
+
+ {
+    "imageSrc":   "https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Turquoise Corner Sofa"
+  } ,
+   {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise_closeup.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Turquoise Corner Sofa Close Up"
+  },
+   {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Turquoise Corner Sofa Full Picture"
+  }
     ]
   },
   "green": {
     "label": "Green",
-    "value": "765",
+    "value": "767",
     "hexCode": "#3D5648",
     "images": [
-        "https://amorea.dk/exam/finalExam/ProductPictures/corner/green.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/green_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/green_full.jpg"
+
+{
+    "imageSrc":   "https://amorea.dk/exam/finalExam/ProductPictures/corner/green.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Green Corner Sofa"
+  } ,
+   {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/green_closeup.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Green Corner Sofa Close Up"
+  },
+   {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/green_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Green Corner Sofa Full Picture"
+  }
+
     ]
   },
   "mustard_yellow": {
-    "label": "Mustard yellow",
+    "label": "Mustard Yellow",
     "value": "5774",
     "hexCode": "#C99136",
     "images": [
-        "https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard_full.jpg"
+
+{
+    "imageSrc":    "https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Mustard Yellow Corner Sofa"
+  } ,
+   {
+    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard_closeup.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Mustard Yellow Corner Sofa Close Up"
+  },
+   {
+    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Mustard Yellow Corner Sofa Full Picture"
+  }
+
     ]
   },
   "dark_orange": {
-    "label": "Dark orange",
-    "value": "765",
+    "label": "Dark Orange",
+    "value": "768",
     "hexCode": "#914525",
     "images": [
-        "https://amorea.dk/exam/finalExam/ProductPictures/corner/orange.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/orange_closeup.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/corner/orange_full.jpg"
+
+{
+    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/corner/orange.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Dark Orange Corner Sofa"
+  } ,
+   {
+    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/corner/orange_closeup.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Dark Orange Corner Sofa Close Up"
+  },
+   {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/orange_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Dark Orange Corner Sofa Full Picture"
+  }
     ]
   }
 }
@@ -60,40 +180,106 @@ Change this file extension to .json to use it as a json file
       "value": "765",
       "hexCode": "#60342C",
       "images": [
-        "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/brown.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/brown_full.jpg"
-      ]
+     {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/brown.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Brown Ottoman"
+  },
+ {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/brown_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Brown Ottoman Full Picture"
+  } ]
     },
     "cream_white": {
       "label": "Cream White",
-      "value": "765",
+      "value": "766",
       "hexCode": "#EEE6E4",
       "images": [
-          "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/cream_white.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/cream_white_full.jpg"
-      ]
+  {
+    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/cream_white.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Cream White Ottoman"
+  } ,
+  
+   {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/cream_white_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Cream White Ottoman Full Picture"
+  }
+    ]
+
+
     },
     "turquoise": {
       "label": "Turquoise",
       "value": "5771",
       "hexCode": "#2C6B7E",
-      "images": [
-          "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/turquoise.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/turquoise_full.jpg"
-      ]
+ "images": [
+
+ {
+    "imageSrc":   "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/turquoise.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Turquoise Ottoman"
+  } ,
+   {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/turquoise_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Turquoise Ottoman Full Picture"
+  }
+    ]
+
     },
     "green": {
       "label": "Green",
-      "value": "765",
+      "value": "767",
       "hexCode": "#3D5648",
-      "images": [
-          "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/green.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/green_full.jpg"
-      ]
+ "images": [
+
+{
+    "imageSrc":   "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/green.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Green Ottoman"
+  } ,
+   
+   {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/green_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Green Ottoman Full Picture"
+  }
+
+    ]
+
+
+
     },
     "dark_orange": {
       "label": "Dark orange",
-      "value": "765",
+      "value": "768",
       "hexCode": "#914525",
-      "images": [
-          "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/orange.jpg","https://amorea.dk/exam/finalExam/ProductPictures/ottoman/orange_full.jpg"
-      ]
+ "images": [
+
+{
+    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/orange.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Dark Orange Ottoman"
+  } ,
+   
+   {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/ottoman/orange_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Dark Orange Ottoman Full Picture"
+  }  ]
     }
   }
 
@@ -104,15 +290,29 @@ Change this file extension to .json to use it as a json file
       "value": "765",
       "hexCode": "#60342C",
       "images": [
-        "https://amorea.dk/exam/finalExam/ProductPictures/pillows/brown.jpg"
+{
+    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/pillows/brown.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Brown Pillows"
+  }
+
+       
       ]
     },
     "cream_white": {
       "label": "Cream White",
-      "value": "765",
+      "value": "766",
       "hexCode": "#EEE6E4",
       "images": [
-          "https://amorea.dk/exam/finalExam/ProductPictures/pillows/cream_white.jpg"
+{
+    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/pillows/cream_white.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Cream White Pillows"
+  }
+
+          
       ]
     },
     "turquoise": {
@@ -120,31 +320,61 @@ Change this file extension to .json to use it as a json file
       "value": "5771",
       "hexCode": "#2C6B7E",
       "images": [
-          "https://amorea.dk/exam/finalExam/ProductPictures/pillows/turquoise.jpg"
+{
+    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/pillows/turquoise.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Turquoise Pillows"
+  }     
       ]
     },
     "green": {
       "label": "Green",
-      "value": "765",
+      "value": "767",
       "hexCode": "#3D5648",
       "images": [
-          "https://amorea.dk/exam/finalExam/ProductPictures/pillows/green.jpg"
+{
+    "imageSrc":  
+          "https://amorea.dk/exam/finalExam/ProductPictures/pillows/green.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Green Pillows"
+  }  
+
       ]
     },
     "mustard_yellow": {
-      "label": "Mustard yellow",
+      "label": "Mustard Yellow",
       "value": "5774",
       "hexCode": "#C99136",
       "images": [
-          "https://amorea.dk/exam/finalExam/ProductPictures/pillows/mustard.jpg"
+
+{
+    "imageSrc":  
+           "https://amorea.dk/exam/finalExam/ProductPictures/pillows/mustard.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Mustard Yellow Pillows"
+  } 
+
+         
       ]
     },
     "dark_orange": {
-      "label": "Dark orange",
-      "value": "765",
+      "label": "Dark Orange",
+      "value": "768",
       "hexCode": "#914525",
       "images": [
-          "https://amorea.dk/exam/finalExam/ProductPictures/pillows/orange.jpg"
+
+{
+    "imageSrc":  
+         "https://amorea.dk/exam/finalExam/ProductPictures/pillows/orange.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Dark Orange Pillows"
+  }
+
+          
       ]
     }
   }
@@ -156,15 +386,63 @@ Change this file extension to .json to use it as a json file
       "value": "765",
       "hexCode": "#60342C",
       "images": [
-        "https://amorea.dk/exam/finalExam/ProductPictures/teddy/brown.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/brown_v1.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/brown_v2.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/brown_full.jpg"
+         {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/teddy/brown.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Brown Teddy Sofa"
+  },
+{
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/teddy/brown_v1.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Brown Teddy Sofa Version 1"
+  },
+ {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/teddy/brown_v2.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Brown Teddy Sofa Version 2"
+  },
+   {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/teddy/brown_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Brown Teddy Sofa Full Picture"
+  } 
       ]
     },
     "cream_white": {
       "label": "Cream White",
-      "value": "765",
+      "value": "766",
       "hexCode": "#EEE6E4",
       "images": [
-        "https://amorea.dk/exam/finalExam/ProductPictures/teddy/cream_white.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/cream_white_v1.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/cream_white_v2.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/cream_white_full.jpg"
+
+
+  {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/teddy/cream_white.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Cream White Teddy Sofa"
+  },
+{
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/teddy/cream_white_v1.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Cream White Teddy Sofa Version 1"
+  },
+ {
+    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/teddy/cream_white_v2.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Cream White Teddy Sofa Version 2"
+  },
+   {
+    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/teddy/cream_white_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Cream White Teddy Sofa Full Picture"
+  } 
       ]
     },
     "turquoise": {
@@ -172,31 +450,126 @@ Change this file extension to .json to use it as a json file
       "value": "5771",
       "hexCode": "#2C6B7E",
       "images": [
-        "https://amorea.dk/exam/finalExam/ProductPictures/teddy/turquoise.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/turquoise_v1.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/turquoise_v2.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/turquoise_full.jpg"
+
+  {
+    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/teddy/turquoise.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Turquoise Teddy Sofa"
+  },
+{
+    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/teddy/turquoise_v1.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Turquoise Teddy Sofa Version 1"
+  },
+ {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/teddy/turquoise_v2.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Turquoise Teddy Sofa Version 2"
+  },
+   {
+    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/teddy/turquoise_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Turquoise Teddy Sofa Full Picture"
+  } 
       ]
     },
     "green": {
       "label": "Green",
-      "value": "765",
+      "value": "767",
       "hexCode": "#3D5648",
       "images": [
-        "https://amorea.dk/exam/finalExam/ProductPictures/teddy/green.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/green_v1.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/green_v2.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/green_full.jpg"
+
+{
+    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/teddy/green.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Green Teddy Sofa"
+  },
+{
+    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/teddy/green_v1.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Green Teddy Sofa Version 1"
+  },
+ {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/teddy/green_v2.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Green Teddy Sofa Version 2"
+  },
+   {
+    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/teddy/green_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Green Teddy Sofa Full Picture"
+  }
       ]
     },
     "mustard_yellow": {
-      "label": "Mustard yellow",
+      "label": "Mustard Yellow",
       "value": "5774",
       "hexCode": "#C99136",
       "images": [
-        "https://amorea.dk/exam/finalExam/ProductPictures/teddy/mustard.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/mustard_v1.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/mustard_v2.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/mustard_full.jpg"
+{
+    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/teddy/mustard.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Mustard Yellow Teddy Sofa"
+  },
+{
+    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/teddy/mustard_v1.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Mustard Yellow Teddy Sofa Version 1"
+  },
+ {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/teddy/mustard_v2.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Mustard Yellow Teddy Sofa Version 2"
+  },
+   {
+    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/teddy/mustard_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Mustard Yellow Teddy Sofa Full Picture"
+  }
       ]
     },
     "dark_orange": {
-      "label": "Dark orange",
-      "value": "765",
+      "label": "Dark Orange",
+      "value": "768",
       "hexCode": "#914525",
       "images": [
-        "https://amorea.dk/exam/finalExam/ProductPictures/teddy/orange.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/orange_v1.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/orange_v2.jpg", "https://amorea.dk/exam/finalExam/ProductPictures/teddy/orange_full.jpg"
+
+{
+    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/teddy/orange.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Dark Orange Teddy Sofa"
+  },
+{
+    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/teddy/orange_v1.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Dark Orange Teddy Sofa Version 1"
+  },
+ {
+    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/teddy/orange_v2.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Dark Orange Teddy Sofa Version 2"
+  },
+   {
+    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/teddy/orange_full.jpg",
+    "imageWidth": 900,
+    "imageHeight": 900,
+    "alt": "Dark Orange Teddy Sofa Full Picture"
+  }
       ]
     }
   }
@@ -210,7 +583,7 @@ Change this file extension to .json to use it as a json file
     },
      "gold":{
       "label": "Gold",
-      "value": "7652",
+      "value": "7653",
       "hexCode": "#D2B978",
     },
   }

@@ -2,16 +2,17 @@ import { Disclosure } from "@headlessui/react";
 import React from "react";
 import Image from "next/image";
 import clsx from "clsx";
+import { AccordionType } from "@/types/accordion";
 
-export interface FaqItem {
-  question: string;
-  answer: string;
-  imageSrc?: string;
-}
+// export interface FaqItem {
+//   question: string;
+//   answer: string;
+//   imageSrc?: string;
+// }
 
 export interface AccordionProps {
   title?: string;
-  items: FaqItem[];
+  items: AccordionType[];
 }
 
 function Accordion({ title, items }: AccordionProps) {
@@ -27,9 +28,19 @@ function Accordion({ title, items }: AccordionProps) {
                 <path d="M18.8369 1.99996L11.6956 9.12568L4.55432 1.99996L2.3606 4.19369L11.6956 13.5287L21.0306 4.19369L18.8369 1.99996Z" fill="currentColor" />
               </svg>
             </Disclosure.Button>
-            <Disclosure.Panel className={clsx("px-6 pt-2 pb-4 style-body-small text-blue grid", item?.imageSrc ? "md:grid-cols-3 gap-x-5" : "md:max-w-2xl")}>
+            <Disclosure.Panel className={clsx("px-6 pt-2 pb-4 style-body-small text-blue grid", item.image ? "md:grid-cols-3 gap-x-5" : "md:max-w-2xl")}>
               <div className="md:col-span-2">{item.answer}</div>
-              {item.imageSrc ? <Image src={item.imageSrc} alt="" className="lg:max-w-xl" /> : null}
+              {/* {item.image ? <Image src={item.image[0].imageSrc} alt={item.image[0].alt} className="lg:max-w-xl" /> : null} */}
+
+              {item.image && (
+                <div className="md:row-start-2 md:col-span-3">
+                  <div key={Math.random()} className="mb-4 md:flex md:flex-row md:justify-around md:items-center">
+                    {item.image.map((image, imageIndex) => (
+                      <Image key={imageIndex} src={image.imageSrc} alt={image.alt} width={image.imageWidth} height={image.imageHeight} />
+                    ))}
+                  </div>
+                </div>
+              )}
             </Disclosure.Panel>
           </Disclosure>
         ))}

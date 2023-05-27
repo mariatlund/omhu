@@ -9,19 +9,13 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 import "../../../styles/globals.css";
-
-type Image = {
-  imageSrc: string;
-  imageWidth: number;
-  imageHeight: number;
-  alt?: string;
-};
+import { ImagesType } from "@/types/images";
 
 interface ImageCarouselProps {
-  images: Image[];
+  images?: ImagesType[];
 }
 
-function ImageCarousel({ images }: ImageCarouselProps) {
+function ImageCarousel({ images = [] }: ImageCarouselProps) {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   return (
     <div className="space-y-2">

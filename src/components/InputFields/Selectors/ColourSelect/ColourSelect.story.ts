@@ -27,29 +27,28 @@ export default {
 //   },
 // } satisfies Meta<typeof SidePanelLinks>;
 
-const optionsArray = [
-  {
+const optionsArray = {
+  Mustard: {
     value: "5774",
     label: "Mustard",
     hexCode: "#C99136",
   },
-  {
+  Turquoise: {
     value: "5771",
     label: "Turquoise",
     hexCode: "#2C6B7E",
   },
-  {
+  Blue: {
     value: "5772",
     label: "Blue",
     hexCode: "#6B6BEC",
   },
-  {
+  Brown: {
     value: "765",
     label: "Brown",
     hexCode: "#60342C",
   },
-];
-
+};
 export const Default: Story = {
   args: {
     options: optionsArray,
