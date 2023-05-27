@@ -16,7 +16,7 @@ function FilterSettings({ onChangeCategory, onChangePrice }: FilterSettingsProps
       <div className="flex flex-col gap-5">
         <p className="font-semibold uppercase style-body">Category</p>
         {checkboxValues.map((item) => (
-          <Checkbox key={item} label={item} value={item} fieldName={`checkbox_${item}`} onChange={(event) => onChangeCategory(event)} />
+          <Checkbox key={item} label={item} value={item} name={`checkbox_${item}`} onChange={(event) => onChangeCategory(event)} />
         ))}
       </div>
       <div className="flex flex-col gap-5">

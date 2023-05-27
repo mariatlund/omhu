@@ -5,7 +5,7 @@ type Story = StoryObj<typeof StepIndicator>;
 
 export default {
   component: StepIndicator,
-} satisfies Meta<typeof StepIndicator>;
+} as Meta<typeof StepIndicator>;
 
 export const Default: Story = {
   args: {

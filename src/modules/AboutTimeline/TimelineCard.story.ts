@@ -6,7 +6,7 @@ type Story = StoryObj<typeof TimelineCard>;
 
 export default {
   component: TimelineCard,
-} satisfies Meta<typeof TimelineCard>;
+} as Meta<typeof TimelineCard>;
 
 export const Default: Story = {
   args: {

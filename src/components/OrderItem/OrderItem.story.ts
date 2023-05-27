@@ -5,7 +5,7 @@ type Story = StoryObj<typeof OrderItem>;
 
 export default {
   component: OrderItem,
-} satisfies Meta<typeof OrderItem>;
+} as Meta<typeof OrderItem>;
 
 export const Default: Story = {
   args: {

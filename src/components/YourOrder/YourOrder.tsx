@@ -27,8 +27,8 @@ function YourOrder({ order, priceInfo, buttonLabel, buttonCallback, checkboxes }
           <div className="w-full">
             {checkboxes === "true" ? (
               <div className="space-y-2">
-                <Checkbox label="I accept the terms and conditions" value="Indeed" fieldName="checkbox" />
-                <Checkbox label="I want to receive emails & newsletters" value="Indeed" fieldName="checkbox" />
+                <Checkbox label="I accept the terms and conditions" value="Indeed" name="checkbox" />
+                <Checkbox label="I want to receive emails & newsletters" value="Indeed" name="checkbox" />
               </div>
             ) : null}
           </div>

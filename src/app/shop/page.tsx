@@ -180,18 +180,6 @@ const Shop: React.FC<shopProps> = () => {
   );
 };
 
-// export async function getServerSideProps() {
-//   const options = {
-//     method: "GET",
-//     headers: headers,
-//   };
-//   const res = await fetch(url, options);
-//   const products = await res.json();
-//   return {
-//     props: { products: products },
-//   };
-// }
-
 export default Shop;
 
 // This should be the shop page with the product list

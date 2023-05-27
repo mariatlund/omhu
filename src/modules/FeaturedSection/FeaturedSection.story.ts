@@ -5,7 +5,7 @@ type Story = StoryObj<typeof FeaturedSection>;
 
 export default {
   component: FeaturedSection,
-} satisfies Meta<typeof FeaturedSection>;
+} as Meta<typeof FeaturedSection>;
 
 export const Blue: Story = {
   args: {
