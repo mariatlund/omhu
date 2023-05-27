@@ -4,27 +4,10 @@ import "../../styles/globals.css";
 import Navigation from "@/components/Menu/Navigation";
 import Footer from "@/modules/Footer/Footer";
 import { useState, useEffect } from "react";
-import { url, headers } from "../../config.js";
 import { Products } from "@/types/products.js";
-import { Metadata } from "next";
+import favicon from "../../public/favicon.png";
 
 // _APP.JS - ADD LOGIC HERE
-
-export const metadata: Metadata = {
-  title: {
-    default: "Furniture with care | OMHU",
-    template: "%s | OMHU",
-  },
-  keywords: ["Sofa", "Furniture", "Decor", "Furniture design", "Retro furniture", "Teddy"],
-  description: "Your home, with omhu.",
-  robots: {
-    index: false,
-    follow: false,
-  },
-  icons: {
-    icon: "../assets/favicon.png",
-  },
-};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [products, setProducts] = useState<Products>([]);
@@ -44,24 +27,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ],
   });
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const options = {
-  //         method: "GET",
-  //         headers: headers,
-  //       };
-  //       const res = await fetch(url, options);
-  //       const data = await res.json();
-  //       setProducts(data);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
   return (
     <html lang="en">
+      <Head>
+        <title>OMHU</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="icon" type="image/png" href="../../public/favicon.png" />
+      </Head>
       <body className="bg-white text-blue style-body font-body">
         <Navigation />
         <main id="main" className="text-blue">

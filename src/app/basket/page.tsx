@@ -1,5 +1,4 @@
 import React from "react";
-import { Layout } from "@/app/pageLayout";
 import BasketOverview from "@/modules/BasketOverview/BasketOverview";
 import { OrderInfoType } from "@/types/orderInfo";
 import { Products } from "@/types/products";
