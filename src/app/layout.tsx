@@ -2,12 +2,24 @@ import Head from "next/head";
 import "../../styles/globals.css";
 import Navigation from "@/components/Menu/Navigation";
 import Footer from "@/modules/Footer/Footer";
+import { Metadata } from "next";
 
 // _APP.JS - ADD LOGIC HERE
 
-export const metadata = {
-  title: "OMHU",
+export const metadata: Metadata = {
+  title: {
+    default: "Furniture with care | OMHU",
+    template: "%s | OMHU",
+  },
+  keywords: ["Sofa", "Furniture", "Decor", "Furniture design", "Retro furniture", "Teddy"],
   description: "Your home, with omhu.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+  icons: {
+    icon: "../assets/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

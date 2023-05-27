@@ -1,3 +1,5 @@
+"use client";
+
 import Accordion, { FaqItem } from "../../components/Accordion/Accordion";
 import React from "react";
 

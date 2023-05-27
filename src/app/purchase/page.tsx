@@ -1,6 +1,6 @@
+"use client";
 import React, { useState } from "react";
 import Head from "next/head";
-import { Layout } from "@/app/pageLayout";
 import StepIndicator from "@/components/StepIndicator/StepIndicator";
 import BillingDetails from "@/components/FormFlow/BillingDetails/BillingDetails";
 import YourOrder from "@/components/YourOrder/YourOrder";
@@ -80,7 +80,7 @@ function Purchase() {
   }
 
   return (
-    <Layout>
+    <>
       {currentStep != "4" ? (
         <div className="container mt-5 mb-14 md:mb-48 xl:mb-80 text-blue">
           {currentStep === "3" ? <StepIndicator activeStep="3" /> : currentStep === "2" ? <StepIndicator activeStep="2" /> : <StepIndicator activeStep="1" />}
@@ -97,7 +97,7 @@ function Purchase() {
           <ThankYou />
         </div>
       )}
-    </Layout>
+    </>
   );
 }
 

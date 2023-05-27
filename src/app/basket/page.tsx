@@ -1,7 +1,13 @@
 import React from "react";
-import Head from "next/head";
 import { Layout } from "@/app/pageLayout";
 import BasketOverview from "@/modules/BasketOverview/BasketOverview";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Basket",
+  keywords: ["Basket", "Omhu"],
+  description: "View the items in your basket here.",
+};
 
 const mockItems = [
   {
@@ -36,12 +42,12 @@ const mockItems = [
 
 function basket() {
   return (
-    <Layout>
+    <>
       <div className="container mt-5 mb-14 md:mt-14 md:mb-20">
         <h1 className="style-h1 mb-10">Your basket</h1>
         <BasketOverview items={mockItems} total="25.789" />
       </div>
-    </Layout>
+    </>
   );
 }
 
