@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
 import Accordion from "./Accordion";
-import measurements from "../../assets/mesurments_teddyFolded.svg";
 
 type Story = StoryObj<typeof Accordion>;
 
