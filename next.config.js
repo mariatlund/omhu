@@ -9,7 +9,7 @@ const nextConfig = {
         pathname: "/exam/finalExam/**/*",
       },
     ],
-    domains: ["omhucph.com", "images.unsplash.com", "storage.googleapis.com", "amorea.dk", "www.amorea.dk"],
+    domains: ["omhucph.com", "images.unsplash.com", "storage.googleapis.com", "amorea.dk", "www.amorea.dk", "i.imgur.com"],
   },
 };
 
