@@ -157,6 +157,7 @@ const Shop: React.FC<shopProps> = () => {
             const randomColorKey = colorKeys[Math.floor(Math.random() * colorKeys.length)];
             const randomColor = product.product_colors[randomColorKey];
             let imageIndex = 0;
+
             if (product.product_name === "Pillows") {
               imageIndex = 0;
             } else if (product.product_name === "Ottoman") {
@@ -175,6 +176,7 @@ const Shop: React.FC<shopProps> = () => {
                 newlyAdded={product.product_newly_added}
                 colors={product.product_colors}
                 id={product.product_id}
+                alt={randomColor.images[imageIndex].alt}
               />
             );
           })}

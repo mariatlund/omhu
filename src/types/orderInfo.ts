@@ -1,13 +1,13 @@
 export type OrderInfoType = {
   total: number;
-  items: Array<{
-    image: string;
+  items: {
+    image?: string;
     productName: string;
     fabricColor: string;
     fabricHex: string;
-    frameColour: string;
+    frameColor: string;
     frameHex: string;
     amount: number;
     price: number;
-  }>;
+  }[];
 };

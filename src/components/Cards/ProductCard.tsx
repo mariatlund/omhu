@@ -10,6 +10,7 @@ interface ProductCardProps {
   newlyAdded: boolean;
   colors: ColorOptions;
   id: number;
+  alt: string;
 }
 
 export type ColorOptions = {
@@ -28,12 +29,12 @@ export type singleColorOption = {
   images: ImagesType[];
 };
 
-function ProductCard({ productName, price, productImage, newlyAdded, colors, id }: ProductCardProps) {
+function ProductCard({ productName, price, productImage, newlyAdded, colors, id, alt }: ProductCardProps) {
   return (
     <div className="w-[280px] sm:w-[350px] h-auto flex flex-col gap-5 relative">
       {newlyAdded && <div className="h-auto w-auto px-[10px] py-[3px] absolute top-5 right-5  bg-blue text-white text-center uppercase">new !</div>}
       <Link href={`/products/${id}`}>
-        <Image src={productImage} alt={productName} width={350} height={300} />
+        <Image src={productImage} alt={alt} width={350} height={300} />
       </Link>
       <div className="product_colors flex flex-row gap-[10px]">
         {Object.values(colors).map((color, index: number) => {
@@ -46,7 +47,7 @@ function ProductCard({ productName, price, productImage, newlyAdded, colors, id 
       <div className="product_info style-h4 text-blue uppercase  flex flex-row justify-between font-body">
         <p>{productName}</p>
         <p>
-          EUR <span> {price}</span>
+          EUR <span> {price}.00</span>
         </p>
       </div>
     </div>

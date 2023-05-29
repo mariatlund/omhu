@@ -13,7 +13,12 @@ import Reviews from "@/modules/Reviews/Reviews";
 import { headers } from "../../../../config.js";
 import { singleProductType } from "@/types/singleProductType";
 
-function Product({ params }: { params: { slug: string } }) {
+interface ProductProps {
+  params: { slug: string };
+  addToBasket: (product: any) => void;
+}
+
+const Product: React.FC<ProductProps> = ({ params, addToBasket }) => {
   const [counter, setCounter] = useState<number>(0);
   const [selectedMetalColor, setSelectedMetalColor] = useState<string>("7653");
   const [product, setProduct] = useState<singleProductType>();
@@ -49,13 +54,34 @@ function Product({ params }: { params: { slug: string } }) {
       fetchProduct();
     }
   }, [params.slug]);
-  console.log(product);
+  //console.log(product);
 
   if (!product) {
     return <div>Loading...</div>;
   }
+
+  // if (selectedColour === "765") {
+  //   setSelectedColour("brown");
+  // } else if (selectedColour === "766") {
+  //   setSelectedColour("cream_white");
+  // } else if (selectedColour === "5771") {
+  //   setSelectedColour("turquoise");
+  // } else if (selectedColour === "767") {
+  //   setSelectedColour("green");
+  // } else if (selectedColour === "5774") {
+  //   setSelectedColour("mustard_yellow");
+  // } else if (selectedColour === "768") {
+  //   setSelectedColour("dark_orange");
+  // }
+
+  // if (selectedMetalColor === "7652") {
+  //   setSelectedMetalColor("silver");
+  // } else if (selectedMetalColor === "7653") {
+  //   setSelectedMetalColor("gold");
+  // }
+
   //to change images based on color
-  let selectedColorImages;
+  let selectedColorImages: any;
   if (selectedColour === "765") {
     selectedColorImages = product.product_colors.brown.images;
   } else if (selectedColour === "766") {
@@ -69,16 +95,6 @@ function Product({ params }: { params: { slug: string } }) {
   } else if (selectedColour === "768") {
     selectedColorImages = product.product_colors.dark_orange.images;
   }
-  // console.log(product.product_measument_link[0].imageSrc);
-
-  // Brown: 765
-  // Cream White: 766
-  // Turquoise: 5771
-  // Green: 767
-  // Mustard Yellow: 5774
-  // Dark Orange: 768
-  // Silver: 7652
-  // Gold: 7653
 
   const materialInfo = product.product_material_information;
 
@@ -99,6 +115,21 @@ function Product({ params }: { params: { slug: string } }) {
     },
   ];
 
+  const handleAddToBasket = () => {
+    const productAdded = {
+      image: selectedColorImages[0].imageSrc,
+      name: product.product_name,
+      chosenFabricColor: selectedColour,
+      fabricHex: product.product_colors[selectedColour].hexCode,
+      chosenMetalColor: selectedMetalColor,
+      metalHex: product.product_bars_colors[selectedMetalColor].hexCode,
+      price: product.product_price,
+      quantity: counter,
+    };
+    console.log(productAdded);
+    //addToBasket(productAdded);
+  };
+
   return (
     <>
       <div className="container mt-5 mb-14 md:mt-14 md:mb-20">
@@ -107,7 +138,7 @@ function Product({ params }: { params: { slug: string } }) {
             {product.product_name}
             <span className="hidden sm:inline">
               {" "}
-              EUR <span>{product.product_price}</span>
+              EUR <span>{product.product_price}.00</span>
             </span>
           </h1>
           <div className="image_container container  sm:row-start-1 sm:row-span-2">
@@ -117,9 +148,9 @@ function Product({ params }: { params: { slug: string } }) {
           <div className="product_info container flex flex-col gap-10">
             <div className="flex flex-row justify-between items-center sm:hidden">
               <p className="style-h4">
-                EUR <span>{product.product_price}</span>
+                EUR <span>{product.product_price}.00</span>
               </p>
-              <Button intent="primary" label="Add to cart" size="small" kind="base" />
+              <Button intent="primary" label="Add to cart" size="small" kind="base" callback={handleAddToBasket} />
             </div>
 
             <div className="sm:col-start-2 sm:row-start-2">
@@ -140,7 +171,7 @@ function Product({ params }: { params: { slug: string } }) {
               <QuantitySelector onChangeQuantity={handleQuantity} counter={counter} setCounter={setCounter} />
             </div>
             <div className="hidden sm:inline-block">
-              <Button intent="primary" label="Add to cart" size="small" kind="base" />
+              <Button intent="primary" label="Add to cart" size="small" kind="base" callback={handleAddToBasket} />
             </div>
           </div>
           <div className="sm:col-start-1 sm:col-span-2 flex flex-col gap-14 sm:gap-20 sm:mt-10">
@@ -162,6 +193,6 @@ function Product({ params }: { params: { slug: string } }) {
       </div>
     </>
   );
-}
+};
 
 export default Product;
