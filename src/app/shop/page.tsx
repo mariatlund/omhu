@@ -8,14 +8,14 @@ import { Products } from "@/types/products.js";
 import { useState, useEffect, useMemo } from "react";
 import { FilterOptions } from "@/types/filterOptions";
 
-interface shopProps {
-  handleFilter: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handlePriceChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleSort: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  products?: Products;
-}
+// interface shopProps {
+//   handleFilter: (e: React.ChangeEvent<HTMLInputElement>) => void;
+//   handlePriceChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+//   handleSort: (e: React.ChangeEvent<HTMLInputElement>) => void;
+//   products?: Products;
+// }
 
-const Shop: React.FC<shopProps> = () => {
+const Shop: React.FC = () => {
   const [products, setProducts] = useState<Products>([]);
   const [selectedSort, setSelectedSort] = useState<string>("Most Popular");
   const [selectedFilter, setSelectedFilter] = useState<FilterOptions>({
