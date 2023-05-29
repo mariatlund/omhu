@@ -2,8 +2,9 @@ import Image from "next/image";
 import Button from "../../components/Button/Button";
 import React from "react";
 
-const heroImage = "https://amorea.dk/exam/finalExam/teddy_hero.jpg";
-
+// const heroImage = "https://amorea.dk/exam/finalExam/teddy_hero.jpg";
+//trying with different image
+const heroImage = "https://i.imgur.com/UCcZNWP.jpeg";
 function HeroSection() {
   return (
     <section className="relative overflow-hidden">
