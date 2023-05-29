@@ -6,7 +6,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "amorea.dk",
 
-        path: "/exam/finalExam/**/*",
+        pathname: "/exam/finalExam/**/*",
       },
     ],
     domains: ["omhucph.com", "images.unsplash.com", "storage.googleapis.com", "amorea.dk", "www.amorea.dk"],
