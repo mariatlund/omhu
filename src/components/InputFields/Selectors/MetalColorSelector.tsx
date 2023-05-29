@@ -1,5 +1,4 @@
 import React from "react";
-import { ProductColors } from "@/types/productColors";
 import ColourSelect from "./ColourSelect/ColourSelect";
 import { ImagesType } from "@/types/images";
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { Layout } from "@/app/pageLayout";
 import ContactBox from "@/modules/ContactBox/ContactBox";
 import { Metadata } from "next";
 

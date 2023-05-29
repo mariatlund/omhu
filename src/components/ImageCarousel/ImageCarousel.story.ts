@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
 import ImageCarousel from "./ImageCarousel";
-import measurements from "../../assets/mesurments_teddyFolded.svg";
 
 type Story = StoryObj<typeof ImageCarousel>;
 

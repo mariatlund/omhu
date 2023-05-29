@@ -6,7 +6,7 @@ interface RadioProps {
   fieldName: string;
   defaultChecked?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  checked: boolean;
+  checked?: boolean;
 }
 
 function Radio({ label, value, fieldName, defaultChecked, onChange, checked }: RadioProps) {

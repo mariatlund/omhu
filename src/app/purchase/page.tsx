@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Head from "next/head";
 import StepIndicator from "@/components/StepIndicator/StepIndicator";
 import BillingDetails from "@/components/FormFlow/BillingDetails/BillingDetails";
 import YourOrder from "@/components/YourOrder/YourOrder";

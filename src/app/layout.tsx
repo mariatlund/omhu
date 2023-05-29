@@ -5,7 +5,7 @@ import "../../styles/globals.css";
 import Navigation from "@/components/Menu/Navigation";
 import Footer from "@/modules/Footer/Footer";
 import React, { useState } from "react";
-import favicon from "../../public/favicon.png";
+// import favicon from "../../public/favicon.png";
 import { OrderInfoType } from "@/types/orderInfo";
 
 // _APP.JS - ADD LOGIC HERE

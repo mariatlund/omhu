@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import ColourSelect from "./ColourSelect";
 

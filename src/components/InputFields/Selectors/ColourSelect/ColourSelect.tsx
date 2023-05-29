@@ -1,4 +1,3 @@
-import { ProductColors } from "@/types/productColors";
 import { Listbox } from "@headlessui/react";
 import clsx from "clsx";
 import { ImagesType } from "@/types/images";
