@@ -4,9 +4,8 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "amorea.dk",
-
-        pathname: "/exam/finalExam/**/*",
+        hostname: "**",
+        // pathname: "/exam/finalExam/**/*",
       },
     ],
     domains: ["omhucph.com", "images.unsplash.com", "storage.googleapis.com", "amorea.dk", "www.amorea.dk", "i.imgur.com"],
