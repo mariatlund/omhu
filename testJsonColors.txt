@@ -19,19 +19,19 @@ Gold: 7653
     "hexCode": "#60342C",
     "images": [
      {
-    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/brown.jpg",
+    "imageSrc": "https://i.imgur.com/CJrVEZG.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Brown Corner Sofa"
   },
 {
-    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/brown_closeup.jpg",
+    "imageSrc": "https://i.imgur.com/2CWnmt6.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Brown Corner Sofa Close Up"
   },
  {
-    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/brown_full.jpg",
+    "imageSrc": "https://i.imgur.com/CLuqW6t.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Brown Corner Sofa Full Picture"
@@ -46,19 +46,19 @@ Gold: 7653
     "images": [
 
       {
-    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/corner/cream_white.jpg",
+    "imageSrc":  "https://i.imgur.com/0GBOojx.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Cream White Corner Sofa"
   } ,
    {
-    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/corner/cream_white_closeup.jpg",
+    "imageSrc":  "https://i.imgur.com/9NTpbpL.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Cream White Corner Sofa Close Up"
   },
    {
-    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/cream_white_full.jpg",
+    "imageSrc": "https://i.imgur.com/mk09lep.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Cream White Corner Sofa Full Picture"
@@ -72,19 +72,19 @@ Gold: 7653
     "images": [
 
  {
-    "imageSrc":   "https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise.jpg",
+    "imageSrc":   "https://i.imgur.com/zLnhabw.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Turquoise Corner Sofa"
   } ,
    {
-    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise_closeup.jpg",
+    "imageSrc": "https://i.imgur.com/zLnhabw.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Turquoise Corner Sofa Close Up"
   },
    {
-    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/turquoise_full.jpg",
+    "imageSrc": "https://i.imgur.com/zLnhabw.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Turquoise Corner Sofa Full Picture"
@@ -98,19 +98,19 @@ Gold: 7653
     "images": [
 
 {
-    "imageSrc":   "https://amorea.dk/exam/finalExam/ProductPictures/corner/green.jpg",
+    "imageSrc":   "https://i.imgur.com/JmS8oT4.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Green Corner Sofa"
   } ,
    {
-    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/green_closeup.jpg",
+    "imageSrc": "https://i.imgur.com/DOiIrkh.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Green Corner Sofa Close Up"
   },
    {
-    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/green_full.jpg",
+    "imageSrc": "https://i.imgur.com/c4OCDis.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Green Corner Sofa Full Picture"
@@ -125,19 +125,19 @@ Gold: 7653
     "images": [
 
 {
-    "imageSrc":    "https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard.jpg",
+    "imageSrc":    "https://i.imgur.com/GdRtkzf.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Mustard Yellow Corner Sofa"
   } ,
    {
-    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard_closeup.jpg",
+    "imageSrc":"https://i.imgur.com/FUWsr6O.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Mustard Yellow Corner Sofa Close Up"
   },
    {
-    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/corner/mustard_full.jpg",
+    "imageSrc":"https://i.imgur.com/Em1tCWv.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Mustard Yellow Corner Sofa Full Picture"
@@ -152,19 +152,19 @@ Gold: 7653
     "images": [
 
 {
-    "imageSrc":  "https://amorea.dk/exam/finalExam/ProductPictures/corner/orange.jpg",
+    "imageSrc":  "https://i.imgur.com/ylGB0GU.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Dark Orange Corner Sofa"
   } ,
    {
-    "imageSrc":"https://amorea.dk/exam/finalExam/ProductPictures/corner/orange_closeup.jpg",
+    "imageSrc":"https://i.imgur.com/OxpLMDf.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Dark Orange Corner Sofa Close Up"
   },
    {
-    "imageSrc": "https://amorea.dk/exam/finalExam/ProductPictures/corner/orange_full.jpg",
+    "imageSrc": "https://i.imgur.com/ONwmFSy.jpg",
     "imageWidth": 900,
     "imageHeight": 900,
     "alt": "Dark Orange Corner Sofa Full Picture"

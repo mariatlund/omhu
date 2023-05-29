@@ -1,12 +1,9 @@
-"use client";
-
 import Head from "next/head";
 import "../../styles/globals.css";
 import Navigation from "@/components/Menu/Navigation";
 import Footer from "@/modules/Footer/Footer";
-import React, { useState } from "react";
+import React from "react";
 // import favicon from "../../public/favicon.png";
-import { OrderInfoType } from "@/types/orderInfo";
 
 // _APP.JS - ADD LOGIC HERE
 
@@ -27,41 +24,41 @@ import { OrderInfoType } from "@/types/orderInfo";
 // };
 
 export default function RootLayout({ children }: { children?: React.ReactNode }) {
-  const [orderInfo, setOrderInfo] = useState<OrderInfoType>({
-    total: 0,
-    items: [
-      {
-        image: "",
-        productName: "",
-        fabricColor: "",
-        fabricHex: "",
-        frameColor: "",
-        frameHex: "",
-        amount: 1,
-        price: 1000,
-      },
-    ],
-  });
+  // const [orderInfo, setOrderInfo] = useState<OrderInfoType>({
+  //   total: 0,
+  //   items: [
+  //     {
+  //       image: "",
+  //       productName: "",
+  //       fabricColor: "",
+  //       fabricHex: "",
+  //       frameColor: "",
+  //       frameHex: "",
+  //       amount: 1,
+  //       price: 1000,
+  //     },
+  //   ],
+  // });
 
-  const addToBasket = (product: any) => {
-    console.log("add to basket");
-    setOrderInfo((prevOrderInfo: OrderInfoType) => ({
-      ...prevOrderInfo,
-      items: [
-        ...prevOrderInfo.items,
-        {
-          image: product.image,
-          productName: product.name,
-          fabricColor: product.chosenFabricColor,
-          fabricHex: product.fabricHex,
-          frameColor: product.chosenMetalColor,
-          frameHex: product.metalHex,
-          amount: product.quantity,
-          price: product.price,
-        },
-      ],
-    }));
-  };
+  // const addToBasket = (product: any) => {
+  //   console.log("add to basket");
+  //   setOrderInfo((prevOrderInfo: OrderInfoType) => ({
+  //     ...prevOrderInfo,
+  //     items: [
+  //       ...prevOrderInfo.items,
+  //       {
+  //         image: product.image,
+  //         productName: product.name,
+  //         fabricColor: product.chosenFabricColor,
+  //         fabricHex: product.fabricHex,
+  //         frameColor: product.chosenMetalColor,
+  //         frameHex: product.metalHex,
+  //         amount: product.quantity,
+  //         price: product.price,
+  //       },
+  //     ],
+  //   }));
+  // };
   return (
     <html lang="en">
       <Head>
