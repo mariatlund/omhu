@@ -182,7 +182,7 @@ export default function Testpage() {
 
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection />
       <div className="mt-5 mb-14 md:mt-14 md:mb-20">
         <div className="container">
           <h1 className="style-h1">H1 headline</h1>
@@ -192,9 +192,9 @@ export default function Testpage() {
           <p className="style-x-small">Body x-small</p>
           <p className="style-small">Body small</p>
           <p className="style-body">Body medium</p>
-        </div>
+        </div> */}
 
-        <div className="container bg-grey-50 mt-10 space-y-5 py-5">
+      {/* <div className="container bg-grey-50 mt-10 space-y-5 py-5">
           <div className="flex gap-5 ">
             <Button intent="primary" kind="link" href="#" size="large" label="Test button" />
             <Button intent="secondary" kind="link" href="#" size="large" label="Test button" />
@@ -203,9 +203,9 @@ export default function Testpage() {
             <Button intent="primary" kind="link" href="#" size="large" label="Test button" icon="arrow" />
             <Button intent="secondary" kind="link" href="#" size="large" label="Test button" icon="filter" />
             <Button intent="alternative" kind="link" href="#" size="large" label="Test button" icon="sort" />
-          </div>
+          </div> */}
 
-          <div className="flex gap-5">
+      {/* <div className="flex gap-5">
             <Button intent="primary" kind="link" href="#" size="small" label="Test button" />
             <Button intent="secondary" kind="link" href="#" size="small" label="Test button" />
             <Button intent="alternative" kind="link" href="#" size="small" label="Test button" />
@@ -214,40 +214,39 @@ export default function Testpage() {
             <Button intent="secondary" kind="link" href="#" size="small" label="Test button" icon="filter" />
             <Button intent="alternative" kind="link" href="#" size="small" label="Test button" icon="sort" />
           </div>
-        </div>
-
+        </div> */}
+      {/* 
         <div className="container mt-10 flex gap-5">
           <TextInput type="text" label="Label" placeholder="Placeholder" fieldName="text" />
           <div className="space-y-5">
             <Select options={countriesArray} selectedOptionValue={selectedCountry} onChange={setSelectedCountry} placeholder="Select country" />
-            {/* <ColourSelect options={coloursArray} selectedOptionValue={selectedColour} onChange={setSelectedColour} defaultOption={coloursArray[0]} containerClass="w-60" /> */}
+             <ColourSelect options={coloursArray} selectedOptionValue={selectedColour} onChange={setSelectedColour} defaultOption={coloursArray[0]} containerClass="w-60" /> 
           </div>
           <div className="space-y-2">
             <Checkbox label="This is a checkbox" value="Indeed" name="checkbox" />
             <Checkbox label="This one as well" value="Indeed" name="checkbox" />
           </div>
           <div className="space-y-2">
-            <Radio label="I'm an option" value="Option1" defaultChecked={true} fieldName="radio" />
+             <Radio label="I'm an option" value="Option1" defaultChecked={true} fieldName="radio" />
             <Radio label="So am I, pick me" value="Option2" fieldName="radio" />
-          </div>
+          </div> 
           <div className="space-y-2">
             <QuantitySelector onChangeQuantity={handleQuantity} counter={counter} setCounter={setCounter} />
           </div>
-          {/* <div className="space-y-2">
+          <div className="space-y-2">
             <MetalColorSelector onChangeMetalColor={setSelectedMetalColor} selectedMetalColor={selectedMetalColor} />
-          </div> */}
-        </div>
+          </div> 
+        </div> */}
 
-        <div className="container flex flex-col gap-20">
-          {/* <ProductCard productName={"Teddy"} price={1200} productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"} newlyAdded={true} colors={colorOptions} id={36} /> */}
+      {/* <div className="container flex flex-col gap-20">
+          <ProductCard productName={"Teddy"} price={1200} productImage={"https://omhucph.com/wp-content/uploads/2023/04/DSC_9254_MBS-5769-Cream-white_chrome_square-1.jpg"} newlyAdded={true} colors={colorOptions} id={36} /> 
           <div className="flex flex-row justify-between">
-            {/* <FilterMenu handleFilter={handleFilter} handlePriceChange={handlePriceChange} selectedFilter={selectedFilter} /> */}
-            <SortMenu handleSort={handleSort} />
+             <FilterMenu handleFilter={handleFilter} handlePriceChange={handlePriceChange} selectedFilter={selectedFilter} /> 
+            <SortMenu handleSort={handleSort} /> 
           </div>
           <ContactBox />
           <Reviews title="" />
-        </div>
-      </div>
+        </div> */}
     </>
   );
 }

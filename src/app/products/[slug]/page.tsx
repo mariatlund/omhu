@@ -15,10 +15,9 @@ import { singleProductType } from "@/types/singleProductType";
 
 interface ProductProps {
   params: { slug: string };
-  addToBasket: (product: any) => void;
 }
 
-const Product: React.FC<ProductProps> = ({ params, addToBasket }) => {
+const Product: React.FC<ProductProps> = ({ params }) => {
   const [counter, setCounter] = useState<number>(0);
   const [selectedMetalColor, setSelectedMetalColor] = useState<string>("7653");
   const [product, setProduct] = useState<singleProductType>();
