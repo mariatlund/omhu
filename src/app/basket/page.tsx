@@ -1,7 +1,5 @@
 import React from "react";
 import BasketOverview from "@/modules/BasketOverview/BasketOverview";
-import { OrderInfoType } from "@/types/orderInfo";
-import { Products } from "@/types/products";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -41,11 +39,11 @@ const mockItems = [
   },
 ];
 
-interface basketProps {
-  products: Products;
-}
+// interface basketProps {
+//   products: Products;
+// }
 
-function basket({ products }: basketProps) {
+function basket() {
   return (
     <>
       <div className="container mt-5 mb-14 md:mt-14 md:mb-20">
