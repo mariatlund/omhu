@@ -8,14 +8,14 @@ import { Products } from "@/types/products.js";
 import { useState, useEffect, useMemo } from "react";
 import { FilterOptions } from "@/types/filterOptions";
 
-interface shopProps {
-  handleFilter: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handlePriceChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleSort: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  products?: Products;
-}
+// interface shopProps {
+//   handleFilter: (e: React.ChangeEvent<HTMLInputElement>) => void;
+//   handlePriceChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+//   handleSort: (e: React.ChangeEvent<HTMLInputElement>) => void;
+//   products?: Products;
+// }
 
-const Shop: React.FC<shopProps> = () => {
+const Shop: React.FC = () => {
   const [products, setProducts] = useState<Products>([]);
   const [selectedSort, setSelectedSort] = useState<string>("Most Popular");
   const [selectedFilter, setSelectedFilter] = useState<FilterOptions>({
@@ -157,6 +157,7 @@ const Shop: React.FC<shopProps> = () => {
             const randomColorKey = colorKeys[Math.floor(Math.random() * colorKeys.length)];
             const randomColor = product.product_colors[randomColorKey];
             let imageIndex = 0;
+
             if (product.product_name === "Pillows") {
               imageIndex = 0;
             } else if (product.product_name === "Ottoman") {
@@ -175,6 +176,7 @@ const Shop: React.FC<shopProps> = () => {
                 newlyAdded={product.product_newly_added}
                 colors={product.product_colors}
                 id={product.product_id}
+                alt={randomColor.images[imageIndex].alt}
               />
             );
           })}
