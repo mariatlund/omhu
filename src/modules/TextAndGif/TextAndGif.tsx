@@ -3,7 +3,7 @@ import React from "react";
 import { ImagesType } from "@/types/images";
 
 type Image = {
-  imageSrc: StaticImageData;
+  imageSrc: StaticImageData | string;
   imageWidth: number;
   imageHeight: number;
   alt?: string;
