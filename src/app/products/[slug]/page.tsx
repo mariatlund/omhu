@@ -24,7 +24,8 @@ const TeddyAnimationObject = {
   alt: "Teddy Folding Animation",
 };
 
-const Product: React.FC<ProductProps> = ({ params }) => {
+// const Product: React.FC<ProductProps> = ({ params }) => {
+function Product({ params }: ProductProps) {
   const [counter, setCounter] = useState<number>(0);
   const [selectedMetalColor, setSelectedMetalColor] = useState<string>("7653");
   const [product, setProduct] = useState<singleProductType>();
@@ -138,28 +139,28 @@ const Product: React.FC<ProductProps> = ({ params }) => {
 
   return (
     <>
-      <div className="container mt-5 mb-14 md:mt-14 md:mb-20">
-        <div className="main_wrapper  flex flex-col sm:flex-row gap-10 text-blue sm:grid sm:grid-cols-2 sm:gap-x-0">
-          <h1 className="style-h3 container text-blue uppercase sm:col-start-2 sm:flex sm:flex-row sm:justify-between">
+      <div className="container mt-5 mb-14 lg:mt-14 lg:mb-20">
+        <div className="main_wrapper  flex flex-col lg:flex-row gap-10 text-blue lg:grid lg:grid-cols-2 lg:gap-x-0">
+          <h1 className="style-h3 container text-blue uppercase lg:col-start-2 lg:flex lg:flex-row lg:justify-between">
             {product.product_name}
-            <span className="hidden sm:inline">
+            <span className="hidden lg:inline">
               {" "}
               EUR <span>{product.product_price}.00</span>
             </span>
           </h1>
-          <div className="image_container container  sm:row-start-1 sm:row-span-2">
+          <div className="image_container container  lg:row-start-1 lg:row-span-2">
             <ImageCarousel images={selectedColorImages} />
           </div>
 
           <div className="product_info container flex flex-col gap-10">
-            <div className="flex flex-row justify-between items-center sm:hidden">
+            <div className="flex flex-row justify-between items-center lg:hidden">
               <p className="style-h4">
                 EUR <span>{product.product_price}.00</span>
               </p>
               <Button intent="primary" label="Add to cart" size="small" kind="base" callback={handleAddToBasket} />
             </div>
 
-            <div className="sm:col-start-2 sm:row-start-2">
+            <div className="lg:col-start-2 lg:row-start-2">
               <p>{product.product_description}</p>
             </div>
 
@@ -176,11 +177,11 @@ const Product: React.FC<ProductProps> = ({ params }) => {
               <p className="style-h4 uppercase">Quantity</p>
               <QuantitySelector onChangeQuantity={handleQuantity} counter={counter} setCounter={setCounter} />
             </div>
-            <div className="hidden sm:inline-block">
+            <div className="hidden lg:inline-block">
               <Button intent="primary" label="Add to cart" size="small" kind="base" callback={handleAddToBasket} />
             </div>
           </div>
-          <div className="sm:col-start-1 sm:col-span-2 flex flex-col gap-14 sm:gap-20 sm:mt-10">
+          <div className="lg:col-start-1 lg:col-span-2 flex flex-col gap-14 lg:gap-20 lg:mt-10">
             <div className="container">
               <Accordion title="" items={accordionContent} />
             </div>
@@ -199,6 +200,6 @@ const Product: React.FC<ProductProps> = ({ params }) => {
       </div>
     </>
   );
-};
+}
 
 export default Product;
