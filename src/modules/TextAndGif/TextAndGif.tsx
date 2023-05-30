@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { ImagesType } from "@/types/images";
 
 type Image = {
-  imageSrc: string;
+  imageSrc: StaticImageData;
   imageWidth: number;
   imageHeight: number;
   alt?: string;
@@ -12,7 +12,7 @@ type Image = {
 interface TextAndGifProps {
   title: string;
   text: string;
-  image?: ImagesType;
+  image?: Image;
 }
 
 function TextAndGif({ title, text, image }: TextAndGifProps) {
