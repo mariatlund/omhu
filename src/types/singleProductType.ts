@@ -2,7 +2,7 @@ import { ImagesType } from "./images";
 import { ProductColors } from "./productColors";
 
 export type singleProductType = {
-  product_id: string;
+  product_id: number;
   product_name: string;
   product_description: string;
   product_price: number;

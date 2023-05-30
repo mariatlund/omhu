@@ -12,10 +12,17 @@ import Video from "@/modules/Video/Video";
 import Reviews from "@/modules/Reviews/Reviews";
 import { headers } from "../../../../config.js";
 import { singleProductType } from "@/types/singleProductType";
+import TeddyAnimation from "../../../assets/Teddy_folding_animation.gif";
 
 interface ProductProps {
   params: { slug: string };
 }
+const TeddyAnimationObject = {
+  imageSrc: TeddyAnimation,
+  imageWidth: 360,
+  imageHeight: 664,
+  alt: "Teddy Folding Animation",
+};
 
 const Product: React.FC<ProductProps> = ({ params }) => {
   const [counter, setCounter] = useState<number>(0);
@@ -177,11 +184,11 @@ const Product: React.FC<ProductProps> = ({ params }) => {
             <div className="container">
               <Accordion title="" items={accordionContent} />
             </div>
-            {product.product_animation !== null && (
+            {product.product_id === 4 && (
               <TextAndGif
                 title="Fold it how you want"
                 text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia architecto provident deleniti suscipit id ratione repudiandae animi saepe temporibus blanditiis, asperiores voluptas aspernatur voluptate, exercitationem voluptates quisquam ea dolorem cumque?"
-                image={product.product_animation[0]}
+                image={TeddyAnimationObject}
               />
             )}
             {product.product_name !== "Pillows" && <Video title="Easy to place, easy to style" videoSrc="https://player.vimeo.com/video/829091943?h=285c72499b" />}
