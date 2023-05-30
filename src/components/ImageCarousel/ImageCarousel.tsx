@@ -26,7 +26,7 @@ function ImageCarousel({ images = [] }: ImageCarouselProps) {
           </SwiperSlide>
         ))}
       </Swiper>
-      <Swiper onSwiper={setThumbsSwiper} loop={true} spaceBetween={10} slidesPerView={5} freeMode={true} watchSlidesProgress={true} modules={[FreeMode, Navigation, Thumbs]} className="thumbnails">
+      <Swiper onSwiper={setThumbsSwiper} loop={true} spaceBetween={10} slidesPerView={4} freeMode={true} watchSlidesProgress={true} modules={[FreeMode, Navigation, Thumbs]} className="thumbnails">
         {images.map((image, index) => (
           <SwiperSlide key={`${index}-thumbnail`}>
             <Image src={image.imageSrc} width={image.imageWidth} height={image.imageHeight} alt={image?.alt ? image.alt : ""} className="aspect-square" />
