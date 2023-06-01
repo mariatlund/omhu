@@ -7,6 +7,7 @@ import SortMenu from "@/components/Menu/SortMenu";
 import { Products } from "@/types/products.js";
 import { useState, useEffect, useMemo } from "react";
 import { FilterOptions } from "@/types/filterOptions";
+import { Metadata } from "next";
 
 // interface shopProps {
 //   handleFilter: (e: React.ChangeEvent<HTMLInputElement>) => void;

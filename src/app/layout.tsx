@@ -10,11 +10,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Furniture with care | OMHU",
     template: "%s | OMHU",
+    default: "Your home, with omhu. | OMHU",
   },
   keywords: ["Sofa", "Furniture", "Decor", "Furniture design", "Retro furniture", "Teddy"],
-  description: "Your home, with omhu.",
+  description: "Explore our retro-inspired furniture and popular Teddy sofa.",
   robots: {
     index: false,
     follow: false,
