@@ -13,7 +13,7 @@ function SortMenu({ handleSort, selectedSort }: SortMenuProps) {
 
   return (
     <div className="relative">
-      <Button intent={showMenu ? "primary" : "secondary"} kind="base" size="large" label="Sort" icon={showMenu ? "close" : "sort"} callback={() => setShowMenu(!showMenu)} />
+      <Button intent="secondary" kind="base" size="large" label="Sort" icon={showMenu ? "close" : "sort"} callback={() => setShowMenu(!showMenu)} />
       {showMenu && <SortSettings onChangeSort={handleSort} selectedSort={selectedSort} />}
     </div>
   );
