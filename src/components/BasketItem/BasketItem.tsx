@@ -55,7 +55,7 @@ function BasketItem({ image, productName, fabricColour, fabricHex, frameColour, 
         <QuantitySelector onChangeQuantity={handleQuantity} counter={itemQuantity} setCounter={setItemQuantity} />
       </div>
 
-      <span className="order-3 font-semibold justify-self-end md:style-body md:order-4 md:col-span-2">{`${price} DKK`}</span>
+      <span className="order-3 font-semibold justify-self-end md:style-body md:order-4 md:col-span-2">{`${price} EUR`}</span>
 
       <div className="order-6 text-grey-75 justify-self-end md:order-5 md:col-span-2 cursor-pointer hover:text-orange">
         <svg width="24" height="29" viewBox="0 0 24 29" fill="none">

@@ -28,29 +28,27 @@ const countries = [
 
 const orderInfo = [
   {
-    productName: "Teddy",
-    fabricColour: "Blue",
-    fabricHex: "#6B6BEC",
-    frameColour: "Chrome",
-    frameHex: "#919190",
+    productName: "Teddy sofa",
+    fabricColour: "Brown",
+    fabricHex: "#60342C",
+    frameColour: "Silver",
+    frameHex: "#E9E9E9",
     amount: "1",
-    price: "12.899,00",
+    price: "1675",
   },
   {
-    productName: "Teddy",
-    fabricColour: "Blue",
-    fabricHex: "#6B6BEC",
-    frameColour: "Chrome",
-    frameHex: "#919190",
-    amount: "1",
-    price: "12.899,00",
+    productName: "Pillows",
+    fabricColour: "Green",
+    fabricHex: "#3D5648",
+    amount: "2",
+    price: "230",
   },
 ];
 
 const priceInfo = {
-  subtotal: "16.000,00",
+  subtotal: "1.905",
   deliveryCost: "Free",
-  total: "16.000,00",
+  total: "1.905",
 };
 
 function Purchase() {
