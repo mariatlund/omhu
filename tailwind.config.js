@@ -7,6 +7,7 @@ module.exports = {
       body: ["poppins", "sans-serif"],
     },
     colors: {
+      current: "currentColor",
       blue: {
         DEFAULT: "#1D00B2",
         75: "#5640C5",
