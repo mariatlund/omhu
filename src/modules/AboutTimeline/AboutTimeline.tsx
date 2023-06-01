@@ -75,18 +75,18 @@ const timelineDesktop = (
 function AboutTimeline() {
   return (
     <section id="about" className="text-blue relative overflow-hidden grid grid-cols-12">
-      <div className="relative w-full h-full overflow-hidden flex col-span-1 xl:hidden">
+      <div className="relative w-full h-full overflow-hidden flex col-span-1 2xl:hidden">
         <div className="absolute grid place-items-start w-full">
           <div className="w-full">{timelinePhone}</div>
         </div>
       </div>
-      <div className="relative hidden w-full h-full overflow-hidden col-span-3 xl:flex">
+      <div className="relative hidden w-full h-full overflow-hidden col-span-3 2xl:flex">
         <div className="absolute grid place-items-start w-full">
           <div className="w-full">{timelineDesktop}</div>
         </div>
       </div>
 
-      <div className="grid space-y-10 pt-12 ml-[-3px] max-w-[1100px] col-span-11 md:pt-20 md:space-y-20 xl:col-span-9 xl:ml-0 xl:pt-40 2xl:pt-52 pb-20 xl:pb-40">
+      <div className="grid space-y-10 pt-12 ml-[-3px] max-w-[1100px] col-span-11 md:pt-24 md:space-y-20 2xl:col-span-8 2xl:ml-0 2xl:pt-52 pb-20 2xl:pb-40">
         {bulletPoints.map((item, index) => {
           return <TimelineCard key={index} {...item} />;
         })}
