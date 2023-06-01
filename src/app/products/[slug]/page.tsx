@@ -13,8 +13,7 @@ import Reviews from "@/modules/Reviews/Reviews";
 import { headers } from "../../../../config.js";
 import { singleProductType } from "@/types/singleProductType";
 import TeddyAnimation from "../../../assets/Teddy_folding_animation.gif";
-import { ProductAdded } from "@/types/productAdded.js";
-import { ProductColors } from "@/types/productColors.js";
+import parse from "html-react-parser";
 
 interface ProductProps {
   params: { slug: string };
@@ -105,12 +104,11 @@ function Product({ params }: ProductProps) {
     selectedColorImages = product.product_colors.dark_orange.images;
   }
 
-  const materialInfo = product.product_material_information;
-
+  const parsedMaterialInfo = parse(product.product_material_information);
   const accordionContent = [
     {
       question: "Materials",
-      answer: materialInfo,
+      answer: parsedMaterialInfo,
     },
     {
       question: "Shipping",
@@ -136,7 +134,7 @@ function Product({ params }: ProductProps) {
     //   quantity: counter,
     // };
 
-    //show modal
+    // could maybe call a modal here to open and give feedback to user
 
     console.log("product added");
     //addToBasket(productAdded);
