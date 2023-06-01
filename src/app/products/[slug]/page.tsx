@@ -13,6 +13,7 @@ import Reviews from "@/modules/Reviews/Reviews";
 import { headers } from "../../../../config.js";
 import { singleProductType } from "@/types/singleProductType";
 import TeddyAnimation from "../../../assets/Teddy_folding_animation.gif";
+import parse from "html-react-parser";
 
 interface ProductProps {
   params: { slug: string };
@@ -103,12 +104,11 @@ function Product({ params }: ProductProps) {
     selectedColorImages = product.product_colors.dark_orange.images;
   }
 
-  const materialInfo = product.product_material_information;
-
+  const parsedMaterialInfo = parse(product.product_material_information);
   const accordionContent = [
     {
       question: "Materials",
-      answer: materialInfo,
+      answer: parsedMaterialInfo,
     },
     {
       question: "Shipping",
@@ -123,17 +123,20 @@ function Product({ params }: ProductProps) {
   ];
 
   const handleAddToBasket = () => {
-    const productAdded = {
-      image: selectedColorImages[0].imageSrc,
-      name: product.product_name,
-      chosenFabricColor: selectedColour,
-      fabricHex: product.product_colors[selectedColour].hexCode,
-      chosenMetalColor: selectedMetalColor,
-      metalHex: product.product_bars_colors[selectedMetalColor].hexCode,
-      price: product.product_price,
-      quantity: counter,
-    };
-    console.log(productAdded);
+    // const productAdded: ProductAdded = {
+    //   image: selectedColorImages[0].imageSrc,
+    //   name: product.product_name,
+    //   chosenFabricColor: selectedColour,
+    //   fabricHex: product.product_colors[selectedColour].hexCode,
+    //   chosenMetalColor: selectedMetalColor,
+    //   metalHex: product.product_bars_colors[selectedMetalColor].hexCode,
+    //   price: product.product_price,
+    //   quantity: counter,
+    // };
+
+    // could maybe call a modal here to open and give feedback to user
+
+    console.log("product added");
     //addToBasket(productAdded);
   };
 
