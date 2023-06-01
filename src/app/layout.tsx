@@ -20,18 +20,13 @@ export const metadata: Metadata = {
     follow: false,
   },
   icons: {
-    icon: "../assets/favicon.png",
+    icon: "/icon.png",
   },
 };
 
 export default function RootLayout({ children }: { children?: React.ReactNode }) {
   return (
     <html lang="en">
-      <Head>
-        <title>OMHU</title>
-        <meta name="robots" content="noindex, nofollow" />
-        <link rel="icon" type="image/png" href="../../public/favicon.png" />
-      </Head>
       <body className="bg-white text-blue style-body font-body">
         <Navigation />
         <main id="main" className="text-blue">
