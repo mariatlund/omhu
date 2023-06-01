@@ -10,28 +10,23 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Furniture with care | OMHU",
     template: "%s | OMHU",
+    default: "Your home, with omhu. | OMHU",
   },
   keywords: ["Sofa", "Furniture", "Decor", "Furniture design", "Retro furniture", "Teddy"],
-  description: "Your home, with omhu.",
+  description: "Explore our retro-inspired furniture and popular Teddy sofa.",
   robots: {
     index: false,
     follow: false,
   },
   icons: {
-    icon: "../assets/favicon.png",
+    icon: "/icon.png",
   },
 };
 
 export default function RootLayout({ children }: { children?: React.ReactNode }) {
   return (
     <html lang="en">
-      <Head>
-        <title>OMHU</title>
-        <meta name="robots" content="noindex, nofollow" />
-        <link rel="icon" type="image/png" href="../../public/favicon.png" />
-      </Head>
       <body className="bg-white text-blue style-body font-body">
         <Navigation />
         <main id="main" className="text-blue">

@@ -7,16 +7,9 @@ import showroomPic from "../assets/showroom.png";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Your home, with omhu. | OMHU",
+  title: "Home | OMHU",
   keywords: ["Sofa", "Furniture", "Decor", "Furniture design", "Retro furniture", "Teddy"],
   description: "Explore our retro-inspired furniture and popular Teddy sofa.",
-  robots: {
-    index: false,
-    follow: false,
-  },
-  icons: {
-    icon: "../assets/favicon.png",
-  },
 };
 
 const meetOmhuImg: ImageProps = {
