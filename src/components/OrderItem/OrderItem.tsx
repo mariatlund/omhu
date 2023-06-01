@@ -31,7 +31,7 @@ function OrderItem({ productName, fabricColour, fabricHex, frameColour, frameHex
 
         <span className="font-semibold">{`x ${amount}`}</span>
 
-        <span>{`${price} DKK`}</span>
+        <span>{`${price} EUR`}</span>
       </div>
     </div>
   );

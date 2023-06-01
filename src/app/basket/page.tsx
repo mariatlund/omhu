@@ -22,7 +22,7 @@ const mockItems = [
     frameColour: "Silver",
     frameHex: "#E9E9E9",
     amount: 1,
-    price: "1675,-",
+    price: "1675",
   },
   {
     image: {
@@ -35,7 +35,7 @@ const mockItems = [
     fabricColour: "Green",
     fabricHex: "#3D5648",
     amount: 2,
-    price: "230,-",
+    price: "230",
   },
 ];
 
@@ -48,7 +48,7 @@ function basket() {
     <>
       <div className="container mt-5 mb-14 md:mt-14 md:mb-20">
         <h1 className="style-h1 mb-10">Your basket</h1>
-        <BasketOverview items={mockItems} total="25.789" />
+        <BasketOverview items={mockItems} total="1.905" />
       </div>
     </>
   );
