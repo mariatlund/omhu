@@ -16,9 +16,9 @@ function PriceBox({ subtotal, deliveryCost, total }: PriceBoxProps) {
       </div>
 
       <div className="grid gap-y-4 text-right">
-        <span>{`${subtotal} DKK`}</span>
-        <span>{deliveryCost === "Free" ? "Free" : `${deliveryCost} DKK`}</span>
-        <span className="font-semibold">{`${total} DKK`}</span>
+        <span>{`${subtotal} EUR`}</span>
+        <span>{deliveryCost === "Free" ? "Free" : `${deliveryCost} EUR`}</span>
+        <span className="font-semibold">{`${total} EUR`}</span>
       </div>
     </div>
   );
