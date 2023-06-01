@@ -1,10 +1,8 @@
 import Image from "next/image";
 import Button from "../../components/Button/Button";
 import React from "react";
-
 import heroImage from "../../assets/teddy_hero.jpg";
-//trying with different image
-//const heroImage = "https://i.imgur.com/UCcZNWP.jpeg";
+
 function HeroSection() {
   return (
     <section className="relative overflow-hidden">
@@ -15,7 +13,7 @@ function HeroSection() {
         </div>
       </div>
 
-      <div className="w-full h-[27.5rem] lg:h-[50rem]">
+      <div className="w-full h-[27.5rem] lg:h-[40rem]">
         <Image src={heroImage} alt="OMHU Teddy Sofa" fill className="w-full object-cover object-center md:aspect-video" />
       </div>
     </section>
