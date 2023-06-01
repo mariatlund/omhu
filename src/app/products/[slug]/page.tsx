@@ -13,6 +13,8 @@ import Reviews from "@/modules/Reviews/Reviews";
 import { headers } from "../../../../config.js";
 import { singleProductType } from "@/types/singleProductType";
 import TeddyAnimation from "../../../assets/Teddy_folding_animation.gif";
+import { ProductAdded } from "@/types/productAdded.js";
+import { ProductColors } from "@/types/productColors.js";
 
 interface ProductProps {
   params: { slug: string };
@@ -123,17 +125,20 @@ function Product({ params }: ProductProps) {
   ];
 
   const handleAddToBasket = () => {
-    const productAdded = {
-      image: selectedColorImages[0].imageSrc,
-      name: product.product_name,
-      chosenFabricColor: selectedColour,
-      fabricHex: product.product_colors[selectedColour].hexCode,
-      chosenMetalColor: selectedMetalColor,
-      metalHex: product.product_bars_colors[selectedMetalColor].hexCode,
-      price: product.product_price,
-      quantity: counter,
-    };
-    console.log(productAdded);
+    // const productAdded: ProductAdded = {
+    //   image: selectedColorImages[0].imageSrc,
+    //   name: product.product_name,
+    //   chosenFabricColor: selectedColour,
+    //   fabricHex: product.product_colors[selectedColour].hexCode,
+    //   chosenMetalColor: selectedMetalColor,
+    //   metalHex: product.product_bars_colors[selectedMetalColor].hexCode,
+    //   price: product.product_price,
+    //   quantity: counter,
+    // };
+
+    //show modal
+
+    console.log("product added");
     //addToBasket(productAdded);
   };
 
