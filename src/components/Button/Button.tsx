@@ -2,11 +2,11 @@ import React from "react";
 import { clsx } from "clsx";
 
 // STYLING
-const basic = "font-body font-medium uppercase border inline-block border-2 leading-6";
+const basic = "font-body font-medium uppercase border inline-block border-2 leading-6 button";
 // intent
-const primary = "bg-blue text-white border-blue hover:bg-link hover:border-link active:bg-blue-75 active:border-blue-75";
-const secondary = "bg-none text-blue border-blue hover:bg-blue hover:text-white hover:border-blue active:bg-blue-75 active:text-white active:border-blue-75";
-const alternative = "border-white text-white hover:bg-white hover:text-blue hover:border-white active:bg-blue-50 active:border-blue-50 active:text-white";
+const primary = "bg-blue text-white border-none before:bg-link after:bg-link";
+const secondary = "bg-none text-blue border-blue hover:text-white before:bg-blue after:bg-blue";
+const alternative = "border-white text-white hover:text-blue  before:bg-white after:bg-white";
 // size
 const large = "text-16 pb-3 pt-3.5";
 const small = "text-14 pb-2 pt-2.5";
